@@ -1,4 +1,14 @@
 *{margin: 0; padding: 0;}
+
+.backtotop {
+    POSITION: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #ffffff9e;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
 body{
     height: auto;
     min-height: 100%;
@@ -9,11 +19,11 @@ h2.chuto {
     font-family: tahoma;
     font-size: 100px;
     margin-left: 14%;
-    padding-top: 600px;
+    padding-top: 450px;
 }
 
 .chapter1,.chapter2,.chapter3,.chapter4 {
-    height: 800px;
+    height: 700px;
     background-image: url(images/chap1.jpg);
     background-size: cover;
 }
@@ -31,7 +41,7 @@ h2.chuto {
 }
 
 .noidung1,.noidung2,.noidung3,.noidung4 {
-    height: 800px;
+    height: 600px;
     padding: 50px 0px;
     text-align: center;
     color: gray;
