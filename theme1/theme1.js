@@ -31,4 +31,10 @@ $(document).ready(function() {
 		
 		$('html,body').animate({scrollTop: 0}, 400);
 	});
+
+	$('.noidung1 card').hover(function() {
+		this.addClass('cam');
+	}, function() {
+		this.removeClass('cam')
+	});
 });
