@@ -1,4 +1,8 @@
 *{margin: 0; padding: 0;}
+body{
+    height: auto;
+    min-height: 100%;
+}
 
 h2.chuto {
     color: white;
