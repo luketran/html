@@ -1,5 +1,26 @@
 *{margin: 0; padding: 0;}
 
+.nd3right img {
+}
+
+.nd3left {
+    width: 500px;
+    margin-top: 175px;
+    text-align: right;
+    margin-left: 125px;
+    font-size: 33px;
+}
+
+.noidung3 .nd3 {
+}
+
+img.man {
+    height: 350px;
+    float: right;
+    margin-top: -200px;
+    margin-right: 180px;
+}
+
 .noidung2 h2.cangiua {
     width: 350px;
     float: right;
@@ -38,8 +59,15 @@
     display: inline-block;
     margin-top: 79px;
     margin: 50px 25px;
-    border: 5px solid gray;
+    border: 2px solid #679180;
     border-radius: 10px;
+    transition: transform .2s;
+    background: #81CFE0;
+}
+
+.somecard .card:hover {
+    transform: scale(1.2);
+    background: #95A5A6;
 }
 
 .backtotop {
@@ -86,7 +114,8 @@ h2.chuto {
     height: 500px;
     padding: 50px 0px;
     text-align: center;
-    color: gray;
+    color: #30336b;
+    background: #dff9fb;
 }
 
 .home {
