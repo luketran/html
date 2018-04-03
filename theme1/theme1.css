@@ -1,5 +1,22 @@
 *{margin: 0; padding: 0;}
 
+.noidung4 h2.cangiua {
+    margin-top: -15px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    color: teal;
+}
+
+.nd4 .row {
+    height: 50%;
+    display: flex;
+}
+
+.nd4 .info {width: 240px;margin: auto;}
+
+
+.noidung4 .nd4 {width: 80%;margin: auto;height: 100%;}
+
 .nd3right img {
 }
 
