@@ -1,5 +1,24 @@
 *{margin: 0; padding: 0;}
 
+.info .text {
+    width: 12rem;
+}
+
+.info h2 {}
+
+.info .hinh {
+}
+
+h2.cangiua {
+    font-size: 20px;
+    margin-top: -20px;
+}
+
+.nd4 img {
+    cursor: pointer;
+    height: 7rem;
+}
+
 .noidung4 h2.cangiua {
     margin-top: -15px;
     margin-bottom: 10px;
@@ -12,7 +31,7 @@
     display: flex;
 }
 
-.nd4 .info {width: 240px;margin: auto;}
+.nd4 .info {width: 30%;margin: auto;display: flex;}
 
 
 .noidung4 .nd4 {width: 80%;margin: auto;height: 100%;}
@@ -21,21 +40,20 @@
 }
 
 .nd3left {
-    width: 500px;
-    margin-top: 175px;
+    width: 26rem;
+    margin-top: 7rem;
     text-align: right;
-    margin-left: 125px;
-    font-size: 33px;
+    margin-left: 12rem;
+    font-size: 1.8rem;
 }
 
-.noidung3 .nd3 {
-}
+.noidung3 .nd3 {display: flex;}
 
 img.man {
-    height: 350px;
+    height: 23rem;
     float: right;
-    margin-top: -200px;
-    margin-right: 180px;
+    margin-top: 3rem;
+    margin-left: 5rem;
 }
 
 .noidung2 h2.cangiua {
@@ -51,31 +69,20 @@ img.man {
     margin-left: 180px;
 }
 
-.card a {
-}
-
-.card p {margin: 23px;padding-bottom: 24px;}
+.card p {margin: 22px 19px;font-size: 15px;}
 
 .card h1 {
     margin-top: 20px;
     margin-bottom: 20px;
+    font-size: 25px;
 }
 
-.card.n3 {
-}
-
-.card.n2 {
-}
-
-.card.n1 {
-}
 
 .somecard .card {
     width: 220px;
     height: 350px;
     display: inline-block;
-    margin-top: 79px;
-    margin: 50px 25px;
+    margin: 35px 25px;
     border: 2px solid #679180;
     border-radius: 10px;
     transition: transform .2s;
@@ -166,6 +173,17 @@ nav.menutren {
 }
 
 .menutren ul li {float: left;list-style: none;}
-.cam{
-    
+
+
+@media screen and (max-width: 800px) {
+nav > li {
+float: none;
+}
+nav ul {
+display: block;
+width: 100%;
+}
+nav > li.hover > ul , nav li li.hover ul {
+position: static;
     }
+}
