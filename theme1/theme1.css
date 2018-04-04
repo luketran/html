@@ -1,7 +1,27 @@
 *{margin: 0; padding: 0;}
 
+i.fa {
+    margin: 4px;
+    font-size: 24px;
+}
+
+.social .i {
+    background: #4ac6d6;
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+    border-radius: 2rem;
+    padding: 10px 10px;
+    margin: 0.3rem;
+}
+
+.social .i:hover {
+    background: #6ba4ab;
+}
+
 footer .social {
-    padding: 5rem;
+    padding: 4rem;
+    display: flex;
 }
 
 .contact p {
