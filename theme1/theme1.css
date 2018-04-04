@@ -1,5 +1,26 @@
 *{margin: 0; padding: 0;}
 
+.noidung1 h2.cangiua {
+    width: 45rem;
+    margin: auto;
+}
+
+footer .copyright {
+    background: #89cacc;
+    height: 3rem;
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 3rem;
+}
+
+footer .content {
+    display: flex;
+}
+
+.nd4 img {
+    cursor: pointer;
+}
+
 i.fa {
     margin: 4px;
     font-size: 24px;
@@ -37,7 +58,7 @@ footer .contact {
     padding: 0.3rem 0rem;
 }
 
-footer h3 {margin-bottom: 1rem;}
+footer h3 {margin-bottom: 1rem;color: #4ac6d6;}
 
 footer .address {
     padding: 2rem 6rem;
@@ -45,7 +66,7 @@ footer .address {
 }
 
 footer {
-    display: flex;
+    /* display: flex; */
     height: 12rem;
 }
 
@@ -140,7 +161,7 @@ img.man {
     POSITION: fixed;
     bottom: 10px;
     right: 10px;
-    background-color: #ffffff9e;
+    background-color: #ce2e17b8;
     padding: 10px;
     border-radius: 10px;
     cursor: pointer;
@@ -193,7 +214,8 @@ h2.chuto {
 }
 
 .menutren ul {
-    margin-left: 25%;
+    width: 40rem;
+    margin: auto;
 }
 
 .menutren a {
@@ -211,7 +233,7 @@ nav.menutren {
     background: whitesmoke;
     margin: auto;
     position: fixed;
-    margin-top: 0;
+    text-align: center;
 }
 
 .menutren ul li {float: left;list-style: none;}
