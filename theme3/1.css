@@ -1,0 +1,227 @@
+*{margin: 0; padding: 0;}
+
+footer .container {
+    display: flex;
+}
+
+footer {
+    display: flex;
+    background-color: #222222;
+    color: white;
+    padding-top: 2rem;
+}
+
+.fanpage {
+    width: 25rem;
+    height: 16rem;
+    background-color: antiquewhite;
+    float: right;
+}
+
+footer ul {
+    margin-top: 1rem;
+}
+
+footer li {
+    list-style: none;
+    padding-top: 0.3rem;
+}
+
+.trademark {
+    text-align: center;
+    height: 3rem;
+    background-color: #000000;
+    padding-top: 1rem;
+    color: white;
+    font-style: italic;
+}
+
+.totop {
+    width: fit-content;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.coor .owl-item {
+    width: 18rem !important;
+}
+
+.coor {
+    text-align: center;
+}
+
+.botbaner {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.building p {
+    padding-top: 1rem;
+    margin-bottom: 0;
+}
+
+.sample .building {
+    padding: 1rem;
+}
+
+.sample {
+    text-align: center;
+}
+
+.container h5, .sample h5 {
+    color: #aa2024;
+    margin-bottom: 0;
+}
+
+footer h5 {
+    color: white !important;
+}
+
+.service h3 {
+    margin: auto;
+    text-align: center;
+}
+
+main .service {
+    margin-top: 2.5rem;
+    text-align: center;
+}
+
+main .intro {
+    margin-top: 2.5rem;
+    display: flex;
+}
+
+.intro button.btn-danger {
+    height: 3rem;
+    width: 11rem;
+    background-color: #aa2024;
+    border-radius: 9px;
+    margin-top: 2rem;
+}
+
+.intro h5 {
+    color: #aa2024;
+    margin-bottom: 0;
+}
+
+.intro .col-xs-6 {
+    text-align: justify;
+}
+
+.intro .container {
+    display: flex;
+    margin-top: 2.5rem;
+}
+
+.navbar a {
+    color: white;
+}
+
+.navbar li {
+    list-style: none;
+    padding: 1%;
+}
+
+.navbar ul {display: flex;}
+
+.navbar .container {
+    padding: 0;
+}
+
+main .navbar {
+    padding: 0;
+    background: #861619;
+    height: 3rem;
+    border-radius: 0;
+}
+
+.branch {
+    float: left;
+    margin-left: 8%;
+    margin-top: 2%;
+}
+
+.btnseach {
+    background: #861619;
+    width: 20%;
+    color: white;
+    text-align: center;
+    padding-top: 1%;
+}
+
+input[type="text"] {
+    border: none;
+    width: 80%;
+    padding-left: 3%;
+}
+
+.search {
+    display: flex;
+    border: 2px solid #861619;
+    width: 50%;
+    border-radius: 6px;
+    height: 30%;
+    float: right;
+    margin-right: 8%;
+    margin-top: 4%;
+}
+
+.logo {
+    background-image: url(pics/khung-header.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 10rem;
+}
+
+.social i.fa {
+    border: 1px dashed #861619;
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+    margin-left: 1rem;
+    text-align: center;
+    padding-top: 3%;
+    color: #861619;
+    cursor: pointer;
+}
+
+.social i.fa:hover {
+    background: #861619;
+    color: white;
+}
+
+.contact i.fa {
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+    background: #861619;
+    color: white;
+    border-radius: 6px;
+    padding-top: 7px;
+    margin-right: 2%;
+    cursor: pointer;
+}
+
+i.fa.fa-envelope {
+    margin-left: 7%;
+}
+
+.contact {
+    float: left;
+    width: 50%;
+}
+
+.social {
+    display: flex;
+    float: right;
+}
+
+.topheader {
+    height: 3rem;
+    background: #f1f1f1;
+    padding: 0.5% 8%;
+} s
