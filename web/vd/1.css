@@ -1,3 +1,6 @@
+
+//css hieu ung khung anh
+
 body {
 	font-family: 'Roboto', sans-serif, 'Microsoft JhengHei';
 	background: #eee;
@@ -62,3 +65,9 @@ a div:after {
   top: 5%;
   right: 5%;
 }
+
+
+//css canh giua theo chieu doc
+{display: flex;
+flex-direction: column;
+justify-content: center;}
