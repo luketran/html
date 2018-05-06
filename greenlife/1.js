@@ -1,5 +1,7 @@
-﻿$(document).ready(function(){
+﻿  $(document).ready(function () {
 
-  $(".owl-carousel").owlCarousel();
-  
-});
+  		$( "i.fa.fa-search" ).click(function() {
+  			console.log('123123');		  	
+  			$(".search input").toggleClass('ap');
+		});
+  });
