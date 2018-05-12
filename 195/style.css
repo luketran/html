@@ -1,5 +1,17 @@
 *{margin: 0;padding: 0;font-family: arial;}
 
+#imenu {
+    position: fixed;
+    width: 3rem;
+    left: 2rem;
+    top: 1rem;
+    display: none;
+}
+.collapsed i{
+    transform-origin: 50% 50%;
+    transform: rotate(-90deg);
+}
+
 .hotdetail {
     text-align: left;
     margin: 4rem 2rem;
@@ -12,6 +24,7 @@
     position: relative;
     bottom: 0;
     left: 7px;
+    max-width: 100%;
 }
 
 .paner {
@@ -75,8 +88,8 @@ li.fb {
 
 .trademark {
     background: #cd4d2a;
-    padding-top: 1rem !important;
-    padding-bottom: 1rem !important;
+    padding-top: .5rem !important;
+    padding-bottom: .5rem !important;
     color: white;
 }
 
@@ -204,8 +217,8 @@ button.owl-next {
     color: #7D8393;
 }
 
-i.fa.fa-arrow-circle-o-right {
-    padding-right: 5px;
+i.fa.fa-arrow-circle-o-down {
+    margin-right: 5px;
 }
 
 .all-product li {
@@ -218,7 +231,10 @@ i.fa.fa-arrow-circle-o-right {
     font-weight: bold;
 }
 
-.product-type i {color: #CD4D2A;padding-right: 10px;}
+.product-type i {
+    color: #CD4D2A;
+    margin-right: 10px;
+}
 
 .danhmucsp h6 {
     color: #CD4D2A;
@@ -242,9 +258,8 @@ i.fa.fa-arrow-circle-o-right {
 }
 
 .banner {
-    width: 1285px;
-    height: 461px;
     max-width: 100%;
+    overflow: hidden;
 }
 
 .carousel-control span {
@@ -279,6 +294,7 @@ i.fa.fa-arrow-circle-o-right {
 
 .menu ul {
     display: flex;
+    justify-content: space-between;
 }
 
 .search i {
@@ -290,14 +306,14 @@ i.fa.fa-arrow-circle-o-right {
     line-height: 2;
     position: relative;
     top: 5px;
-    right: 26px;
+    right: 47px;
     padding: 0 11px;
 }
 
 .search input {
     height: 45px;
     width: 336px;
-    border: 1px solid #D76B4F !important;
+    border: 2px solid #D76B4F !important;
     border-radius: 5px;
     padding-left: 1rem;
 }
@@ -309,6 +325,7 @@ i.fa.fa-arrow-circle-o-right {
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 100%;
 }
 
 .logo img {
@@ -334,6 +351,7 @@ i.fa.fa-arrow-circle-o-right {
 
 .cart li {
     list-style: none;
+    padding: 0 .3rem;
 }
 
 .cart img {
@@ -378,3 +396,103 @@ i.fa.fa-arrow-circle-o-right {
     z-index: 99999;
     cursor: pointer;
 }
+
+@media (max-width: 1024px) {
+
+.wrap{
+    padding: 0 3rem;
+}
+    
+}
+
+@media (max-width: 800px) {
+
+
+}
+
+@media (max-width: 768px) {
+
+
+}
+
+@media (max-width: 600px) {
+
+#imenu {
+    display: unset !important;
+}
+.menu ul{
+    display: block !important;
+}
+.menu{
+    position: fixed;
+    top: 4rem;
+    z-index: 20;
+    transform: translateX(-100%);
+    transition: all 1s;
+    display: none;
+}
+.cart{
+    justify-content: center;
+    font-weight: bold;
+    position: unset !important;
+    margin-bottom: 1rem;
+}
+.danhmucsp h6{
+    font-size: 1.4rem;
+}
+.search{
+    height: 45px;
+    margin: 1rem 0;
+    text-align: center;
+}
+.search i{
+    top: -45px;
+    left: 9rem;
+}
+.tophead{
+    display: block;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.col-sm-3,.col-sm-9{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.content{
+    display: block;
+}
+.wrap{
+    padding: 0 2rem;
+}
+
+.dieukhoan img {
+    width: 5rem;
+    padding: .5rem;
+}
+
+.dieukhoan a {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+}
+
+@media (max-width: 414px) {
+
+
+}
+
+@media (max-width: 375px) {
+.dieukhoan img{
+    width: 2rem;
+}
+
+}
+
+.menu.toggled {
+    transform: translateX(0%);
+    display: block;
+}
+

@@ -1,5 +1,18 @@
 ﻿  $(document).ready(function () {
 
+  	$("#imenu").click(function(e) {
+        e.preventDefault();
+        console.log('123');
+        $(".menu").toggleClass("toggled");
+    });
+
+  	$(window).on("load, resize", function() {
+    var viewportWidth = $(window).width();
+    if (viewportWidth < 600) {
+            $(".danhmucsp h6").addClass('collapsed');
+    }
+	});
+
   	var owlpro1 = $('#pro1');
 	owlpro1.owlCarousel({
 	    items:3,
