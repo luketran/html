@@ -9,12 +9,17 @@
     font-weight: 500;
     line-height: 26.4px;
 }
+.wrapmenu{
+    background-color: #1d242b;
+    height: 1170px;
+}
 #imenu{
     position:absolute;
-    top: .4rem;
+    top: .2rem;
     width: 2rem;
-    left: 9rem;
+    left: 2rem;
     z-index: 99;
+    display: none;
 }
 
 .logogame img{
@@ -403,11 +408,10 @@ div#demo, div#demo1, div#demo2, div#demo3, div#demo4, div#demo5, div#demo6 {
     padding: 10px;
 }
 
-.list2 {width: 50%;height: 100%;}
+.list2 {width: 50%;}
 
 .listitem .list1 {
     width: 50%;
-    height: 100%;
     float: left;
 }
 
@@ -713,20 +717,19 @@ img.des.inshop {
 .brand {
     height: 60px;
     display: flex;
+    background-color: #1d242b;
 } 
 
 .leftmenu {
-    background-color:  #1d242b;
+    /* background-color:  #1d242b; */
     width:  280px;
-    height: 100%;
     float:  left;
     color: white;
-    position: fixed;
     transition: all .5s;
 }
 .main {
     width: 100%;
-    height: 1400px;
+    /* height: 1400px; */
     padding-left: 280px;
 }
 .banner {
@@ -736,8 +739,8 @@ img.des.inshop {
     background-repeat: no-repeat;
 }
 
-.leftmenu.toggled {
-    transform: translateX(0);
+.toggled.wrapmenu {
+    height: 100%;
     z-index: 99;
 }
 
@@ -779,17 +782,56 @@ img.des.inshop {
 }
 @media (max-width: 414px) {
     .leftmenu{
-        transform: translateY(-100%);
+    position: fixed;
+    width: 100%;
+    z-index: 10;
     }
     .main{
         padding-left: 0;
     }
     .brand{
-        position: absolute;
-        left: 11rem;
-        top: .2rem;
+    width: 100%;
     }
-    
+    #imenu{
+        display: block;
+    }
+    .wrapmenu{
+        height: 0;
+        overflow: hidden;
+    }
+    .listitem{
+        display: block;
+    }
+    .listitem .list1{
+        width: 100%;
+        float: unset;
+    }
+    .listitem .list2{
+        width: 100%;
+    }
+    .bbot{
+        margin:.5rem 0
+    }
+    .button{
+        width: 50%;
+    }
+    .btopleft{
+        width:unset;
+    }
+    .nd.khoichon{
+        margin-top:15px;
+    }
+    .signin{
+        width: 80%;
+        margin: .5rem auto;
+    }
+    .khoinoidung.right{
+        text-align: center;;
+    }
+    .nd.khoichon.right img {
+    margin-left: unset;
+    transform: unset;
+}
 }
 @media (max-width: 600px) {
     

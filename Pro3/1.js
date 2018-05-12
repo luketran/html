@@ -28,6 +28,6 @@
     $("#imenu").click(function(e) {
         e.preventDefault();
         console.log('123');
-        $(".leftmenu").toggleClass("toggled");
+        $(".wrapmenu").toggleClass("toggled");
     });
 });  
