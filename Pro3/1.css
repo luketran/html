@@ -11,13 +11,15 @@
 }
 .wrapmenu{
     background-color: #1d242b;
-    height: 1170px;
+    height: 100%;
+    transform-origin:  0% 0%;
+    transition:  all .5s;
 }
 #imenu{
     position:absolute;
     top: .2rem;
     width: 2rem;
-    left: 2rem;
+    left: 1rem;
     z-index: 99;
     display: none;
 }
@@ -611,6 +613,7 @@ img.des.inshop {
 .bbot {
     width: 100%;
     height: 22%;
+    margin: 1rem 0;
 }
 
 .btop {
@@ -721,7 +724,8 @@ img.des.inshop {
 } 
 
 .leftmenu {
-    /* background-color:  #1d242b; */
+    position: absolute;
+    height: 100%;
     width:  280px;
     float:  left;
     color: white;
@@ -740,8 +744,9 @@ img.des.inshop {
 }
 
 .toggled.wrapmenu {
-    height: 100%;
+    transform: scaleY(1);
     z-index: 99;
+    height: auto;
 }
 
 
@@ -781,10 +786,18 @@ img.des.inshop {
     
 }
 @media (max-width: 414px) {
+    i.fa.fa-refresh, i.fa.fa-reorder{
+        padding: 12px 10px;
+    }
+    .btopleft img {
+     margin-left: unset;    
+     transform: unset;
+    }
     .leftmenu{
-    position: fixed;
+    position: absolute;
     width: 100%;
     z-index: 10;
+    height: fit-content;
     }
     .main{
         padding-left: 0;
@@ -796,7 +809,7 @@ img.des.inshop {
         display: block;
     }
     .wrapmenu{
-        height: 0;
+        transform: scaleY(0);
         overflow: hidden;
     }
     .listitem{
@@ -833,10 +846,26 @@ img.des.inshop {
     transform: unset;
 }
 }
-@media (max-width: 600px) {
+@media (max-width: 375px) {
+    .shopitem{
+        justify-content: space-around;
+    }
+    .btop .khoinoidung, .btop .khoimo{
+        width:100px;       
+    }
+    
     
 }
-@media (max-width: 600px) {
-
+@media (max-width: 320px) {
+    .shopitem{
+        justify-content: space-around;
+    }
+    .btop .khoinoidung, .btop .khoimo{
+        width:100px;       
+    }
+    .item.item1{
+        display: none;
+    }
+    
 }
 
