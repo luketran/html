@@ -1,0 +1,25 @@
+.ordersuccess{
+    max-width: 1000px;
+    padding: 0 15px;
+    background-color: white;
+    text-align: center;
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    .annouce{
+        position: absolute;
+        @include absolute-center;
+        .fa-check{
+            padding: 10px;
+            background-color: green;
+            font-size: 30px;
+            color: white;
+            border-radius: 50%;
+        }
+        p{
+            font-size: 1.1em;
+        }
+    }
+}

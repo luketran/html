@@ -1,0 +1,28 @@
+.aboutus{
+    padding: 5rem 0;
+    article{
+        h1{
+            font-family: pony-normal;
+        }
+    }
+    .abimg{
+        img{
+            width: 100%;
+        }
+    }
+    .ourservice{
+        text-align: center;
+        h1{
+            font-size: 25px;
+            margin: 3rem 0;
+            font-weight: bold;
+        }
+        ._1service{
+            i{
+                font-size: 50px;
+                color: black;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}

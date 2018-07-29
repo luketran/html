@@ -1,0 +1,75 @@
+.whitepage{
+    padding: 10rem 0;
+}
+.formwrap{
+    border: 1px solid $border;
+    position: relative;
+    .usericon{
+        position: absolute;
+        transform: translateY(-50%) translateX(50%);
+        right: 50%;
+    }
+    .formcont{
+        text-align: center;
+        padding: 10rem 2rem 5rem 2rem;
+        h1{
+            font-size: 2.5rem;
+            margin: 0;
+        }
+        b{
+            font-size: 1.5rem;
+            display: block;
+            margin-bottom: 2rem;
+        }
+        .passrequire{
+            text-align: left;
+            color: $border;
+            font-style: italic;
+        }
+        input[type="text"]{
+            width: 100%;
+            border: none;
+            margin-bottom: 2rem;
+            border-radius: 5px;
+            background-color: $bg-color;
+            padding: 1rem;
+        }
+        .logopt{
+            display: inline-block;
+            width: 100%;
+            .cuscheck{
+                float: left;
+            }
+            a{
+                display: inline-block;
+                float: right;
+            }
+        }
+        button{
+            margin: 1rem 0;
+        }
+        a{
+            display: inline-block;
+        }
+    }
+}
+._404cont{
+    text-align: center;
+    b{
+        display: block;
+        font-size: 1.8rem;
+        margin: 2rem 0;
+    }
+    p{
+        margin: 2rem 0;
+        a{
+            color: $page-color;
+        }
+    }
+    a.pagebtn{
+        display: inline-block;
+        margin: 2rem 0;
+        text-decoration: none;
+        color: white;
+    }
+}

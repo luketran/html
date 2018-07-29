@@ -1,0 +1,37 @@
+.v2{
+    header{
+        .header{
+            .hotline{
+                // font-size: 14px;
+            }
+            .logo{
+                text-align: center;
+            }
+            .lognact{
+                text-align: right;
+                .login{
+                    display: inline-block;
+                    margin-right: 30px;
+                    .accaction{
+                        display: none;
+                    }
+                }
+                .short{
+                    display: inline-block;
+                    margin: 0;
+                    padding: 0;
+                    @media (max-width: 1200px){
+                        position: relative;
+                        top: unset;
+                    }
+                    li{
+                        display: inline-block;
+                        a{
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

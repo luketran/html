@@ -1,0 +1,112 @@
+.footer{
+    background-color: $bg-black;
+    color: #b5b5b5;
+    padding-top: 50px;
+    position: relative;
+    .info{
+        padding-bottom: 50px;
+        h5{
+            font-size: 15px;
+            color: white;
+        }
+        ul{
+            li{
+                a{
+                    color: #b5b5b5;
+                    text-decoration: none;
+                    &:hover,&:active,&:focus{
+                        color: $page-color;
+                    }
+                }
+            }
+        }
+        .ctinfo{
+            .ouraddress{
+                margin: 20px 0 20px 26px;
+                li{
+                    margin-bottom: 10px;
+                }
+                i{
+                    margin-right: 10px;
+                    color: white;
+                }
+                .fa-phone{
+                    border: 1px solid #b5b5b5;
+                    border-radius: 50%;
+                    padding: 1px 3px;
+                }
+                .fa-map-marker {
+                    font-size: 17px;
+                }
+                .pno{
+                    color: white;
+                }
+            }
+            .social{
+                li{
+                    float: left;
+                    margin-right: 10px;
+                    a{
+                        font-size: 17px;
+                        padding: 10px;
+                        width: 40px;
+                        height: 40px;
+                        color: $text-content;
+                        border: 1px solid;  
+                        border-radius: 50%;
+                        text-decoration: none;
+                        text-align: center;
+                        &:hover,&:active,&:focus{
+                            background-color: $page-color;
+                            color: white;
+                        }
+                        @media (max-width: 992px) {
+                            padding: 5px;
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
+                }
+            }
+        }
+        .sitemap{
+            display: inline-block;
+            width: 100%;
+        }
+    }
+    .trademark{
+        border-top: 1px solid $text-content;
+        padding: 10px 0;
+        @media (max-width: 767px) {
+            text-align: center;
+        }
+        .cpr{
+            span{
+                color: $page-color;
+            }
+        }
+        .paymentmt{
+            float: right;
+            @media (max-width: 767px) {
+                float: none;
+            }
+            span{
+                margin: 0 10px;
+            }
+        }
+    }
+    .totop{
+        position: absolute;
+        bottom: 41px;
+        right: 10px;
+        z-index: 100;
+        cursor: pointer;
+        i{
+            font-size: 25px;
+            border: 1px solid gray;
+            padding: 15px;
+            color: $page-color;
+            background-color: white;
+        }
+    }
+}

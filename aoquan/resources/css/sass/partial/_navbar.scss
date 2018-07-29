@@ -1,0 +1,342 @@
+.menu{
+    text-align: center;
+    @media(min-width:992px){
+        margin-top: 5px;
+    }
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        @media(min-width:992px){
+            display: block !important;
+        }
+        li{
+            position: relative;
+            
+        }
+    }
+    .menubar{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        
+        >li{
+            display: inline-block;
+            position: relative;
+            border: 1px solid transparent;
+            border-radius: 15px;
+            &:hover,&:focus,&:active {
+                @media(min-width:992px){
+                    border: 1px solid $page-color;
+                }
+                }
+            >a{
+                display: block;
+                font-weight: bold;
+                padding: 6px 15px;
+                text-decoration: none;
+                color:#000;
+                text-align: left;
+                >i{
+                    transition:  transform 0.5s ease;
+                }
+            }
+            &:hover{
+                >a{
+                    color: $page-color;
+                }
+            }
+            &.has-submenu{
+                &:hover{
+                    >a{
+                        text-decoration: none;
+                        >i{
+                            transform: rotate(-180deg);
+                        }
+                    }
+                    >ul.submenu{
+                        opacity: 1;
+                        visibility: visible;
+                        transform: none;
+                    }
+                }
+                >ul.submenu{
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    min-width: 100%;
+                    opacity: 0;
+                    visibility: hidden;
+                    max-width: 250px;
+                    transition: all 0.5s ease;
+                    transform: translateY(15px);
+                    z-index: 10;
+                    >li{
+                        display: block;
+                        background: #F7F8FA;
+                        @media(min-width:992px){
+                            padding-right: 20px;
+                        }
+                        &:first-child{
+                            margin-top: 10px;
+                            border-top: 4px solid $page-color;
+                        }
+                        >a{
+                            text-decoration: none;
+                            padding: 10px 15px;
+                            display: block;
+                            color:#000;
+                            white-space: nowrap;
+                            text-align: left;
+                            >i{
+                                transition : transform 0.5s ease;
+                            }
+                        }
+                        &:hover{
+                            @media(min-width:992px){
+                                background-color: white;
+                            }
+                            >a{
+                                color:$page-color;
+                            }
+                        }
+                        &.has-second-submenu{
+                            &:hover{
+                                >a{
+                                    >i{
+                                        transform: rotate(180deg);
+                                    }
+                                }
+                                >ul.second-submenu{
+                                    opacity: 1;
+                                    visibility: visible;
+                                    transform: none;
+                                }
+                            }
+                            >ul.second-submenu{
+                                position: absolute;
+                                top: 0;
+                                left: 100%;
+                                min-width: 100%;
+                                opacity: 0;
+                                visibility: hidden;
+                                transition: all 0.5s ease;
+                                transform: translateX(15px);
+                                
+                                >li{
+                                    display: block;
+                                    background: #F7F8FA;
+                                    @media(min-width:992px){
+                                        padding-right: 20px;
+                                    }
+                                    &:first-child{
+                                        border-top: 4px solid $page-color;
+                                    }
+                                    &:hover{
+                                        background-color: white;
+                                        >a{
+                                            color:$page-color;
+                                        }
+                                    }
+                                    >a{
+                                        text-decoration: none;
+                                        padding: 10px 15px;
+                                        display: block;
+                                        color:#000;
+                                        white-space: nowrap;
+                                        text-align: left;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width:991px){
+    body{
+        .main{
+            &:before{
+                content: '';
+                position: fixed;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: 10000;
+                opacity: 0;
+                transition: all 0.5s ease;
+                visibility: hidden;
+                background-color: rgba(0,0,0,.3);
+            }
+        }
+        &.menu-open{
+            .main{
+                &:before{
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+
+        }
+        li{
+            .open{
+                a{
+                    i{
+                        transform: translateY(-50%) rotate(180deg);
+                    }
+                }
+            }
+        }
+    }
+    .navbar-toggle{
+        display:inline-block !important;
+        z-index: 10001;
+        position: fixed;
+        left: 15px;
+        .icon-bar{
+            background: #000;
+        }
+    }
+    .menu{
+        position: fixed;
+        top: 70px;
+        right: 0;
+        bottom: 0;
+        left: -250px;
+        width: 250px;
+        z-index: 10001;
+        transition : left 0.5s ease;
+        background: #F7F8FA;
+        border-right :  1px solid #000;
+        overflow-x: hidden;
+        overflow-y: auto;
+        &.open{
+            left: 0;
+        }
+        .menubar{
+            
+            >li{
+                display: block;
+                >a{
+                    >i{
+                        transform: none !important;
+                    }
+                }
+                
+                &.has-submenu{
+                    >a{
+                        padding-right: 40px;
+                        position: relative;
+                        >i{
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                            bottom: 0;
+                            width: 40px;
+                            text-align: center;
+                            &:before{
+                                width: 20px;
+                                height: 20px;
+                                position: absolute;
+                                top: 50%;
+                                right: 10px;
+                                transform: translateY(-50%);
+                            }
+                        }
+                    }
+                    >ul.submenu{
+                        position: relative;
+                        top:auto;
+                        left: auto;
+                        min-width: 100%;
+                        opacity: 1;
+                        visibility: visible;
+                        max-width: unset;
+                        background: #F7F8FA;
+                        transition: unset;
+                        transform: unset;
+                        padding-left: 15px;
+                        display: none;
+                        >li{
+                            display: block;
+                            >a{
+                                padding: 10px 15px;
+                                display: block;
+                                color:#000;
+                                white-space: nowrap;
+                                >i{
+                                    transition : transform 0.5s ease;
+                                }
+                            }
+                            &:hover{
+                                >a{
+                                    color:$page-color;
+                                }
+                            }
+                            &.has-second-submenu{
+                                &:hover{
+                                    >a{
+                                        >i{
+                                            transform: none !important;
+                                        }
+                                    }
+                                    >ul.second-submenu{
+                                        opacity: 1;
+                                        visibility: visible;
+                                        transform: none;
+                                    }
+                                }
+                                >a{
+                                    padding-right: 40px;
+                                    position: relative;
+                                    >i{
+                                        position: absolute;
+                                        right: 0;
+                                        top: 0;
+                                        bottom: 0;
+                                        width: 40px;
+                                        text-align: center;
+                                        &:before{
+                                            width: 20px;
+                                            height: 20px;
+                                            position: absolute;
+                                            top: 50%;
+                                            right: 10px;
+                                            transform: translateY(-50%);
+                                        }
+                                    }
+                                }
+                                >ul.second-submenu{
+                                    position: relative;
+                                    top: auto;
+                                    left: auto;
+                                    padding-left: 15px;
+                                    min-width: 100%;
+                                    opacity:1;
+                                    visibility: visible;
+                                    background: #F7F8FA;
+                                    transition: unset;
+                                    transform:unset;
+                                    display: none;
+                                    >li{
+                                        display: block;
+                                        >a{
+                                            padding: 10px 15px;
+                                            display: block;
+                                            color:#000;
+                                            white-space: nowrap;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}

@@ -1,0 +1,27 @@
+.hidecontent{
+    .modalqview{
+        .modal-dialog{
+            width: unset !important;
+            max-width: 1200px;
+            button{
+                &.close{
+                    position: absolute;
+                    right: 20px;
+                    top: 10px;
+                    font-size: 30px;
+                    color: $page-color;
+                    text-shadow: none;
+                    opacity: 1;
+                    z-index: 9;
+                    @media (max-width: 991px) {
+                        right: 10px;
+                        top: 5px;
+                    }
+                }
+            }
+        }
+        .modal-content{
+            padding: 3rem 0;
+        }
+    }
+}

@@ -1,0 +1,187 @@
+.tablecontent{
+    padding: 5rem 0;
+    table{
+        width: 100%;
+        thead{
+            background-color: $bg-color;
+        }
+        th,td{
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+        td{
+            &.wliteminfo{
+                text-align: left;
+                display: table;
+                margin: 1rem 0;
+                
+                .wlitemdetail{
+                    display: table-cell;
+                    vertical-align: middle;
+                    padding-left: 1rem;
+                }
+            }
+            a{
+                &.savetocart{
+                    background-color: $bg-color;
+                    color: black;
+                    &:hover{
+                        background-color: $page-color;
+                    }
+                }
+            }
+            .rmfc{
+                background-color: $bg-color;
+                padding: 1rem;
+                border-radius: 3px;
+                cursor: pointer;
+                color: red;
+                &:hover{
+                    background-color: $page-color;
+                }
+            }
+        }
+    }
+    a{
+        &.pagebtn{
+            display: inline-block;
+        }
+    }
+}
+.cart{
+    @media(max-width:768px){
+        table{
+            display: block;
+            width: 100% !important;
+            overflow: hidden;
+            thead{
+                display: none;
+            }
+            tbody,tr,td{
+                display: block;
+                width: 100% !important;
+            }
+            tr{
+                position: relative;
+                border-bottom: 1px solid $border-line;
+                margin-bottom: 10px;
+                &.appear{
+                    .show-title{
+                        display: block;
+                    }
+                }
+            }
+            td{
+                padding: 5px 0 !important;
+                text-align: left !important;
+                &:after{
+                    clear: both;
+                    display: block;
+                    content: " ";
+                }
+                &.show-title{
+                    font-weight: bold;
+                    &:before{
+                        font-weight: normal;
+                        margin-right: 10px;
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                    &.st1{
+                        &:before{
+                            content : attr(data-title1);
+                        }
+                    }
+                    &.st2{
+                        display: flex;
+                        align-items: center;
+                        &:before{
+                            content : attr(data-title2);
+                        }
+                    }
+                    &.st3{
+                        &:before{
+                            content : attr(data-title3);
+                        }
+                    }
+                }
+                .rmfc{
+                    position: absolute;
+                    bottom: 15px;
+                    right: 0;
+                }
+            }
+        }
+    }
+    .cartaction{
+        a{
+            background-color: $bg-color;
+            color: black;
+            &:hover{
+                background-color: $page-color ;
+                color: white;
+            }
+        }
+        @media (max-width: 480px) {
+            text-align: center;
+            a{
+                margin: 1rem;
+            }
+        }
+    }
+}
+.wishlist{
+    @media(max-width:768px){
+        table{
+            display: block;
+            width: 100% !important;
+            overflow: hidden;
+            thead{
+                display: none;
+            }
+            tbody,tr,td{
+                display: block;
+                width: 100% !important;
+            }
+            tr{
+                position: relative;
+                border-bottom: 1px solid $border-line;
+                margin-bottom: 10px;
+                &.appear{
+                    .show-title{
+                        display: block;
+                    }
+                }
+            }
+            td{
+                padding: 5px 0 !important;
+                text-align: left !important;
+                &:after{
+                    clear: both;
+                    display: block;
+                    content: " ";
+                }
+                &.show-title{
+                    font-weight: bold;
+                    &:before{
+                        font-weight: normal;
+                        margin-right: 10px;
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                    &.st1{
+                        &:before{
+                            content : attr(data-title1);
+                        }
+                    }
+                    
+                }
+                .rmfc{
+                    position: absolute;
+                    bottom: 15px;
+                    right: 0;
+                }
+            }
+        }
+    }
+}

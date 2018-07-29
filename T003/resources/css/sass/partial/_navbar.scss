@@ -1,0 +1,379 @@
+.menu{
+    @media(min-width:992px){
+        margin-top: 2rem;
+    }
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        @media(min-width:992px){
+            display: block !important;
+        }
+        li{
+            position: relative;
+        }
+    }
+    .menubar{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        >li{
+            display: inline-block;
+            position: relative;
+            border-radius: 3px;
+            margin: 0 1rem;
+            background-color: $page-xanh;
+            &:hover,&:focus,&:active {
+                background-color: $page-color;
+            }
+            >a{
+                display: block;
+                font-weight: bold;
+                padding: 10px 20px;
+                text-decoration: none;
+                color:white;
+                text-align: left;
+                >i{
+                    transition:  transform 0.5s ease;
+                }
+            }
+            &.has-submenu{
+                &:hover{
+                    >a{
+                        text-decoration: none;
+                        >i{
+                            transform: rotate(-180deg);
+                        }
+                    }
+                    >ul.submenu{
+                        opacity: 1;
+                        visibility: visible;
+                        transition: transform 0.3s ease-out;
+                        transform: none;
+                    }
+                }
+                >ul.submenu{
+                    position: absolute;
+                    top: 100%;
+                    right: 0;
+                    min-width: 100%;
+                    opacity: 0;
+                    visibility: hidden;
+                    max-width: 250px;
+                    transform: translateY(15px);
+                    z-index: 10;
+                    border: 1px solid $border-light;
+                    >li{
+                        display: block;
+                        >a{
+                            text-decoration: none;
+                            padding: 15px 50px 15px 15px;
+                            display: block;
+                            color:black;
+                            background-color: white;
+                            white-space: nowrap;
+                            text-align: left;
+                            position: relative;
+                            >i{
+                                position: absolute;
+                                right: 5px;
+                                @include absolute-Y;
+                            }
+                        }
+                        &:hover{
+                            >a{
+                                color:white;
+                                background-color: $page-color;
+                            }
+                        }
+                        &.has-second-submenu{
+                            &:hover{
+                                >a{
+                                    >i{
+                                        transform: translateY(-50%) rotate(90deg);
+                                        transition: transform 0.3s ease-out;
+                                    }
+                                }
+                                >ul.second-submenu{
+                                    opacity: 1;
+                                    visibility: visible;
+                                    transform: none;
+                                    transition: 0.3s ease-out;
+                                }
+                            }
+                            >ul.second-submenu{
+                                position: absolute;
+                                top: 0;
+                                left: 100%;
+                                min-width: 100%;
+                                opacity: 0;
+                                visibility: hidden;
+                                transform: translateX(10px);
+                                >li{
+                                    display: block;
+                                    background-color: $page-color;
+                                    >a{
+                                        text-decoration: none;
+                                        padding: 15px 50px 15px 15px;
+                                        display: block;
+                                        color:white;
+                                        white-space: nowrap;
+                                        text-align: left;
+                                    }
+                                    &:hover{
+                                        >a{
+                                            color:black;
+                                            background-color: white;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+@media(max-width:991px){
+    body{
+        .main{
+            &:before{
+                content: '';
+                position: fixed;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: 2;
+                opacity: 0;
+                transition: all 0.5s ease;
+                visibility: hidden;
+                background-color: rgba(0,0,0,.3);
+            }
+        }
+        &.menu-open{
+            .main{
+                &:before{
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+    .navbar-toggle{
+        display:inline-block !important;
+        z-index: 10001;
+        position: fixed;
+        left: 15px;
+        top: 55px;
+        .icon-bar{
+            background: #000;
+            transition: 0.5s ease;
+        }
+        &.active{
+            .icon-bar{
+                &:first-child{
+                    transform: rotate(45deg);
+                    position: absolute;
+                    top: 15px;
+                }
+                &:nth-child(2){
+                   opacity: 0;
+                }
+                &:last-child{
+                    transform: rotate(-45deg);
+                    position: absolute;
+                    top: 11px;
+                }
+            }
+        }
+    }
+    .menu{
+        position: fixed;
+        top: 116px;
+        right: 0;
+        bottom: 0;
+        left: -250px;
+        width: 250px;
+        z-index: 10001;
+        transition : left 0.5s ease;
+        background: white;
+        color: black;
+        overflow-x: hidden;
+        overflow-y: auto;
+        &.open{
+            left: 0;
+        }
+        .menubar{
+            >li{
+                display: block;
+                border: none !important;
+                background-color: white;
+                &:hover,&:focus,&:active{
+                    background-color: white;
+
+                }
+                >a{
+                    color: black;
+                    &.active{
+                        color: $page-color;
+                    }
+                    >i{
+                        transform: none !important;
+                    }
+                }
+                &:hover{
+                    >a{
+                        color: $page-color;
+                        background-color: white;
+                    }
+                }
+                &.has-submenu{
+                    >a{
+                        padding-right: 40px;
+                        position: relative;
+                        >i{
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                            bottom: 0;
+                            width: 40px;
+                            text-align: center;
+                            &:before{
+                                width: 20px;
+                                height: 20px;
+                                position: absolute;
+                                top: 50%;
+                                right: 10px;
+                                transform: translateY(-50%);
+                            }
+                        }
+                    }
+                    &.open{
+                        .fa-angle-down{
+                            transform: rotate(180deg) !important;
+                        }
+                    }
+                    >ul.submenu{
+                        position: relative;
+                        top:auto;
+                        left: auto;
+                        min-width: 100%;
+                        opacity: 1;
+                        visibility: visible;
+                        max-width: unset;
+                        transition: unset;
+                        transform: unset;
+                        padding-left: 15px;
+                        display: none;
+                        border: none;
+                        >li{
+                            display: block;
+                            background-color: white;
+                            border: none !important;
+                            >a{
+                                padding: 10px 15px;
+                                display: block;
+                                color:#000;
+                                white-space: nowrap;
+                                &.active{
+                                    color: $page-color;
+                                }
+                                >i{
+                                    transition : transform 0.5s ease;
+                                }
+                            }
+                            &:hover{
+                                >a{
+                                    background-color: white;
+                                    color: $page-color;
+                                }
+                            }
+                            &.has-second-submenu{
+                                a{
+                                    .fa-angle-right{
+                                        &::before {
+                                            content: "\f107";
+                                        }
+                                    }
+                                    &.active{
+                                        color: $page-color;
+                                    }
+                                }
+                                &.open{
+                                    a{
+                                        i{
+                                            transform: rotate(-180deg) !important;
+                                        }
+                                    }
+                                }
+                                &:hover{
+                                    >a{
+                                        >i{
+                                            transform: none;
+                                        }
+                                    }
+                                    >ul.second-submenu{
+                                        opacity: 1;
+                                        visibility: visible;
+                                        transform: none;
+                                    }
+                                }
+                                >a{
+                                    padding-right: 40px;
+                                    position: relative;
+                                    >i{
+                                        position: absolute;
+                                        right: 0;
+                                        top: 0;
+                                        bottom: 0;
+                                        width: 40px;
+                                        text-align: center;
+                                        &:before{
+                                            width: 20px;
+                                            height: 20px;
+                                            position: absolute;
+                                            top: 50%;
+                                            right: 10px;
+                                            transform: translateY(-50%);
+                                        }
+                                    }
+                                }
+                                >ul.second-submenu{
+                                    position: relative;
+                                    top: auto;
+                                    left: auto;
+                                    padding-left: 15px;
+                                    min-width: 100%;
+                                    opacity:1;
+                                    visibility: visible;
+                                    transition: unset;
+                                    transform:unset;
+                                    display: none;
+                                    >li{
+                                        display: block;
+                                        background-color: white;
+                                        border: none !important;
+                                        >a{
+                                            padding: 10px 15px;
+                                            display: block;
+                                            color:#000;
+                                            white-space: nowrap;
+                                            &:hover{
+                                                background-color: unset;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
