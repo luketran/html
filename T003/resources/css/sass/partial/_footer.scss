@@ -22,14 +22,20 @@ footer{
             }
         }
         ._2sub{
-           input{
-               padding: 20px 12px;
-               border: 1px solid transparent;
-               &:focus{
-                   outline: none;
-                   border: 1px solid transparent;
-               }
-           }
+            .input-group{
+                width: unset;
+                border: none;
+                float: none;
+                input[type="text"]{
+                    text-align: left;
+                    padding: 20px 12px;
+                    border: 1px solid transparent;
+                    &:focus{
+                        outline: none;
+                        border: 1px solid transparent;
+                    }
+                }
+            }
         }
         .social{
             ul{
@@ -121,7 +127,7 @@ footer{
 
 .totop{
     position: fixed;
-    bottom: 100px;
+    bottom: 70px;
     right: 10px;
     z-index: 100;
     cursor: pointer;
@@ -131,8 +137,8 @@ footer{
     transition: 0.5s ease;
     i{
         font-size: 25px;
-        border: 1px solid gray;
-        padding: 15px;
+        border: 1px solid $page-xanh;
+        padding: 1rem;
         color: $page-color;
         background-color: white;
     }

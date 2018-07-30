@@ -1,0 +1,86 @@
+@import "sass/static/mixin";
+@import "sass/static/_variables.scss";
+@import "sass/static/font";
+@import "sass/static/button";
+@import "sass/static/general";
+@import "sass/partial/header";
+@import "sass/partial/body";
+@import "sass/partial/footer";
+@import "sass/partial/navbar";
+@import "sass/partial/banner";
+@import "sass/partial/slideitem";
+@import "sass/page/chitiettin";
+@import "sass/page/sanpham";
+@import "sass/page/chitietsp";
+@import "sass/page/giohang";
+@import "sass/page/thanhtoan";
+@import "sass/page/ordersuccess";
+@import "sass/page/dangnhap";
+@import "sass/page/taikhoan";
+@import "sass/page/lichsu";
+@import "sass/page/quenmatkhau";
+@import "sass/page/404";
+@import "sass/page/gioithieu";
+@import "sass/page/lienhe";
+@import "sass/page/tintuc";
+@import "sass/page/home";
+
+
+section{
+    .wrapper{
+        background-color: $bg-color;
+    }
+}
+
+
+
+.pagelocal{
+    padding: 10px 0;
+    background-color: $border-light;
+    @media (max-width:991px){
+        margin-top: 87.44px;
+    }
+    .breadcrumb{
+        margin: 0;
+        background-color: transparent;
+        padding: 0 15px;
+        li{
+            &.active{
+                color: black;
+                &::before{
+                   content: "\f105" !important;
+                   font-family: FontAwesome;
+                }
+            }
+        }
+    }
+    a{
+        color: $text-author;
+        text-decoration: none;
+    }
+}
+.pageinfo{
+    position: relative;
+    @media (min-width:992px) {
+        span{
+            position: absolute;
+            top: 20px;
+            right: 0;
+        }
+    }
+}
+.pagination{
+    li{
+        a{
+            margin: 0 3px;
+            background-color: $border-light;
+            border: 1px solid transparent;
+            color: $text;
+            font-weight: bold;
+            &:hover,&:active{
+                background-color: $page-xanh;
+                color: white;
+            }
+        }
+    }
+}

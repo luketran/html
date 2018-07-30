@@ -1,0 +1,99 @@
+footer{
+    background-color: #292929;
+    color: white;
+    .footer{
+        padding-top: 5rem;
+        .ourinfo{
+            .social{
+                margin: 2rem 0;
+                ul{
+                    li{
+                        list-style: none;
+                        display: inline-block;
+                        margin-right: .5rem;
+                        a{
+                            color: white;
+                            display: table;
+                            font-size: 2rem;
+                            width: 40px;
+                            height: 40px;
+                            text-align: center;
+                            text-decoration: none;
+                            &:before{
+                                display: table-cell;
+                                vertical-align: middle;
+                            }
+                            &:hover{
+                                background: $page-color;
+                            }
+                        }
+                    }
+                }
+            }
+            ul{
+                list-style: none;
+                li{
+                    position: relative;
+                    i{
+                        position: absolute;
+                        left: 0;
+                        top: 3px;
+                    }
+                    span{
+                        margin-left: 2rem;
+                        display: block;
+                    }
+                }
+            }
+        }
+        ._1foot{
+            h4{
+                font-size: 17px;
+                margin: 25px 0;
+            }
+            ul{
+                list-style: none;
+                li{
+                    a{
+                        @include a-usual;
+                        color: white;
+                    }
+                }
+            }
+            img{
+                margin-top: 3rem;
+            }
+        }
+        .trademark{
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+            text-align: center;
+            border-top: 1px solid $border-light;
+            a{
+                text-decoration: none;
+                color: $yellow;
+                font-weight: bold;
+            }
+        }
+    }
+    
+}
+
+.totop{
+    position: fixed;
+    bottom: 70px;
+    right: 10px;
+    z-index: 100;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(100%);
+    transition: 0.5s ease;
+    i{
+        font-size: 25px;
+        border: 1px solid $page-color;
+        padding: 1rem;
+        color: $page-color;
+        background-color: white;
+    }
+}

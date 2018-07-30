@@ -133,28 +133,53 @@ function Helper(){
         var path = $(this).find('img').attr('src');
         $('#big-photo img').attr('src', path);
         });
-        // slide image
-        var width = $(window).width(); 
-        var thumbs = 0;
-        if (($(document).width() >= 768)) {
-            thumbs=-210;
-        }
-        else {
-            thumbs=-110;
-        }
-        var counter = 0;
-        $(".thumbdown").click(function () {
-            if(counter == 2){return}
-            else{
-                $(".thumblist").css({"top": thumbs * ++counter});
-                }
-        })
-        $(".thumbup").click(function () {
-            if(counter == 0){return}
-            else{
-                $(".thumblist").css({"top": thumbs * --counter,});
-                }
-        })		
+		// slide image
+		var width = $(window).width(); 
+		var thumbs = 0;
+		if (width >= 768) {
+			thumbs=-210;
+		}
+		else {
+			thumbs=-110;
+		}
+		var counter = 0;
+		$(".thumbdown").click(function () {
+			if(counter == 2){return}
+			else{
+				$(".thumblist").css({"top": thumbs * ++counter});
+				}
+		})
+		$(".thumbup").click(function () {
+			if(counter == 0){return}
+			else{
+				$(".thumblist").css({"top": thumbs * --counter,});
+				}
+		})		
+		$( window ).resize(function() {
+			$(".thumblist").css({"top": 0});
+			var width = $(window).width(); 
+			var thumbs = 0;
+			if (width >= 768) {
+				thumbs=-210;
+			}
+			else {
+				thumbs=-110;
+			}
+			var counter = 0;
+			$(".thumbdown").click(function () {
+				if(counter == 2){return}
+				else{
+					$(".thumblist").css({"top": thumbs * ++counter});
+					}
+			})
+			$(".thumbup").click(function () {
+				if(counter == 0){return}
+				else{
+					$(".thumblist").css({"top": thumbs * --counter,});
+					}
+			})		
+		});
+        // var width = $(window).width(); 
     }
     methods.colornsizepick = function(){
         $( ".sizepick a" ).click(function() {
@@ -235,10 +260,33 @@ function Helper(){
 		});
 	}
 	methods.cartshow = function(){
-		$('.short a').on('click', function(event) {
+		$('.short a.fa-shopping-bag').on('click', function(event) {
 		event.preventDefault();
 		/* Act on the event */
 		$(this).parents('li').toggleClass('showcart');
+		});
+		$('body, html').on('click', function(event){
+			var target = $(event.target);
+			if( !target.is('.showcart *')){
+				$('.short a.fa-shopping-bag').parents('li').removeClass('showcart');
+			}
+		});
+	}
+	methods.inputctrl = function(){
+		$(".nictrl").on("click", function() {
+		var $button = $(this);
+		var oldValue = $button.parent().find("input").val();
+		if ($button.text() == "+") {
+			var newVal = parseFloat(oldValue) + 1;
+		} else {
+		// Don't allow decrementing below zero
+		if (oldValue > 0) {
+			var newVal = parseFloat(oldValue) - 1;
+		} else {
+			newVal = 0;
+		}
+		}
+		$button.parent().find("input").val(newVal);
 		});
 	}
 
@@ -270,5 +318,6 @@ $(function(){
     helper.showitem();
     helper.addactive();
     helper.cartshow();
+    helper.inputctrl();
     // helper.initMap();
 });

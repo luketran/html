@@ -1,0 +1,179 @@
+// trang thanh toan
+.payment{
+    padding: 40px 0;
+    .logoption{
+        background-color: $bg-color;
+        border-top: 2px solid $page-color;
+        padding: 10px;
+        margin-bottom: 20px;
+        .form-check{
+            display: flex;
+            label{
+                font-weight: normal;
+            }
+        }
+    }
+    .paymentinfo{
+        h4{
+            border-bottom: 1px solid $border;
+            padding-bottom: 10px;
+            margin-top: 0;
+            margin-bottom: 15px;
+
+        }
+        .uaddress{
+            .uinput{
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                margin-bottom: 10px;
+                ._1uinput{
+                    display: grid;
+                    width: 48%;
+                    margin: 10px 0;
+                    @media (max-width: 480px) {
+                        width: 100%;
+                    }
+                    label{
+                        font-weight: normal;
+                    }
+                    input{
+                        @include getboder;
+                        border-radius: 10px;
+                        padding: 5px 10px;
+                        width: 100%;
+                    }
+                }
+            }
+            
+        }
+        .transfer{
+            margin-bottom: 20px;
+            .form-check{
+                margin: 10px 0;
+                height: 35px;
+            }
+            input{
+                float: left;
+                margin-top: 5px;
+            }
+            label{
+                display: flex;
+                justify-content: space-between;
+                span{
+                    width: 32%;
+                    text-align: right;
+                    &:first-child{
+                        text-align: left;
+                        padding-left: 10px;
+                    }
+                }
+            }
+        }
+        .paymethod{
+            .form-check{
+                input{
+                    margin-top: 7px;
+                }
+                label{
+                    padding-left: 10px;
+                    img{
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+        .coupon{
+            @include getboder;
+            margin-bottom: 20px;
+            padding: 15px;
+            h4{
+                font-size: 15px;
+                border-bottom: 1px solid $border;
+                padding-bottom: 10px;
+                margin-top: 0px;
+                margin: 0;
+            }
+            .cpform{
+                margin: 10px 0;
+                input{
+                @include getboder;
+                border-radius: 10px;
+                padding: 5px 10px;
+                margin-right: 10px;
+                }
+                button{
+                    @include staticbutton;
+                    padding: 5px 15px;
+                }
+            }
+            textarea{
+                margin-top:10px;
+                width: 100%;
+                @include getboder;
+                border-radius: 10px;
+                padding: 5px 10px;
+            }
+        }
+        .yourcart{
+            @include getboder;
+            padding: 15px;
+            h4{
+                border-bottom: 1px solid $border;
+                padding-bottom: 10px;
+                margin: 0px;
+            }
+            table{
+                thead{
+                    th{
+                        padding: 8px 0;
+                        border-bottom: none;
+                        &:last-child{
+                            text-align: right;
+                        }
+                    }
+                }
+                tbody{
+                    tr{
+                        td{
+                            border-top: 1px dashed #ddd;
+                            padding: 10px 0;
+                            font-weight: bold;
+                            vertical-align: middle;
+                            &:last-child{
+                                text-align: right;
+                            }
+                            span{
+                                margin: 0 2 0px;
+                                @media (max-width: 480px) {
+                                    margin: 0 9px;
+                                }
+                            }
+                            .dr{
+                                color: $page-color;
+                            }
+                        }
+                    }
+                    .pac{
+                        td{
+                            span{
+                            color: $page-color;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+        .confirm{
+            @include staticbutton;
+            padding: 10px 20px;
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            margin-bottom: 20px;
+            text-decoration: none;
+        }
+        
+    }
+}

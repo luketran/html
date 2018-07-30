@@ -1,0 +1,132 @@
+.dealp{
+    color: red;
+    font-weight: bold;
+    font-size: 15px;
+    margin-right: 5px;
+}
+.oldp{
+    color: $text;
+    font-size: 13px;
+    text-decoration: line-through;
+}
+._1item{
+    text-align: center;
+    position: relative;
+    margin: 2px;
+    transition: 0.5s ease;
+    &:hover{
+        box-shadow: -2px 2px 4px 0px grey;
+        background-color: white;
+        // transform: scale(1.1);
+    }
+    img{
+        margin-bottom: 10px;
+        transition: all 0.3s ease-in-out;
+    }
+    a{
+        @include a-usual;
+        color: $text;
+        font-weight: bold;
+        transition: 0.5s ease;
+    }
+    .star{
+        padding: 7px 0;
+        i{
+            color: $page-color;
+        }
+    }
+    button{
+        border: none;
+        padding: 10px;
+        margin-top: 10px;
+        color: $text;
+        background-color: $bg-button;
+        transition: 0.5s ease;
+        &:hover{
+            background-color: $page-color;
+        }
+    }
+}
+.itemslide2{
+    ._1item{
+        background-color: white;
+        padding: 20px 15px;
+        border: 1px solid $border-light;
+        position: relative;
+        &:hover{
+            .quickact{
+                transform: translateY(-50%) translateX(0px);
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+        img{
+            border-bottom: 1px solid $border-light;
+            padding:15px;
+        }
+        .countdown{
+            margin: 10px 0;
+            ul{
+                overflow: hidden;
+                li{
+                    position: relative;
+                    overflow: hidden;
+                    display: inline-block;
+                    padding: 10px ;
+                    animation: hightlight 2s infinite;
+                    background-color: #D9D9D9;
+                    @media (min-width:992px) and (max-width:1199px) {
+                        font-size: 10px;
+                    }
+                    p{
+                        margin: 0;
+                    }
+                }
+            }
+        }
+        .quickact{
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%) translateX(100px);
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.3s ease;
+            a{
+                text-decoration: none;
+                width: 30px;
+                height: 30px;
+                padding: 8px;
+                margin: 2px 0;
+                color: white;
+                background-color: $page-xanh;
+                &:hover{
+                    color: $page-color;
+                }
+            }
+        }
+    }
+}
+.newcome{
+    ._1item{
+        .dealp{
+            font-size: 15px;
+        }
+        .oldp{
+            font-size: 13px;
+        }
+        button{
+            font-size: 13px;
+        }
+    }
+}
+@keyframes hightlight {
+    0% {
+        background-color: white;
+        color: $page-xanh;
+    }
+    100% {
+        background-color: $page-xanh;
+        color: white;
+    }
+}

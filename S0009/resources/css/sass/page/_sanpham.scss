@@ -1,0 +1,89 @@
+
+.priceslider{
+    input{
+        border:none; 
+        color:black; 
+        font-weight:bold;
+    }
+    .ui-slider{
+        background-color: $bg-button;
+        border-radius: 20px;
+        border: none;   
+    }
+    .ui-slider-range{
+        background-color: $page-xanh;
+    }
+    .ui-slider-handle{
+        border-radius: 50%;
+        border: 4px solid $page-xanh;
+        cursor: pointer;
+        outline: none;
+    }
+}
+.productfilter{
+    h4{
+        border-bottom: 1px solid $border-line;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        font-weight: bold;
+    }
+    a{
+        text-decoration: none;
+        color: $text;
+        &:hover,&:active{
+            color: $page-xanh;
+        }
+    }
+    color: $text;
+    ul{
+        list-style: none;
+        margin-left: 15px;
+        li{
+            padding: 5px 0;
+        }
+    }
+    ._1opt{
+        margin: 20px 0;
+    }
+}
+.topfilter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    .filterview{
+        a{
+            text-decoration: none;
+            color: white;
+            background-color: $bg-button;
+            padding: 10px;
+            &:hover,&:active,&:focus{
+                background-color: $page-xanh;
+            }
+        }
+    }
+    .filtoption{
+        select{
+            background-color: $bg-button;
+            border: 1px solid transparent;
+            padding: 3px;
+            outline: none;
+        }
+    }
+}
+.productlist{
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    ._1item{
+        margin-bottom: 15px;
+        transition: 0.3s ease-in-out;
+        &:hover{
+            transform: scale(1.05);
+        }
+        img{
+            width: 100%;
+        }
+    }
+}

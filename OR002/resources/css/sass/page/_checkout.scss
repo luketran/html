@@ -1,0 +1,159 @@
+.checkout{
+    padding: 50px 0;
+    @media (max-width: 991px) {
+        padding: 2rem 0;
+    }
+    input[type="text"],textarea{
+        width: 100%;
+        border: none;
+        background-color: $bg-color;
+        padding: 1.5rem;
+        border-radius: 5px;
+        margin-bottom: 2rem;
+    }
+    input[type="radio"]{
+        &::after{
+            background-color: $page-color;
+        }
+        &:checked {
+            border-color: $border-line;
+        }
+    }
+    button{
+        background-color: $page-color;
+        color: white;
+    }
+    .ttkh{
+        .puinfo{
+            ._1ktt{
+                border-bottom: 1px solid $border;
+                padding: 20px 0;
+                display: block;
+            }
+            .tit{
+                display: block;
+                margin-bottom: 15px;
+                b{
+                    font-size: 20px;
+                }
+                .fa-minus{
+                    float: right;
+                }
+            }
+            .logcont{
+                .logopts{
+                    label{
+                        display: inline;
+                    }
+                }
+                .changecont{
+                    margin-top: 1rem;
+                    .cont1,.cont2,.cont3{
+                        max-height: 0;
+                        overflow: hidden;
+                        &.showlogopt{
+                            transition: 0.5s ease;
+                            max-height: 500px;
+                        }
+                    }
+                    input{
+                        padding: 10px 15px;
+                        margin-bottom: 15px;
+                    }
+                    button{
+                        border-radius: 20px;
+                    }
+                }
+            }
+            .paymethod{
+                border-bottom: none;
+                .form-check{
+                    input{
+                        margin-right: 10px;
+                    }
+                }
+            }
+            .rminfo{
+                label{
+                    display: inline;
+                }
+            }
+        }
+    }
+    .ttdh{
+        h4{
+            font-size: 20px;
+            font-weight: bold;
+            border-bottom: 1px solid $border;
+            padding-bottom: 15px;
+            margin-top: 20px;
+        }
+        ._1ttdh{
+            border-bottom: 1px solid $border;
+            display: inline-block;
+            width: 100%;
+            padding: 15px 0;
+            table{
+                width: 100%;
+                text-align: right;
+                thead{
+                    th{
+                        text-align: right;
+                        padding: 5px 0;
+                        &:first-child{
+                            text-align: left;
+                        }
+                    }
+                }
+                tbody{
+                    td{
+                        text-align: right;
+                        padding: 5px 0;
+                        &:first-child{
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+        }
+        .coupon{
+            position: relative;
+            input{
+                border-radius: 20px;
+                padding: 10px 15px;
+            }
+            button{
+                position: absolute;
+                top: 15px;
+                right: 0;
+                padding: 10px 30px;
+                border-radius: 20px;
+            }
+        }
+        .otfee{
+            ._1fee{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 10px;
+                .ngg,.dcountrate{
+                    font-weight: bold;
+                }
+            }
+            h3{
+                text-align: right;
+            }
+        }
+        .btconfirm{
+            margin-top: 15px;
+            padding: 15px 20px;
+            width: 100%;
+            border-radius: 30px;
+            display: inline-block;
+            text-align: center;
+            background-color: $page-color;
+            &:hover{
+                background-color: $page-xanh;
+            }
+        }
+    }
+}

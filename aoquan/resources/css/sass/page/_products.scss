@@ -1,0 +1,165 @@
+.sppage{
+    padding: 50px 0;
+    background-color: $bg-color;
+    .left{
+        background-color: white;
+        padding: 0;
+        color: $text-content;
+        font-size: 17px;
+        @media (max-width: 1024px) {
+            font-size: 15px;
+        }
+        h4{
+            color: black;
+            font-weight: bold;
+        }
+        .leftmenu{
+            border-bottom: 1px solid $border;
+            padding: 20px;
+            ul{
+                li{
+                    margin: 15px 0  ;
+                    a{
+                        @include a-usual;
+                        color: $text-content;
+                    }
+                    i{
+                        float: right;
+                        cursor: pointer;
+                    }
+                    .fa-minus{
+                        position: relative;
+                        &:after {
+                            content: "\f068";
+                            transform: rotate(90deg);
+                            position: absolute;
+                            right: 0;
+                        }
+                    }
+                    ul{
+                        height: 0;
+                        overflow: hidden;
+                        transition: 0.4s linear;
+                        li{
+                            margin: 10px;
+                            &:last-child{
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+                .smenu{
+                    .fa-minus{
+                        &:after {
+                            visibility: hidden;
+                        }
+                    }
+                    ul{
+                        height: auto;
+                    }
+                }
+            }
+        }
+        .loption{
+            ._1opt{
+                border-bottom: 1px solid $border;
+                padding: 20px;
+                ul{
+                    li{
+                        label{
+                            font-weight: normal;
+
+                        }
+                    }                    
+                }
+            }
+        }
+    }
+    .right{
+        text-align: center;
+        .topfilter{
+            margin: 15px 0;
+            display: table;
+            width: 100%;
+            span{
+                float: left;
+            }
+            .filter{
+                float: right;
+                .filterview{
+                    a{
+                        padding: 10px;
+                        text-decoration: none;
+                        border-radius: 50%;
+                        background-color: white;
+                        color: black;
+                        &:hover,&:active,&:focus{
+                            background: $page-color;
+                            cursor: pointer;
+                            color: white;
+                        }
+                        &.active{
+                            background: $page-color;
+                            color: white;
+                        }
+                    }
+                }
+                .filtoption{
+                    select{
+                        border-radius: 20px;
+                        padding: 6px 10px;
+                    }
+                }
+            }
+        }
+        .dssp{
+            .row{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            ._1item{
+                text-align: left;
+            }
+        }
+        .view2{
+            .item{
+                margin-bottom: 15px;
+                &:hover,&:active,&:focus{
+                    background-color: white;
+                }
+                padding-left: 0;
+                .itemimg{
+                    padding-left: 0;
+                }
+                .iteminfo{
+                    text-align: left;
+                    margin-top: 30px;
+                    a{
+                        @include a-usual;
+                        h4{
+                            font-weight: bold;
+                        }
+                    }
+                    .price{
+                        font-size: 18px;
+                        font-weight: bold;
+                    }
+                    .oldprice{
+                        color: $text-content;
+                        text-decoration: line-through;
+                    }
+                    .p{
+                        color: $text-content;
+                        text-align: justify;
+                    }
+                    button{
+                        @include buttonpage;
+                        padding: 10px 15px;
+                        margin-right: 10px;
+                    }
+    
+                }
+            }
+        }
+    }
+}

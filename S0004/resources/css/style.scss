@@ -1,0 +1,103 @@
+@import "sass/static/mixin";
+@import "sass/static/_variables.scss";
+@import "sass/static/font";
+@import "sass/static/button";
+@import "sass/static/general";
+@import "sass/partial/header";
+@import "sass/partial/body";
+@import "sass/partial/footer";
+@import "sass/partial/navbar";
+@import "sass/partial/item";
+@import "sass/page/product";
+@import "sass/page/productdetail";
+@import "sass/page/hidecontent";
+@import "sass/page/news";
+@import "sass/page/ordersuccess";
+@import "sass/page/aboutus";
+@import "sass/page/contactus";
+// @import "sass/page/taikhoan";
+// @import "sass/page/lichsu";
+// @import "sass/page/quenmatkhau";
+// @import "sass/page/404";
+// @import "sass/page/gioithieu";
+// @import "sass/page/lienhe";
+// @import "sass/page/tintuc";
+// @import "sass/page/home";
+
+.main{
+    background-image: url(../images/content/bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    padding: 0 5rem;
+    @media (max-width: 991px) {
+        padding: 0 15px
+    }
+}
+.wrapper{
+    height: 100%;
+    @media (max-width: 991px) {
+        height: unset;
+    }
+}
+.content{
+    width: 100%;
+    height: 100%;
+    padding-top: 15vh;
+    padding-bottom: 10vh;
+}
+.home{
+    display: block;
+    max-width: 500px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+.homecontent{
+    h1{
+        color: $page-color;
+    }
+    h3{
+        color: white;
+        margin-bottom: 20px;
+    }
+    a{
+        padding: 10px 30px;
+        color: black;
+        text-decoration: none;
+        background-color: white;
+        border-radius: 30px;
+        display: inline-block;
+        margin-top: 30px;
+        &:hover{
+            background-color: $page-color;
+        }
+
+    }
+}
+
+.pagination{
+    li{
+        a{
+            border-radius: 50% !important;
+            background-color: transparent;
+            border: none;
+            color: white;
+            &:hover,&:active{
+                background-color: #333333;
+            }
+        }
+    }
+}
+.pagebtn{
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 30px;
+    &:hover{
+        background-color: $page-color;
+        border: 1px solid transparent;
+    }
+}
+

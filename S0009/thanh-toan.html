@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+  	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title></title>
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="resources/vendor/bootstrap/bootstrap.min.css">
+		<link rel="stylesheet" href="resources/vendor/owlcarousel/owl.carousel.min.css">
+		<link rel="stylesheet" href="resources/vendor/font-awesome-4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<link href="resources/css/style.css" rel="stylesheet">
+  	</head>
+  	<body>
+	<section class="main">
+		<header>
+			<div class="text-right">
+				<button id="btn-toggle" class="navbar-toggle">
+					<i class="icon-bar"></i>
+					<i class="icon-bar"></i>
+					<i class="icon-bar"></i>
+				</button>
+			</div>
+			<div class="tophead">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-6 text-left">
+							<div class="sitenav">
+								<a href="index.html">Trang chủ</a>
+								<a href="tin-tuc.html">Tin tức</a>
+								<a href="gioi-thieu.html">Giới thiệu</a>
+							</div>
+						</div>
+						<div class=" col-sm-6 text-right">
+							<a href="" class="towishlist"><i class="fa fa-heart"></i>Yêu thích</a>
+							<a href="dang-nhap.html">Đăng nhập</a>|
+							<a href="dang-ky.html">Đăng ký</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="midhead">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-2">
+							<div class="logo">
+								<a href="index.html"><img src="resources/images/logo.png" alt=""></a>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="search">
+								<form action="">
+									<span class="category">
+										<span>Danh mục</span>
+										<i class="fa fa-chevron-down showicon"></i>
+										<ul class="listdm">
+											<li><a href="#">Thời trang nam</a></li>
+											<li><a href="#">Thời trang nữ</a></li>
+											<li><a href="#">Túi xách</a></li>
+											<li><a href="#">Giày dép</a></li>
+											<li><a href="#">Phụ kiện</a></li>
+										</ul>
+										<i class="fa fa-shevron-down"></i>
+									</span>
+									<input type="text" placeholder="Nhập từ khoá tìm kiếm....">
+									<i class="fa fa-search"></i>
+								</form>
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="headshort hline">
+								<div class="row">
+									<div class="fa fa-mobile"></div>
+									<div class="hscont">
+										<p>Hotline:</p>
+										<p>(+84) 98765432</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="headshort shortcart">
+								<div class="row">
+									<i class="fa fa-shopping-basket" id="opcart"><sup>3</sup></i>	
+									<div class="scart">
+										<h5>Có 2 sản phẩm trong giỏ hàng</h5>
+										<div class="scartitems">
+											<div class="_1icitem">
+												<img src="resources/images/content/onsale.png" alt="">
+												<div class="_iciteminfo">
+													<b>Loa để bạn ultra mini</b>
+													<div class="itemprice">
+														<span class="dealp">3.000.000đ</span><span class="oldp">3.500.000đ</span>
+													</div>
+													<div class="input-group _itemno">
+														<a class="input-group-addon"></a>
+														<input type="number" class="form-control" aria-label="" value="1">
+														<a class="input-group-addon"></a>
+													</div>	
+												</div>
+												<i class="fa fa-trash"></i>
+											</div>
+											<div class="_1icitem">
+												<img src="resources/images/content/onsale.png" alt="">
+												<div class="_iciteminfo">
+													<b>Loa để bạn ultra mini</b>
+													<div class="itemprice">
+														<span class="dealp">3.000.000đ</span><span class="oldp">3.500.000đ</span>
+													</div>
+													<div class="input-group _itemno">
+														<a class="input-group-addon"></a>
+														<input type="number" class="form-control" aria-label="" value="1">
+														<a class="input-group-addon"></a>
+													</div>	
+												</div>
+												<i class="fa fa-trash"></i>
+											</div>
+											<div class="_1icitem">
+												<img src="resources/images/content/onsale.png" alt="">
+												<div class="_iciteminfo">
+													<b>Loa để bạn ultra mini</b>
+													<div class="itemprice">
+														<span class="dealp">3.000.000đ</span><span class="oldp">3.500.000đ</span>
+													</div>
+													<div class="input-group _itemno">
+														<a class="input-group-addon"></a>
+														<input type="number" class="form-control" aria-label="" value="1">
+														<a class="input-group-addon"></a>
+													</div>	
+												</div>
+												<i class="fa fa-trash"></i>
+											</div>
+											<div class="_1icitem">
+												<img src="resources/images/content/onsale.png" alt="">
+												<div class="_iciteminfo">
+													<b>Loa để bạn ultra mini</b>
+													<div class="itemprice">
+														<span class="dealp">3.000.000đ</span><span class="oldp">3.500.000đ</span>
+													</div>
+													<div class="input-group _itemno">
+														<a class="input-group-addon"></a>
+														<input type="number" class="form-control" aria-label="" value="1">
+														<a class="input-group-addon"></a>
+													</div>	
+												</div>
+												<i class="fa fa-trash"></i>
+											</div>
+											<div class="_1icitem">
+												<img src="resources/images/content/onsale.png" alt="">
+												<div class="_iciteminfo">
+													<b>Loa để bạn ultra mini</b>
+													<div class="itemprice">
+														<span class="dealp">3.000.000đ</span><span class="oldp">3.500.000đ</span>
+													</div>
+													<div class="input-group _itemno">
+														<a class="input-group-addon"></a>
+														<input type="number" class="form-control" aria-label="" value="1">
+														<a class="input-group-addon"></a>
+													</div>	
+												</div>
+												<i class="fa fa-trash"></i>
+											</div>
+										</div>
+										<div class="scartaction">
+											<a href="gio-hang.html">XEM GIỎ HÀNG</a>
+											<a href="thanh-toan.html">THANH TOÁN</a>
+										</div>
+									</div>
+									<div class="hscont">
+										<p>Giỏ hàng:</p>
+										<p>3 sản phẩm</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bothead">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<nav class="menu" id="menu">
+								<ul class="menubar">
+									<li>
+										<a class="has-submenu" href="san-pham.html">Máy tính & Laptop<i class="icon-first-submenu fa fa-angle-down"></i></a>
+									</li>
+									<li class="has-submenu">
+										<a href="#">
+											Đồng hồ
+											<i class="icon-first-submenu fa fa-angle-down"></i>
+										</a>
+										<ul class="submenu">
+											<li class="has-second-submenu">
+												<a href="san-pham.html">
+													Submenu 1 
+													<i class="icon-second-submenu fa fa-angle-down"></i>
+												</a>
+												<ul class="second-submenu">
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+												</ul>
+											</li>
+											<li class="has-second-submenu">
+												<a href="san-pham.html">
+													Submenu 1 
+													<i class="icon-second-submenu fa fa-angle-down"></i>
+												</a>
+												<ul class="second-submenu">
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+													
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+												</ul>
+											</li>
+											<li class="has-second-submenu">
+												<a href="#">
+													Submenu 1 
+													<i class="icon-second-submenu fa fa-angle-down"></i>
+												</a>
+												<ul class="second-submenu">
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+													
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+												</ul>
+											</li>
+											<li class="has-second-submenu">
+												<a href="#">
+													Submenu 1 
+													<i class="icon-second-submenu fa fa-angle-down"></i>
+												</a>
+												<ul class="second-submenu">
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+												</ul>
+											</li>
+											
+											<li><img src="resources/images/megamenu.png" alt=""></li>
+										</ul>
+									</li>
+									<li class="has-submenu">
+										<a href="san-pham.html">
+											Điện thoại
+											<i class="icon-first-submenu fa fa-angle-down"></i>
+										</a>
+										<ul class="submenu">
+											<li>
+												<a href="#">Submenu 1</a>
+											</li>
+											<li class="has-second-submenu">
+												<a href="#">
+													Submenu 1 
+													<i class="icon-second-submenu fa fa-angle-down"></i>
+												</a>
+												<ul class="second-submenu">
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+												</ul>
+											</li>
+											<li>
+												<a href="#">Submenu 1</a>
+											</li>
+											<li class="has-second-submenu">
+												<a href="#">
+													Submenu 1 
+													<i class="icon-second-submenu fa fa-angle-down"></i>
+												</a>
+												<ul class="second-submenu">
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+												</ul>
+											</li>
+											<li>
+												<a href="#">Submenu 1</a>
+											</li>
+											<li><img src="resources/images/megamenu.png" alt=""></li>
+										</ul>
+									</li>
+									<li><a href="san-pham.html">Tivi<i class="icon-first-submenu fa fa-angle-down"></i></a></li>
+									<li><a href="san-pham.html">Sách<i class="icon-first-submenu fa fa-angle-down"></i></a></li>
+									<li><a href="san-pham.html">Tablet<i class="icon-first-submenu fa fa-angle-down"></i></a></li>
+									<li class="has-submenu">
+										<a href="san-pham.html">Thời trang nam<i class="icon-first-submenu fa fa-angle-down"></i></a>
+										<ul class="submenu">
+											<li class="has-second-submenu">
+												<a href="#">
+													Submenu 1 
+													<i class="icon-second-submenu fa fa-angle-down"></i>
+												</a>
+												<ul class="second-submenu">
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+												</ul>
+											</li>
+											<li class="has-second-submenu">
+												<a href="#">
+													Submenu 1 
+													<i class="icon-second-submenu fa fa-angle-down"></i>
+												</a>
+												<ul class="second-submenu">
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+												</ul>
+											</li>
+											<li class="has-second-submenu">
+												<a href="#">
+													Submenu 1 
+													<i class="icon-second-submenu fa fa-angle-down"></i>
+												</a>
+												<ul class="second-submenu">
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+												</ul>
+											</li>
+											<li class="has-second-submenu">
+												<a href="#">
+													Submenu 1 
+													<i class="icon-second-submenu fa fa-angle-down"></i>
+												</a>
+												<ul class="second-submenu">
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+												</ul>
+											</li>
+											<li class="has-second-submenu">
+												<a href="#">
+													Submenu 1 
+													<i class="icon-second-submenu fa fa-angle-down"></i>
+												</a>
+												<ul class="second-submenu">
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+													<li>
+														<a href="#">Submenu 1</a>
+													</li>
+												</ul>
+											</li>
+											<li><img src="resources/images/megamenu.png" alt=""></li>
+										</ul>
+									</li>
+									<li><a href="san-pham.html">Thời trang nữ<i class="icon-first-submenu fa fa-angle-down"></i></a></li>
+									<li><a href="san-pham.html">Túi xách<i class="icon-first-submenu fa fa-angle-down"></i></a></li>
+									<li><a href="san-pham.html">Mỹ phẩm<i class="icon-first-submenu fa fa-angle-down"></i></a></li>
+									<li><a href="san-pham.html">Nội thẩt<i class="icon-first-submenu fa fa-angle-down"></i></a></li>
+									<li><a href="san-pham.html">Phụ kiện<i class="icon-first-submenu fa fa-angle-down"></i></a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- end header -->
+		<section class="wrapper">
+        <div class="pagelocal">
+			<div class="container">
+				<ol class="breadcrumb">
+					<li><a href="#">Trang chủ</a></li>
+					<li class="active">Data</li>
+				</ol>
+			</div>
+        </div>
+        <div class="checkoutoption">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="panel-group" id="accordion">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                                    <i class="fa fa-plus"></i>TÙY CHỌN THANH TOÁN</a>
+                                </h4>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse in ">
+                                <div class="panel-body">
+                                    <div class="_1opt">
+                                        <div class="row">
+                                            <div class="_optnew">
+                                                <div class="col-sm-6">
+                                                    <b>KHÁCH HÀNG MỚI</b>
+                                                    <p>Tùy chọn thanh toán:</p>
+                                                    <label class="cuscheck" for="log1">
+                                                        <input type="radio" id="log1" name="logopt" value="" checked>Tôi muốn mua hàng không cần tài khoản
+                                                    </label>
+                                                    <label class="cuscheck" for="log2">
+                                                        <input type="radio" id="log2" name="logopt" value="">Tạo tài khoản
+                                                    </label>
+                                                    <p>Bằng cách tạo một tài khoản, bạn sẽ có thể mua sắm nhanh hơn, được cập nhật về trạng thái của đơn đặt hàng và theo dõi các đơn đặt hàng bạn đã thực hiện trước đây.</p>
+                                                </div>
+                                            </div>
+                                            <form action="" class="_optlogin">
+                                                <div class="col-sm-6">
+                                                    <b>KHÁCH HÀNG CŨ</b>
+                                                    <p>Tôi là một khách hàng cũ</p>
+                                                    <label for="">Email</label>
+                                                    <input type="text" placeholder="Email">
+                                                    <label for="">Mật khẩu</label>
+                                                    <input type="text" placeholder="Mật khẩu">
+                                                    <button type="button" class="btn btn-info">ĐĂNG NHẬP</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <button class="continue">TIẾP TỤC</button>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                                    <i class="fa fa-plus"></i>ĐỊA CHỈ GIAO HÀNG</a>
+                                </h4>
+                                </div>
+                                <div id="collapse2" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <div class="_1opt">
+                                        <div class="_optaddress">
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <label class="cuscheck" for="addop1">
+                                                        <input type="radio" id="addop1" name="addgopt" value="" checked>Tôi muốn sử dụng địa chỉ hiện có
+                                                    </label>
+                                                    <label class="cuscheck" for="addop2">
+                                                        <input type="radio" id="addop2" name="addgopt" value="">Tôi muốn sử dụng địa chỉ mới
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <form action="">
+                                                    <div class="col-md-4">
+                                                        <label for="">Họ và tên</label>
+                                                        <input type="text" placeholder="Nguyễn Văn A">
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label for="">Email</label>
+                                                        <input type="text" placeholder="demo@gmail.com">
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label for="">Số điện thoại</label>
+                                                        <input type="text" placeholder="0987654321">
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label for="">Số nhà/Đường/Phường/Xã</label>
+                                                        <input type="text" placeholder="Cộng Hòa">
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label for="">Quận/Huyện</label>
+                                                        <input type="text" placeholder="Tân Bình">
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label for="">Tỉnh/Thành phố</label>
+                                                        <input type="text" placeholder="Tp. Hồ Chí Minh">
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="continue">TIẾP TỤC</button>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                                    <i class="fa fa-plus"></i>HÌNH THỨC VẬN CHUYỂN</a>
+                                </h4>
+                                </div>
+                                <div id="collapse3" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <div class="_1opt">
+                                        <div class="shipopt">
+                                            <span>Vui lòng chọn phương thức giao hàng để sử dụng theo đơn đặt hàng này.</span>
+                                            <label class="cuscheck" for="shipop1">
+                                                <input type="radio" id="shipop1" name="shipopt" value="" checked>
+                                                <span class="shippart">Nội bộ vẩn chuyển</span>
+                                                <span class="shiptime">2-3 ngay</span>
+                                                <span class="shipfee">30.000d</span>
+                                            </label>
+                                            <label class="cuscheck" for="shipop2">
+                                                <input type="radio" id="shipop2" name="shipopt" value="" >
+                                                <span class="shippart"><img src="resources/images/ghtk.png" alt=""></span>
+                                                <span class="shiptime">2-3 ngay</span>
+                                                <span class="shipfee">30.000d</span>
+                                            </label>
+                                            <label class="cuscheck" for="shipop3">
+                                                <input type="radio" id="shipop3" name="shipopt" value="" >
+                                                <span class="shippart"> <img src="resources/images/vtpost.png" alt=""></span>
+                                                <span class="shiptime">2-3 ngay</span>
+                                                <span class="shipfee">30.000d</span>
+                                            </label>
+                                            <label class="cuscheck" for="shipop4">
+                                                <input type="radio" id="shipop4" name="shipopt" value="" >
+                                                <span class="shippart"> <img src="resources/images/247post.png" alt=""></span>
+                                                <span class="shiptime">2-3 ngay</span>
+                                                <span class="shipfee">30.000d</span>
+                                            </label>
+                                            <label class="cuscheck" for="shipop5">
+                                                <input type="radio" id="shipop5" name="shipopt" value="" >
+                                                <span class="shippart"> <img src="resources/images/ghn.png" alt=""></span>
+                                                <span class="shiptime">2-3 ngay</span>
+                                                <span class="shipfee">30.000d</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button class="continue">TIẾP TỤC</button>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+                                    <i class="fa fa-plus"></i>PHƯƠNG THỨC THANH TOÁN</a>
+                                </h4>
+                                </div>
+                                <div id="collapse4" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <div class="_1opt">
+                                        <div class="payopt">
+                                            <span>Vui lòng chọn phương thức thanh toán để sử dụng cho đơn đặt hàng này.</span>
+                                            <label class="cuscheck" for="payop1">
+                                                <input type="radio" id="payop1" name="payopt" value="" checked>
+                                                <span class="paypart">COD - Thanh toán khi nhận hàng</span>
+											</label>
+                                            <label class="cuscheck" for="payop2">
+                                                <input type="radio" id="payop2" name="payopt" value="" >
+                                                <span class="paypart"><img src="resources/images/vnpay.png" alt=""></span>
+											</label>
+                                            <label class="cuscheck" for="payop3">
+                                                <input type="radio" id="payop3" name="payopt" value="" >
+                                                <span class="paypart"><img src="resources/images/qrcode.png" alt=""></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="coupon">
+                                        <b>Mã giảm giá:</b>
+                                        <span class="couponinput">
+                                            <input type="text" class="" placeholder="Nhập mã giảm giá nếu có">
+                                            <button class="btn btn-primary" type="button">ÁP DỤNG</button>
+                                        </span>
+                                    </div>
+                                    <button class="continue">TIẾP TỤC</button>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+                                    <i class="fa fa-plus"></i>XÁC NHẬN ĐƠN HÀNG</a>
+                                </h4>
+                                </div>
+                                <div id="collapse5" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <div class="payreview">
+                                        <div class="row">
+                                            <div class="col-md-7">
+                                                <div class="puinfo">
+                                                    <ul>
+                                                        <li>Tên người nhận: <b>Nguyễn Văn A</b> </li>
+                                                        <li>Địa chỉ người nhận: <b>20A Đường Cộng Hòa - Phường 10 - Quận Tân Binh -Tp. Hồ Chí Minh</b> </li>
+                                                        <li>Số điện thoại người nhận: <b>0123456789</b> </li>
+                                                        <li>Phương thức vận chuyển: <b>Viettel Post</b> </li>
+                                                        <li>Phương thức thanh toán: <b>COD</b> </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <div class="itemreview">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th></th>
+                                                                <th>Số lượng</th>
+                                                                <th>Đơn giá</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <img src="resources/images/content/itemreview.png" alt="">
+                                                                    <b>LOREM IPSOME</b>
+                                                                </td>
+                                                                <td>01</td>
+                                                                <td>550.000d</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <img src="resources/images/content/itemreview.png" alt="">
+                                                                    <b>LOREM IPSOME</b>
+                                                                </td>
+                                                                <td>01</td>
+                                                                <td>550.000d</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <div class="_1itrv">
+                                                        <b>TỔNG TIỀN:</b><span>1.100.000đ</span>
+                                                    </div>
+                                                    <div class="_1itrv">
+                                                        <b>COUPON: <p class="dcrate">10%</p> </b><span>100.000đ</span>
+                                                    </div>
+                                                    <div class="_1itrv">
+                                                        <b>THÀNH TIỀN:</b><span>1.000.000đ</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="order-success.html" class="continue payall">THANH TOÁN TOÀN BỘ</a>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+		</section>
+		<!-- end content -->
+		<footer>
+			<div class="container">
+				<div class="subscribe">
+					<div class="row">
+						<div class="col-sm-12">
+							<h4>Đăng ký theo dõi để nhận được nhiều ưu đãi</h4>
+							<form action="">
+								<input type="email" class="form-control" placeholder="Nhập email của bạn">
+								<button type="submit" class="btn btn-primary"><i class="fa fa-envelope"></i>THEO DÕI</button>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="mainfooter">
+					<div class="row">
+						<div class="col-md-4">
+							<div class="ourcontact">
+								<img src="resources/images/logo.png" alt="">
+								<span>Chắc chắn bạn sẽ không thể lãng quên những tin tức mới nhờ việc xem những bản tin của chúng tôi. 
+								</span>
+								<p>Địa chỉ: 20A Cộng Hòa - Tân Bình - Tp. Hồ Chí Minh</p>
+								<p>Số điện thoại: 01659099879 - 0987654321</p>
+								<p>Email: anhtai@gmail.com</p>
+								<img src="resources/images/partner/bct.png" alt="">
+							</div>
+						</div>
+						<div class="col-md-5">
+							<div class="sitemap">
+								<div class="row">
+									<div class="col-sm-6">
+										<h5>CHÍNH SÁCH HOẠT ĐỘNG</h5>
+										<ul>
+											<li><a href="">Chính sách bảo mật</a></li>
+											<li><a href="">Chính sách bảo mật</a></li>
+											<li><a href="">Chính sách bảo mật</a></li>
+											<li><a href="">Chính sách bảo mật</a></li>
+											<li><a href="">Chính sách bảo mật</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-6">
+										<h5>DỊCH VỤ KHÁCH HÀNG</h5>
+										<ul>
+											<li><a href="dang-nhap.html">Đăng nhập</a></li>
+											<li><a href="dang-ky.html">Đăng ký</a></li>
+											<li><a href="gio-hang.html">Giỏ hàng</a></li>
+											<li><a href="wish-list.html">Sản phẩm yêu thích</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="row">
+								<div class="map" id="map">
+								</div>
+								<div class="social">
+									<ul>
+										<li><a href="" class="fa fa-facebook"></a></li>
+										<li><a href="" class="fa fa-google-plus"></a></li>
+										<li><a href="" class="fa fa-twitter"></a></li>
+										<li><a href="" class="fa fa-linkedin"></a></li>
+										<li><a href="" class="fa fa-rss"></a></li>
+										<li><a href="" class="fa fa-instagram"></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="trademark">
+					<div class="row">
+						<div class="col-sm-12">
+							<span class="cpr">Copyright © 2018 Designed by 	<a href="#" target="_blank">iamSale</a> . All rights reserved.</span>
+						</div>
+					</div>
+				</div>
+				<div class="totop">
+					<i class="fa fa-arrow-up"></i>
+				</div>
+				<div class="modal">
+					<div class="modal1"></div>
+					<div class="modal2"></div>
+					<div class="modal3"></div>
+					<div class="modal4"></div>
+				</div>
+			</div>
+
+		</footer>
+		<!-- end foote -->
+	</section>
+
+
+      
+	<script  src="resources/vendor/jquery/jquery-3.3.1.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="resources/vendor/bootstrap/bootstrap.min.js"></script>
+	<script src="resources/vendor/smoothscrool/jquery.easeScroll.js"></script>
+	<script src="resources/vendor/owlcarousel/owl.carousel.min.js"></script>
+	<script  src="resources/vendor/font-awesome-4.7.0/fontawesome.min.js"></script>	
+	<script  src="resources/js/main.js"></script>	
+	<script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async="" defer=""></script>
+	<script>
+		function initMap() {
+			var mapDiv = document.getElementById('map');
+			var map = new google.maps.Map(mapDiv, {
+			center: {lat: 10.800795, lng: 106.653317},
+			zoom: 15
+			});
+		}
+	</script>
+  	</body>
+</html>

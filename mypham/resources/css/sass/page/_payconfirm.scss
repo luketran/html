@@ -1,0 +1,91 @@
+// trang xac nhan
+.payconfirm{
+    padding: 40px 0;
+    .orderinfo{
+        table{
+            width: 100%;
+            padding: 20px 0;
+            display: block;
+            @include getboder;
+            tbody{
+                tr{
+                    margin: 10px;
+                    td{
+                        padding: 7px 15px;
+                        &:first-child{
+                            width: 45%;
+                            text-align: right;
+                            padding-right: 15px;
+                            font-weight: bold
+                        }
+                        &:last-child{
+                            width: 55%;
+                            text-align: left;
+                            padding-left: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .yourcart{
+        @include getboder;
+        padding: 15px;
+        h4{
+            border-bottom: 1px solid $border;
+            padding-bottom: 10px;
+            margin: 0px;
+        }
+        table{
+            thead{
+                th{
+                    padding: 8px 0;
+                    border-bottom: none;
+                    &:last-child{
+                        text-align: right;
+                    }
+                }
+            }
+            tbody{
+                tr{
+                    td{
+                        border-top: 1px dashed #ddd;
+                        padding: 10px 0;
+                        font-weight: bold;
+                        vertical-align: middle;
+                        &:last-child{
+                            text-align: right;
+                        }
+                        span{
+                            margin: 0 20px;
+                            @media (max-width: 480px) {
+                                margin: 0 9px;
+                            }
+                        }
+                        .dr{
+                            color: $page-color;
+                        }
+                    }
+                }
+                .pac{
+                    td{
+                        span{
+                        color: $page-color;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+    .confirm{
+        @include staticbutton;
+        padding: 10px 20px;
+        display: block;
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 20px;
+        text-decoration: none;
+    }
+   
+}

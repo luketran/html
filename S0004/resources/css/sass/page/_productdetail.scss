@@ -1,0 +1,212 @@
+._itemno{
+    display: flex;
+    align-items: center;
+    width: 100px;
+    border-radius: 30px;
+    background-color: white;
+    a{
+        background-color: transparent;
+        border: none !important;
+        text-decoration: none;
+        i{
+            font-weight: bold;
+        }
+    }
+    input{
+        border: none;
+        text-align: center;
+    }
+}
+.itemdetail{
+    height: 75vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    .photo-thumbnails{
+        width: 20%;
+        float: left;
+        margin-right: 10px;
+        .thumblist{
+            i{
+                font-size: 25px;
+                color: $page-color;
+                text-align: center;
+                margin: auto;
+                display: block;
+            }
+        }
+        .thumbnail{
+            img{
+                width: 100%;
+            }
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+    .big-photo{
+        width: 80%;
+        margin-left: auto;
+        img{
+            width: 100%;
+        }
+    }
+    .mtsp{
+        h4{
+            font-weight: bold;
+            margin: 0;
+        }
+        .star{
+            color: $page-color;
+            margin: 15px 0;
+        }
+        .itemprice{
+            .price{
+                font-weight: bold;
+                font-size: 20px;
+                margin-right: 5px;
+            }
+            .oldprice{
+                color: $text-content;
+                text-decoration: line-through;
+                font-size: 16px;
+                margin-right: 5px;
+            }
+            .dcount{
+                color: $page-color;
+            }
+        }
+        p{
+            margin: 15px 0;
+        }
+        .sizepick{
+            list-style: none;
+            display: block;
+            margin-bottom: 15px;
+            li{
+                display: inline-block;
+            }
+            a{
+                background-color: $bg-color;
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                text-align: center;
+                padding: 10px;
+                text-decoration: none;
+                color: black;
+                border: 2px solid transparent;
+                &:hover,&:active,&:focus{
+                    border: 2px solid $page-color;
+                }
+            }
+        }
+        .colorpick{
+            list-style: none;
+            display: block;
+            margin-bottom: 15px;
+            li{
+                display: inline-block;
+            }
+            a{
+                padding: 10px;
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                text-decoration: none;
+                border: 2px solid transparent;
+                &:hover,&:active,&:focus{
+                    border: 2px solid $page-color;
+                }
+            }
+            .vang{
+                background-color: #ecb430;
+            }
+            .xam{
+                background-color: #bec4de;
+            }
+            .hong{
+                background-color: #ff00ff;
+            }
+        }
+        
+        ._mtaction{
+            border-bottom: 1px solid $border;
+            padding: 20px 0;
+            button{
+                color: $text;
+                font-weight: bold;
+                border-radius: 30px;
+                border: none;
+                padding: 10px 15px;
+                background-color: white;
+                &:hover{
+                    background-color: $page-color;
+                }
+            }
+        }
+        ._mtsocial{
+            display: flex;
+            align-items: center;
+            .jssocials{
+                margin-left: 15px;
+                a{
+                    text-decoration: none;
+                    color: $border;
+                    padding: 10px;
+                    border: 1px solid $border;
+                    border-radius: 50%;
+                    &:hover{
+                        background-color: $page-color;
+                        color: white;
+                        border: 1px solid transparent;
+                    }
+                }
+            }
+        }
+    }
+}
+._2detail{
+    margin: 20px 0;
+    .nav-tabs{
+        border-bottom: 1px solid $border-light;
+        li{
+            position: relative;
+            &::after{
+                content: "";
+                background: $page-color;
+                height: 2px;
+                position: absolute;
+                bottom: 0px;
+                width: 100%;
+                visibility: hidden;
+            }
+            &.active{
+                a{
+                    background-color: transparent;
+                    border: 1px solid transparent;
+                    color: white;
+                }
+                &::after{
+                    visibility: visible;
+                }
+            }
+            a{
+                color: white;
+                font-weight: bold;
+                &:hover{
+                    border-bottom: 2px solid $page-color;
+                    background-color: transparent;
+                    border: 1px solid transparent;
+                }
+            }
+        }
+    }
+}
+._3detail{
+    padding-bottom: 50px;
+    .splienquan{
+        .item{
+            width: 100%;
+        }
+    }
+}

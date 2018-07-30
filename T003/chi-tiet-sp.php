@@ -237,6 +237,7 @@
                                                     
                                                     <div class="repinput collapse">
                                                         <textarea name="" cols="" rows="4" placeholder="Nhập nội dung"></textarea>
+                                                        <button class="pagebtn">Gửi</button>
                                                     </div>
                                                 </div>
                                                 <div class="_1comt">
@@ -267,6 +268,7 @@
                                                     
                                                     <div class="repinput collapse">
                                                         <textarea name="" cols="" rows="4" placeholder="Nhập nội dung"></textarea>
+                                                        <button class="pagebtn">Gửi</button>
                                                     </div>
                                                 </div>
                                             </div>

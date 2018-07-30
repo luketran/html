@@ -1,0 +1,31 @@
+.contactus{
+    padding: 5rem 0;
+    @media (max-width: 991px) {
+        padding: 2rem 0;
+    }
+    h1{
+        text-align: center;
+        margin: 2rem 0
+    }
+    .bigmap{
+        height: 500px;
+        @media (max-width: 991px){
+            height: 400px;
+        }
+    }
+    .contactinfo{
+        text-align: center;
+        h1{
+            font-size: 25px;
+            margin: 3rem 0;
+            font-weight: bold;
+        }
+        .cticon{
+            i{
+                font-size: 50px;
+                color: $page-xanh;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}

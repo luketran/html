@@ -1,0 +1,72 @@
+.lienhe{
+    padding: 30px 0;
+    .container{
+        .map{
+            margin-bottom: 40px;
+            position: relative;
+            #bigmap{
+                height: 500px;
+            }
+            .ctinfo{
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 300px;
+                height: 100%;
+                background-color: $bg-black;
+                color: #dddddd;
+                padding-left: 30px;
+                padding-top: 5px;
+                @media (max-width: 768px) {
+                    position: relative;
+                    width: 100%;
+                    margin-top: 15px;
+                    
+                }
+                ._1ct{
+                    border-bottom: 1px solid $border;
+                    &:last-child{
+                        border-bottom: 1px solid transparent;
+                    }
+                    h4{
+                        margin-top: 30px;
+                    }
+                    p{
+                        color: #b5b5b5;
+                        padding-right: 15px;
+                    }
+                }
+            }
+        }
+        .sendinfo{
+            max-width: 600px;
+            margin: 20px auto;
+            form{
+                text-align: center;
+                h4{
+                    text-align: center;
+                    font-weight: bold;
+                    margin-top: 30px;
+                    margin-bottom: 30px;
+                }
+                .yinfo{
+                    .col-sm-6,.col-sm-12{
+                        margin-bottom: 15px;
+                    }
+                    input,textarea{
+                        width: 100%;
+                        border-radius: 5px;
+                        border: none;
+                        background-color: $bg-color;
+                        padding: 10px 20px;
+                    }
+                }
+                button{
+                    @include buttonpage;
+                    padding: 10px 40px;
+                    background-color: $page-color;
+                }
+            }
+        }
+    }
+}

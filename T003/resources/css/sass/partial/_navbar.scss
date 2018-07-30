@@ -1,7 +1,9 @@
 .menu{
-    @media(min-width:992px){
-        margin-top: 2rem;
-    }
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
     ul{
         list-style-type: none;
         margin: 0;
@@ -11,6 +13,13 @@
         }
         li{
             position: relative;
+            a{
+                color: black;
+            }
+        }
+        .menu-right{
+            float: right;
+            
         }
     }
     .menubar{
@@ -22,86 +31,103 @@
             display: inline-block;
             position: relative;
             border-radius: 3px;
-            margin: 0 1rem;
-            background-color: $page-xanh;
-            &:hover,&:focus,&:active {
-                background-color: $page-color;
-            }
             >a{
                 display: block;
-                font-weight: bold;
                 padding: 10px 20px;
                 text-decoration: none;
-                color:white;
-                text-align: left;
+                text-transform: uppercase;
                 >i{
                     transition:  transform 0.5s ease;
                 }
             }
-            &.has-submenu{
+            @media(min-width:992px){
+                margin: 0 1rem;
+                background-color: $page-xanh;
                 &:hover{
-                    >a{
-                        text-decoration: none;
-                        >i{
-                            transform: rotate(-180deg);
+                    background-color: $page-color;
+                }
+                a{
+                    color: white;
+                    font-weight: bold;
+                }
+            }
+            
+            &.has-submenu{
+                @media(min-width:992px){
+                    &:hover{
+                        >a{
+                            >i{
+                                transform: rotate(-180deg);
+                            }
+                        }
+                        >ul.submenu{
+                            opacity: 1;
+                            visibility: visible;
+                            transform: none;
+                            transition: all 0.5s ease;
                         }
                     }
-                    >ul.submenu{
-                        opacity: 1;
-                        visibility: visible;
-                        transition: transform 0.3s ease-out;
-                        transform: none;
-                    }
                 }
+               
                 >ul.submenu{
                     position: absolute;
                     top: 100%;
                     right: 0;
-                    min-width: 100%;
+                    min-width: 160px;
                     opacity: 0;
                     visibility: hidden;
                     max-width: 250px;
                     transform: translateY(15px);
-                    z-index: 10;
-                    border: 1px solid $border-light;
+                    z-index: 10000;
+                    padding: 5px 0;
+                    text-align: left;
+                    border-radius: 4px;
+                    @media(min-width:992px){
+                        background-color: white;    
+                        border: 1px solid #eee;
+                    }
                     >li{
                         display: block;
                         >a{
                             text-decoration: none;
-                            padding: 15px 50px 15px 15px;
+                            padding: 10px 40px 10px 10px;
                             display: block;
-                            color:black;
-                            background-color: white;
+                            color:#000;
                             white-space: nowrap;
-                            text-align: left;
-                            position: relative;
                             >i{
+                                transition : transform 0.5s ease;
                                 position: absolute;
-                                right: 5px;
-                                @include absolute-Y;
+                                top: 0;
+                                right: 0;
+                                height: 40px;
+                                width: 15px;
+                                line-height: 40px;
                             }
                         }
-                        &:hover{
-                            >a{
-                                color:white;
-                                background-color: $page-color;
+                        @media(min-width:992px){
+                            a{
+                                background-color: white;
                             }
-                        }
-                        &.has-second-submenu{
                             &:hover{
                                 >a{
-                                    >i{
-                                        transform: translateY(-50%) rotate(90deg);
-                                        transition: transform 0.3s ease-out;
-                                    }
-                                }
-                                >ul.second-submenu{
-                                    opacity: 1;
-                                    visibility: visible;
-                                    transform: none;
-                                    transition: 0.3s ease-out;
+                                    transition: 0.7s;
+                                    color: white;
+                                    background-color: $page-color;
                                 }
                             }
+                        }
+                       
+                        &.has-second-submenu{
+                            @media(min-width:992px){
+                                &:hover{
+                                    >ul.second-submenu{
+                                        opacity: 1;
+                                        visibility: visible;
+                                        transform: none;
+                                    }
+                                }
+                            }
+                            
                             >ul.second-submenu{
                                 position: absolute;
                                 top: 0;
@@ -109,22 +135,26 @@
                                 min-width: 100%;
                                 opacity: 0;
                                 visibility: hidden;
-                                transform: translateX(10px);
+                                @include box-shadow;
+                                background: #fff;
+                                transition: all 0.5s ease;
+                                transform: translate(15px , 15px);
+                                padding: 0;
                                 >li{
                                     display: block;
-                                    background-color: $page-color;
                                     >a{
                                         text-decoration: none;
-                                        padding: 15px 50px 15px 15px;
+                                        padding: 10px 15px;
                                         display: block;
-                                        color:white;
                                         white-space: nowrap;
-                                        text-align: left;
-                                    }
-                                    &:hover{
-                                        >a{
-                                            color:black;
-                                            background-color: white;
+                                        @media(min-width:992px){
+                                            color:white;
+                                            background-color: $page-color;
+                                            &:hover {
+                                                transition: 0.7s;
+                                                color: black;
+                                                background-color: white;
+                                            }
                                         }
                                     }
                                 }
@@ -135,8 +165,8 @@
             }
         }
     }
-    
 }
+
 @media(max-width:991px){
     body{
         .main{
@@ -168,7 +198,7 @@
         z-index: 10001;
         position: fixed;
         left: 15px;
-        top: 55px;
+        top: 50px;
         .icon-bar{
             background: #000;
             transition: 0.5s ease;
@@ -192,43 +222,37 @@
         }
     }
     .menu{
+        margin-top: 0;
         position: fixed;
-        top: 116px;
-        right: 0;
+        top: 110px;
+        right: 100%;
         bottom: 0;
-        left: -250px;
-        width: 250px;
+        width: 100%;
         z-index: 10001;
-        transition : left 0.5s ease;
+        transition : right 0.5s ease;
         background: white;
-        color: black;
+        color: $text;
         overflow-x: hidden;
         overflow-y: auto;
         &.open{
-            left: 0;
+            right: 0;
         }
         .menubar{
             >li{
                 display: block;
                 border: none !important;
-                background-color: white;
-                &:hover,&:focus,&:active{
-                    background-color: white;
-
-                }
                 >a{
-                    color: black;
-                    &.active{
-                        color: $page-color;
-                    }
+                    padding: 15px;  
+                    border-bottom: 1px solid #eee;
+                    text-align: left;
                     >i{
                         transform: none !important;
+                        border-left: 1px solid #eee;
                     }
                 }
                 &:hover{
                     >a{
                         color: $page-color;
-                        background-color: white;
                     }
                 }
                 &.has-submenu{
@@ -249,12 +273,13 @@
                                 top: 50%;
                                 right: 10px;
                                 transform: translateY(-50%);
+                                transition: 0.3s ease;
                             }
                         }
                     }
                     &.open{
-                        .fa-angle-down{
-                            transform: rotate(180deg) !important;
+                        .fa-angle-down::before{
+                            transform: translateY(-50%) rotate(180deg) !important;
                         }
                     }
                     >ul.submenu{
@@ -269,26 +294,23 @@
                         transform: unset;
                         padding-left: 15px;
                         display: none;
-                        border: none;
+                        background: #fafafa;
                         >li{
                             display: block;
-                            background-color: white;
-                            border: none !important;
+                            background: #fafafa;
+                            border: 1px solid transparent;
                             >a{
                                 padding: 10px 15px;
                                 display: block;
                                 color:#000;
                                 white-space: nowrap;
-                                &.active{
-                                    color: $page-color;
-                                }
                                 >i{
                                     transition : transform 0.5s ease;
                                 }
                             }
                             &:hover{
                                 >a{
-                                    background-color: white;
+                                    background: unset;
                                     color: $page-color;
                                 }
                             }
@@ -298,9 +320,6 @@
                                         &::before {
                                             content: "\f107";
                                         }
-                                    }
-                                    &.active{
-                                        color: $page-color;
                                     }
                                 }
                                 &.open{
@@ -328,17 +347,15 @@
                                     >i{
                                         position: absolute;
                                         right: 0;
-                                        top: 0;
-                                        bottom: 0;
                                         width: 40px;
                                         text-align: center;
+                                        display: inline-block;
+                                        vertical-align: middle;
                                         &:before{
                                             width: 20px;
                                             height: 20px;
                                             position: absolute;
-                                            top: 50%;
                                             right: 10px;
-                                            transform: translateY(-50%);
                                         }
                                     }
                                 }
@@ -346,25 +363,26 @@
                                     position: relative;
                                     top: auto;
                                     left: auto;
-                                    padding-left: 15px;
+                                    padding: 0;
+                                    margin: 0;
                                     min-width: 100%;
                                     opacity:1;
                                     visibility: visible;
+                                    border: none;
+                                    background: #fff;
                                     transition: unset;
                                     transform:unset;
                                     display: none;
+                                    border-bottom: 1px solid #eee;
                                     >li{
                                         display: block;
                                         background-color: white;
-                                        border: none !important;
+                                        border: none;
                                         >a{
                                             padding: 10px 15px;
                                             display: block;
                                             color:#000;
                                             white-space: nowrap;
-                                            &:hover{
-                                                background-color: unset;
-                                            }
                                         }
                                     }
                                 }
@@ -374,6 +392,7 @@
                 }
             }
         }
-        
     }
+
+
 }

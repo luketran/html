@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title></title>
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="resources/vendor/bootstrap/bootstrap.min.css">
+		<link rel="stylesheet" href="resources/vendor/owlcarousel/owl.carousel.min.css">
+		 <!-- slick and fancybox css -->
+		 <link rel="stylesheet" href="resources/vendor/slick/slick.css">
+		<link rel="stylesheet" href="resources/vendor/fancybox/jquery.fancybox.min.css">
+        <!-- slick and fancybox css -->
+		<link rel="stylesheet" href="resources/vendor/font-awesome-4.7.0/css/font-awesome.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<link href="resources/css/style.css" rel="stylesheet">
+  	</head>
+  	<body>
+	<section class="main">
+        <?php  include("header-loged.php");?>
+		<!-- end header -->
+		<section class="wrapper" >
+			<?php  include("page-local.php");?>
+            <div class="tablecontent">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="page-cart">
+								<table>
+									<thead>
+										<tr>
+											<th>Sản phẩm</th>
+											<th>Giá tiền</th>
+											<th>Số lượng</th>
+											<th>Thành tiền</th>
+											<th>Xoá</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="wliteminfo">
+												<img src="resources/images/content/wlitem.png" alt="">
+												<div class="wlitemdetail">
+													<p>Vợt tennis</p>
+													<p>Màu sắc: Nâu</p>
+													<p>Thương hiệu: Lusian</p>
+												</div>
+											</td>
+											<td class="show-title st1" data-title1="Giá tiền :"><span class="_1price">1.100.000d</span> </td>
+											<td class="show-title st2" data-title2="Số lượng :">
+												<div class="_itemno">
+													<div class="input-group">
+														<span class="input-group-addon"><i class="fa fa-minus"></i></span>
+														<input type="text" class="form-control" aria-label="" value="1">
+														<span class="input-group-addon"><i class="fa fa-plus"></i></span>
+													</div>
+												</div>
+											</td>
+											<td class="show-title st3" data-title3="Thành tiền :"><span class="_1price">1.100.000d</span> </td>
+											<td>
+												<i class="rmfc fa fa-trash"></i>
+											</td>
+										</tr>
+										<tr>
+											<td class="wliteminfo">
+												<img src="resources/images/content/wlitem.png" alt="">
+												<div class="wlitemdetail">
+													<p>Vợt tennis</p>
+													<p>Màu sắc: Nâu</p>
+													<p>Thương hiệu: Lusian</p>
+												</div>
+											</td>
+											<td class="show-title st1" data-title1="Giá tiền :"><span class="_1price">1.100.000d</span> </td>
+											<td class="show-title st2" data-title2="Số lượng :">
+												<div class="_itemno">
+													<div class="input-group">
+														<span class="input-group-addon"><i class="fa fa-minus"></i></span>
+														<input type="text" class="form-control" aria-label="" value="1">
+														<span class="input-group-addon"><i class="fa fa-plus"></i></span>
+													</div>
+												</div>
+											</td>
+											<td class="show-title st3" data-title3="Thành tiền :"><span class="_1price">1.100.000d</span> </td>
+											<td>
+												<i class="rmfc fa fa-trash"></i>
+											</td>
+										</tr>
+										
+									</tbody>
+								</table>
+								<div class="text-right cartaction">
+									<a class="pagebtn" href="san-pham.php">TIẾP TỤC MUA SẮM</a>
+									<a class="pagebtn" href="check-out.php">TIẾN HÀNH THANH TOÁN</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+        </section>
+		
+		<!-- end content -->
+		<?php   
+            include("footer.php");
+        ?>
+		<!-- end foote -->
+		<?php   
+            include("hide-content.php");
+        ?>
+	</section>
+
+
+      
+	<script  src="resources/vendor/jquery/jquery-3.3.1.js"></script>
+	<script src="resources/vendor/bootstrap/bootstrap.min.js"></script>
+	 <!-- slick and fancybox lib -->
+	 <script src="resources/vendor/slick/slick.min.js"></script>
+    <script src="resources/vendor/fancybox/jquery.fancybox.min.js"></script>
+    <!-- slick and fancybox lib -->
+	<script src="resources/vendor/owlcarousel/owl.carousel.min.js"></script>
+	<script  src="resources/vendor/font-awesome-4.7.0/fontawesome.min.js"></script>	
+	<script  src="resources/js/main.js"></script>	
+</html>

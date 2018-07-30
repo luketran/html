@@ -36,7 +36,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-12">
-							<div class="cart">
+							<div class="page-cart">
 								<table>
 									<thead>
 										<tr>
@@ -128,7 +128,6 @@
 	 <script src="resources/vendor/slick/slick.min.js"></script>
     <script src="resources/vendor/fancybox/jquery.fancybox.min.js"></script>
     <!-- slick and fancybox lib -->
-	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 	<script src="resources/vendor/owlcarousel/owl.carousel.min.js"></script>
 	<script  src="resources/vendor/font-awesome-4.7.0/fontawesome.min.js"></script>	
 	<script  src="resources/js/main.js"></script>	

@@ -1,0 +1,54 @@
+.buyhistory{
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 10px;
+    h4{
+        border-bottom: 1px solid $border-line;
+        padding-bottom: 15px;
+        margin-bottom: 0;
+        font-weight: bold;
+    }
+    table{
+        width: 100%;
+        thead{
+            tr{
+                border-bottom: 1px solid $border-line;
+                th{
+                    font-weight: bold;
+                    text-align: center;
+                    padding: 15px 0;
+                }
+            }
+        }
+        tbody{
+            tr{
+                border-bottom: 1px solid $border-line;
+                td{
+                    padding: 15px 0;
+                    span{
+                        border-radius: 5px;
+                        padding: 5px;
+                    }
+                    .dgx{
+                        background-color: #00a65a;
+                        color: white;
+                    }
+                    .dgh{
+                        background-color: #00c0ef;
+                        color: white;
+                    }
+                    .dxl{
+                        background-color: #f39c12;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+    @media(max-width:768px){
+        overflow-x: scroll;
+        table{
+            width: 800px;
+        }
+    }
+}

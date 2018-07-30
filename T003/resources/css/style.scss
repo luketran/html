@@ -19,10 +19,13 @@
 @import "sass/page/lognforgotpass";
 @import "sass/page/wishlist";
 @import "sass/page/useracc";
+@import "sass/page/checkout";
+@import "sass/page/ordersuccess";
+@import "sass/partial/cart";
 
 @media (max-width: 991px){
     .wrapper{
-        margin-top: 116px;
+        margin-top: 110px;
     }
 }
 .pagelocal{

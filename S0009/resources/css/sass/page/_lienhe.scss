@@ -1,0 +1,58 @@
+.ourinfo{
+    padding: 30px 0;
+    font-size: 14px;
+    h4{
+        font-weight: bold;
+    }
+    ._contactinfo{
+        ._1info{
+            margin: 20px 0;
+        }
+        i{
+            font-size: 30px;
+            color: $page-xanh;
+            border: 1px solid $page-xanh;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            text-align: center;
+            padding-top: 8px;
+            float: left;
+            margin-right: 10px;
+        }
+
+    }
+    ._youridea{
+        span{
+            margin-left: 15px;
+        }
+        input{
+            border: none;
+            width: 100%;
+            border-bottom: 1px solid $border-light;
+            background-color: transparent;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        textarea{
+            width: 100%;
+            border: 1px solid $border-light;
+            border-radius: 3px;
+            background-color: transparent;
+            padding: 10px;
+        }
+        button{
+            padding: 10px 15px;
+        }
+    }
+    .bigmap{
+        display: block;
+        @media (min-width:992px) {
+            height: 500px;
+        }
+        @media (max-width:991px) {
+            height: 300px;
+            margin-top: 15px;
+        }
+    }
+}

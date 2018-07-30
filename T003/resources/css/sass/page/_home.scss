@@ -60,6 +60,11 @@
             @media (min-width: 992px) {
                 max-width: 30%;
             }
+            @media (max-width: 480px) {
+                h1{
+                    font-size: 2rem;
+                }
+            }
             a{
                 display: block;
                 text-decoration: none;
@@ -119,6 +124,11 @@
             display: inline-block;
             text-decoration: none;
         }
+        @media (max-width: 600px) {
+            h1{
+                font-size: 30px;
+            }
+        }
     }
 }
 .topbrand{
@@ -160,8 +170,10 @@
             font-size: 30px;
             color: white;
             font-weight: bold;
-            visibility: hidden;
-            opacity: 0;
+            @media (min-width: 992px) {
+                visibility: hidden;
+                opacity: 0;
+            }
         }
     }
 }

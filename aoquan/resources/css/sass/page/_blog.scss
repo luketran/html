@@ -1,0 +1,90 @@
+.blog{
+    padding: 50px 0;
+    .listblog{
+        display: inline-block;
+        ._1tin{
+            margin-bottom: 20px;
+        }
+    }
+    .pagination{
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .menutin{
+        border-bottom: 1px solid $border;
+        h4{
+            font-weight: bold;
+        }
+        ul{
+            li{
+                margin: 15px 0  ;
+                a{
+                    @include a-usual;
+                    color: $text-content;
+                }
+                i{
+                    float: right;
+                    cursor: pointer;
+                }
+                .fa-minus{
+                    position: relative;
+                    &:after {
+                        content: "\f068";
+                        transform: rotate(90deg);
+                        position: absolute;
+                        right: 0;
+                    }
+                }
+                ul{
+                    height: 0;
+                    overflow: hidden;
+                    transition: 0.4s linear;
+                    li{
+                        margin: 10px;
+                        &:last-child{
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+            .smenu{
+                .fa-minus{
+                    &:after {
+                        visibility: hidden;
+                    }
+                }
+                ul{
+                    height: auto;
+                }
+            }
+        }
+    }
+    .baiphobien{
+        h4{
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        .listbpb{
+            ._1bpb{
+                text-decoration: none;
+                display: inline-block;
+                width: 100%;
+                margin-bottom: 15px;
+                img{
+                    float: left;
+                    margin-right: 10px;
+                }
+                ._blqc{
+                    display: block;
+                    b{
+                        color: $text;
+                    }
+                    span{
+                        color: $text-content;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+// trang gioi thieu
+.about-us{
+    padding: 40px 0;
+    h3{
+        color: $page-color;
+    }
+    img{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .ourintro{
+        text-align: center;
+        padding: 0 15px;
+        p{
+            text-align: justify;
+        }
+    }
+}

@@ -196,8 +196,29 @@
         z-index: 10001;
         position: fixed;
         left: 15px;
+        .fa-arrow-left{
+            position: absolute;
+            bottom: 0;
+            right: 5px;
+            font-size: 30px;
+            transform: translateX(50px);
+            visibility: hidden;
+            opacity: 0;
+        }
         .icon-bar{
             background: #000;
+        }
+        &.active{
+            .fa-arrow-left{
+                transform: translateX(0px);
+                visibility: visible;
+                opacity: 1;
+            }
+            .icon-bar{
+                transform: translateX(50px);
+                visibility: hidden;
+                opacity: 0;
+            }
         }
     }
     .menu{
@@ -215,6 +236,7 @@
         overflow-y: auto;
         &.open{
             left: 0;
+
         }
         .menubar{
             
@@ -244,6 +266,13 @@
                                 top: 50%;
                                 right: 10px;
                                 transform: translateY(-50%);
+                            }
+                        }
+                    }
+                    &.open{
+                        a{
+                            .fa-angle-down{
+                                transform: rotate(180deg) !important;
                             }
                         }
                     }
@@ -287,6 +316,13 @@
                                         opacity: 1;
                                         visibility: visible;
                                         transform: none;
+                                    }
+                                }
+                                &.open{
+                                    a{
+                                        i{
+                                            transform: rotate(180deg) !important;
+                                        }
                                     }
                                 }
                                 >a{

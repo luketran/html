@@ -1,0 +1,253 @@
+// trang chi tiet san pham
+.itemdetail{
+    padding: 40px 0;
+    ._1detail{
+        
+        ._mtsocial{
+            margin: 20px 0;
+        }
+    }
+    ._2detail{
+        display: inline-block;
+        margin-top: 20px;
+        .nav-tabs{
+            background-color: white;
+            border: none;
+            .nav-item{
+                a{
+                    border: 1px solid $page-color;
+                    border-radius: 0;
+                    padding: 10px 20px;
+                    color: black;
+                    margin: 0;  
+                    &:hover,&:focus,&:active {
+                    background-color: $page-color;
+                    color: white;
+                    }
+                    @media (max-width: 600px) {
+                        padding: 10px 10px;
+                        font-size: 12px;
+                        font-weight: bold;
+                    }
+                    @media (max-width: 400px) {
+                        padding: 10px 5px;
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+        .tab-content{
+            position: relative;
+            border: 1px solid $page-color;
+            padding: 20px;
+           
+        }
+    }
+    ._3detail{
+        text-align: center;
+        .lotus{
+            margin: 10px 0px 20px 0px; ;
+        }
+        .splq{
+            position: relative;
+            .item{
+            background-color: $bg-color;
+            }
+            .owl-dots{
+                display: none;
+            }
+            .owl-nav{
+                button{
+                    position: absolute;
+                    top: 40%;
+                    font-size: 50px;
+                    color: $page-color;
+                    opacity: 0;
+                    &:hover,&:focus,&:active {
+                        opacity: 1;
+                    }
+                }
+                .owl-prev{
+                    left: 0px;
+                }
+                .owl-next{
+                    right: 0px;
+                }
+            }
+               
+        }
+        
+    }
+}
+._mtsocial{
+    a{
+        text-decoration: none;
+    }
+}
+.mtsp{
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 20px;
+    @media (max-width: 480px) {
+        margin: 0;
+    }
+    h4{
+        font-weight: bold;
+    }
+    .star{
+        color: $page-color;
+        font-size: 17px;
+    }
+    ._mt3{
+        color: $text-title;
+        margin: 10px 0;
+        span{
+            color: black;
+            margin: 0 10px;
+        }
+    }
+    .price{
+        color: red;
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .oldprice{
+        color: gray;
+        font-size: medium;
+        text-decoration: line-through;
+        font-weight: bold;
+    }
+    .line{
+        width: 100%;
+        height: 1px;
+        border-bottom: 1px dashed $page-color;
+        margin: 10px 0;
+    }
+    h5{
+        font-size: 15px;
+        font-weight: bold;
+    }
+    p{
+        color: $text-title;
+    }
+    .colorpick{
+        list-style: none;
+        display: flex;
+        li{
+            padding: 2px;
+            border-radius: 50%;
+            margin-right: 5px;
+            border: 1px solid transparent;
+            cursor: pointer;
+            &:hover,&:focus,&:active {
+                border: 1px solid $text-title;
+            }
+            div{
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+            }
+            .xanh{
+                background-color: #59CBC3;
+            }
+            .do{
+                background-color: #F94B4C;
+            }
+            .vang{
+                background-color: #F7FF13;
+            }
+            .den{
+                background-color: black;
+            }
+        }
+        
+    }
+    ._mtaction{
+        display: flex;
+        text-align: center;
+        ._itemno{
+            border-radius: 10px;
+        }
+        button{
+            margin: 0 15px;
+            @include buttonpage(padding,0,15px);
+            @include buttonhover;
+            @media (max-width: 480px) {
+                padding: 10px 5px;
+                font-size: 12px;
+                font-weight: bold;  
+            }
+        }
+        .fa-heart{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            line-height: 50px;
+            font-size: 25px;
+            @include getboder;
+            @include buttonhover;
+        }
+    }
+}
+.gallery-photos{
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    position: relative;
+    i{
+        font-size: 30px;
+        color: $page-color;
+        display: block;
+        text-align: center;
+        z-index: 3;
+        &:hover,&:focus,&:active {
+            cursor: pointer;
+        }
+    }
+    .photo-thumbnails{
+        width: 20%;
+        .thumblist{
+            .thumbnail{
+                cursor: pointer;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                border: 1px solid transparent;
+                outline: none;
+                padding: 0;
+                &:hover,&:focus,&:active {
+                    border: 1px solid $page-color;
+                }
+                &.slick-current{
+                    border: 1px solid $page-color;
+                }
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        
+    }
+    .big-photo{
+        width: 80%;
+        ._1img{
+            outline: none;
+        }
+        @media (max-width: 480px) {
+            width: unset;
+            height: unset;
+        }
+        img{
+           padding: 30px;
+           margin: auto;
+        }
+    }
+    @media (max-width: 991px) {
+        .photo-thumbnails{
+            display: none;
+        }
+        .big-photo{
+            width: 100%;
+        }
+    }
+}

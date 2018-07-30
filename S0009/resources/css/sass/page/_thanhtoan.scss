@@ -1,0 +1,144 @@
+.checkoutoption{
+    padding: 30px 0;
+    .panel-group{
+        margin-bottom: 0;
+    }
+    .panel{
+        border-radius: 0;
+        border: none;
+        box-shadow: none;
+        background-color: transparent;
+    }
+    .panel-heading{
+        border: none;;
+        background-color: $border-light;
+        border-radius: 0;
+    }
+    .panel-title{
+        a{
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            &[aria-expanded="true"]{
+                i::before{
+                    visibility: hidden;
+                }
+                i::after{
+                    content: "\f068";
+                    position: absolute;
+                    left: 0;
+                }
+            }
+        }
+        i{
+            margin-right: 5px;
+            position: relative;
+        }
+    }
+    .panel-body{
+        border: none !important;
+        padding: 15px 0;
+    }
+    label{
+        display: block;
+    }
+    .continue{
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+        border-radius: 3px;
+        border: none;
+        background-color: $page-xanh;
+        padding: 10px 20px;
+        margin: 10px 0;
+        display: inline-block;
+        &:hover{
+            background-color: $page-color;
+        }
+        &.payall{
+            float: right;
+        }
+    }
+    ._1opt{
+        border-bottom: 1px solid $border-line;
+        padding-bottom: 15px;
+        input[type="text"]{
+            width: 100%;
+            border: 1px solid $border-light;
+            padding: 10px;
+        }
+        ._optlogin{
+            button{
+                background-color: $page-xanh;
+                margin-top: 15px;
+            }
+        }
+    }
+    .shipopt{
+        max-width: 600px;
+        label{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 0;
+            .shippart{
+                width: 50%;
+            }
+        }
+    }
+    .coupon{
+        margin: 15px 0;
+        display: inline-block;
+        width: 100%;
+        input{
+            padding: 8px 10px;
+            border: 1px solid $border-line;
+            border-radius: 3px;
+        }
+    }
+    .payreview{
+        .puinfo{
+            background-color: white;
+            padding: 15px;
+            border: 1px solid $border-light;
+            ul{
+                list-style: none;
+                li{
+                    margin: 10px 0;
+                }
+            }
+        }
+        .itemreview{
+            background-color: white;
+            border: 1px solid $border-light;
+            table{
+                width: 100%;
+                border-bottom: 1px solid $border-light;
+                th,td{
+                    text-align: center;
+                    padding: 10px 0;
+                }
+            }
+            ._1itrv{
+                padding: 10px 20px;
+                border-bottom: 1px solid $border-light;
+                b{
+                    width: 50%;
+                    text-align: right;
+                    display: inline-block;
+                }
+                span{
+                    width: 50%;
+                    text-align: right;
+                    display: inline-block;
+                }
+                .dcrate{
+                    display: inline-block;
+                    color: $page-xanh;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

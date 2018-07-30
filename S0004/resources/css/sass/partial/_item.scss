@@ -1,0 +1,47 @@
+.item{
+    width: 18%;
+    position: relative;
+    margin-bottom: 15px;
+    &:hover img{
+        filter: brightness(70%);
+    }
+    &:hover .shortact{
+        transform: scale(1);
+    }
+    img{
+        width: 100%;
+    }
+    a{
+        color: white;
+        text-decoration: none;
+    }
+    .iteminfo{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0,0,0,0.4);
+        padding: 5px 10px;
+        h4{
+            font-size: 14px;
+        }
+    }
+    .shortact{
+        position: absolute;
+        bottom: 50%;
+        left: 0;
+        right: 0;
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+        transform: scale(0);
+        i{
+            border-radius: 50%;
+            font-size: 20px;
+            padding: 10px;
+            background-color: #333333;
+            &:hover{
+                background-color: $page-color;
+            }
+        }
+    }
+}

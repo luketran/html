@@ -1,0 +1,36 @@
+.aboutus{
+    padding: 5rem 0;
+    @media (max-width: 991px) {
+        padding: 2rem 0;
+    }
+    article{
+        .abttop{
+            text-align: center;
+            h1, h4{
+                font-weight: bold;
+            }
+            p{
+                margin: 1.5rem 0;
+            }
+        }
+        .abtmid{
+            text-align: center;
+            color: $page-color;
+            margin: 2rem 0;
+            b{
+                font-size: 5rem;
+            }
+        }
+        .abtbot{
+            p{
+                font-size: 16px;
+            }
+        }
+    }
+    .abimg{
+        img{
+            width: 100%;
+        }
+    }
+   
+}

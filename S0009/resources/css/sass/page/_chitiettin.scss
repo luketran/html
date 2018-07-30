@@ -1,0 +1,145 @@
+.blogdetail{
+    h4{
+        font-weight: bold;
+        border-bottom: 1px solid $text;
+    }
+    h5{
+        font-weight: bold;
+    }
+    b{
+        margin: 10px 0;
+        display: block;
+    }
+}
+.share{
+    padding: 15px 0;
+    border-top: 1px solid $border-line;
+    border-bottom: 1px solid $border-line;
+    @media (min-width: 992px) {
+        display: flex;
+        align-items: center;
+    }
+    .jssocials-share{
+        border-radius: 5px;
+        padding: 5px;
+        a{
+            color: white;
+            text-decoration: none;
+            line-height: unset;
+            padding: 0;
+            @media (max-width: 991px) {
+                padding: 10px;
+            }
+            i{
+                font-size: 14px;
+            }
+        }
+    }
+    .jssocials-share-facebook{
+        background-color: $clfb;
+    }
+    .jssocials-share-twitter{
+        background-color: $cltt;
+    }
+    .jssocials-share-pinterest{
+        background-color: $clpt;
+    }
+    .jssocials-share-googleplus{
+        background-color: $clgp;
+    }
+    .tagdiv{
+        display: block;
+        margin-left: auto;
+        @media (max-width: 767px) {
+            margin: 10px 0;
+        }
+    }
+
+}
+.comment{
+    h4{
+        font-weight: bold;
+        margin: 15px 0;
+    }
+    ._1comt{
+        margin-bottom: 15px;
+        display: inline-block;
+        width: 100%;
+        img{
+            width: 70px;
+            margin-right: 10px;
+        }
+        @media (max-width: 767px) {
+            .uava{
+                img{
+                    width: 40px;
+                }
+            }
+        }
+        .uava{
+            float: left;
+        }
+        ._1comtinfo{
+            position: relative;
+            margin-left: 70px;
+            border-bottom: 1px solid $border-light;
+            @media (max-width: 767px){
+                margin-left: 45px;
+            }
+            p{
+                font-size: 14px;
+            }
+            .cmttime{
+                color: $text-author;
+            }
+            .btrep{
+                @media (min-width: 480px){
+                    position: absolute;
+                }
+                display: inline-block;
+                color: $text-author;
+                top: 0;
+                right: 0;
+                .fa-share{
+                    transform: scaleX(-1);
+                }
+            }
+        }
+    }
+    .rep{
+        padding-left: 70px;
+    }
+}
+.relatenews{
+    border-bottom: 1px solid $border-line;
+    padding-bottom: 10px;
+    h4{
+        font-weight: bold;
+        margin: 15px 0;
+    }
+    .relatelist{
+        .owl-dots,.owl-nav{
+            display: none;
+        }
+        
+    }
+}
+.yourcomment{
+    h4{
+        font-weight: bold;
+        margin: 15px 0;
+    }
+    input, textarea{
+        border: 1px solid $border-h;
+        border-radius: 3px;
+        width: 100%;
+        padding: 10px;
+        background-color: transparent;
+        margin-bottom: 15px;
+    }
+    button{
+        background-color: $page-xanh;
+        padding: 10px 15px;
+        color: white;
+    }
+}

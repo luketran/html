@@ -1,0 +1,93 @@
+.wishlist{
+    padding: 60px 0;
+    table{
+        width: 100%;
+        thead{
+            border: 1px solid $border;
+            @media (max-width: 768px) {
+                display: none;
+            }
+            th{
+                text-align: center;
+                padding: 20px 0px;
+                &:first-child{
+                    text-align: left;
+                    padding-left: 30px;
+                }
+            }
+        }
+        tbody{
+            tr{
+                border: 1px solid $border;
+                td{
+                    text-align: center;
+                    padding: 20px 0px;
+                    &:first-child{
+                        text-align: left;
+                        padding-left: 30px;
+                    }
+                }
+                .wlip{
+                    font-weight: bold;
+                }
+                .wlact{
+                    button{
+                        @include buttonpage;
+                        background-color: $page-color;
+                        padding: 10px 20px;
+                    }
+                }
+                i{
+                    font-size: 22px;
+                    cursor: pointer;
+                    &:hover{
+                        color: $page-color;
+                    }
+                }
+            }
+        }
+    }
+    @media(max-width:768px){
+        table{
+            display: block;
+            width: 100% !important;
+            overflow: hidden;
+            thead{
+                display: none;
+            }
+            tbody,tr,td{
+                display: block;
+                width: 100% !important;
+            }
+            tr{
+                position: relative;
+            }
+            td{
+                padding: 10px !important;
+                &.rmfc{
+                    position: absolute;
+                    top: 100px;
+                    right: 10px;
+                    width: unset !important;
+                }
+                &:after{
+                    clear: both;
+                    display: block;
+                    content: " ";
+                }
+                &.show-title{
+                    &:before{
+                        font-weight: normal;
+                    }
+                    &.wlip{
+                        &:before{
+                            content : attr(data-title1);
+                            display: inline-block;
+                            vertical-align: middle;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

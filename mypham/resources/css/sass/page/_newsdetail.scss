@@ -1,0 +1,139 @@
+// trang chi tiet tin
+.blogdetail{
+    padding: 40px 0;
+}
+
+.chitiettin{
+    .newsinfo{
+        text-align: left;
+        h4{
+            font-weight: bold;
+            font-size: 20px;
+        }
+        i{
+            color: $text-author;
+        }    
+        span{
+            color: $text-author;
+            margin-top: 10px;
+        }
+    }
+    .ndtin{
+        p{
+            text-align: justify;
+            color: #555555;
+            margin: 20px 0;
+        }
+    }
+    .binhluan{
+        text-align: left;
+        border-top: 1px solid #cccccc;
+        padding: 10px 0;
+        h5{
+            font-size: 16px;
+        }
+        input{
+            @include getboder;
+            border-radius: 5px;
+            width: 100%;
+            font-size: 20px;
+            padding: 5px 10px;
+            @media (max-width: 767px) {
+                width: 100%;
+            }
+        }
+        textarea{
+            @include getboder;
+            border-radius: 5px;
+            width: 100%;
+            font-size: 20px;
+            padding: 5px 10px;
+        }
+        button{
+            @include buttonpage(padding,10px,10px);
+            @include buttonhover;
+        }
+    }
+}
+.logtocmt{
+    border-top: 1px solid #cccccc;
+    padding: 15px 0;
+    button{
+        padding: 5px 10px;
+    }
+}
+.comment{
+    h4{
+        font-weight: bold;
+        margin: 15px 0;
+    }
+    ._1comt{
+        margin-bottom: 15px;
+        display: inline-block;
+        width: 100%;
+        img{
+            width: 70px;
+            margin-right: 10px;
+        }
+        @media (max-width: 767px) {
+            .uava{
+                img{
+                    width: 40px;
+                }
+            }
+        }
+        .uava{
+            float: left;
+        }
+        ._1comtinfo{
+            position: relative;
+            margin-left: 70px;
+            @media (max-width: 767px){
+                margin-left: 45px;
+            }
+            p{
+                font-size: 14px;
+            }
+            .btrep{
+                @media (min-width: 480px){
+                    position: absolute;
+                }
+                display: inline-block;
+                color: $text-author;
+                top: 0;
+                right: 0;
+                cursor: pointer;
+                .fa-share{
+                    transform: scaleX(-1);
+                }
+            }
+        }
+    }
+    .repinput{
+        margin-left: 70px;
+        textarea{
+            width: 100%;
+            border: 1px solid $page-color;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        button{
+            float: right;
+            padding: 5px 15px;
+        }
+    }
+    .rep{
+        padding-left: 70px;
+    }
+}
+.pagebtn{
+    border: 1px solid $page-color;
+    border-radius: 10px;
+    padding: 5px 10px;
+    color: $text;
+    background: white;
+    &:hover{
+        background-color: $page-color;
+        color: white;
+    }
+}

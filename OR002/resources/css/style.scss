@@ -1,0 +1,50 @@
+@import "sass/static/mixin";
+@import "sass/static/_variables.scss";
+@import "sass/static/font";
+@import "sass/static/button";
+@import "sass/static/general";
+@import "sass/partial/header";
+@import "sass/partial/body";
+@import "sass/partial/footer";
+@import "sass/partial/navbar";
+@import "sass/partial/item";
+@import "sass/page/home";
+@import "sass/page/contactus";
+@import "sass/page/aboutus";
+@import "sass/page/blog";
+@import "sass/page/blogdetail";
+@import "sass/page/product";
+@import "sass/page/productdetail";
+@import "sass/page/hidecontent";
+@import "sass/page/lognforgotpass";
+@import "sass/page/wishlist";
+@import "sass/page/useracc";
+@import "sass/page/checkout";
+@import "sass/page/ordersuccess";
+@import "sass/partial/cart";
+
+@media (max-width: 991px){
+    .wrapper{
+        margin-top: 94px;
+    }
+}
+.pagelocal{
+    background-color: #f7f7f7;
+        .breadcrumb{
+            margin: .5rem 0;
+            padding-left: 0;
+            a{
+                color: black;
+            }
+            li{
+                color: black;
+                &.active{
+                    color: $page-color;
+                    &::before{
+                        content: "|";
+                        color: black;
+                    }
+                }
+            }
+    }
+}

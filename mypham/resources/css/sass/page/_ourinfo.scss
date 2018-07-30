@@ -1,0 +1,74 @@
+// trang lien he
+.ourinfo{
+    padding: 40px 0;
+    #bigmap{
+        height: 410px;
+        width: 100%;
+    }
+    .lh{
+        h3{
+            @media (max-width: 768px) {
+                font-size: 20px;
+            }
+        }
+        h5{
+            color: $text-title;
+        }
+        .contactus{
+            ._1ct{
+                display: flex;
+                i{
+                    margin: auto 15px;
+                    margin-bottom: auto;
+                    font-size: 35px;
+                    color: $page-color;
+                    width: 35px;
+                }
+                .ctdetail{
+                    span{
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        .ideal{
+            ._1k{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                @media (max-width: 480px) {
+                    display: block;
+                }
+                input,textarea{
+                    border: 1px solid $page-color;
+                    border-radius: 10px;
+                    width: 100%;
+                    padding: 10px;
+                }
+                .yname{
+                    width: 48%;
+                    @media (max-width: 480px) {
+                        width: 100%;
+                    }
+                }
+                .ymail{
+                    width: 48%;
+                    @media (max-width: 480px) {
+                        width: 100%;
+                    }
+                }
+                .yideal{
+                    width: 100%;
+                }
+            }
+            button{
+                border: none;
+                border-radius: 10px;
+                color: white;
+                background-color: $page-color;
+                padding: 10px 20px;;
+                margin: 10px 0;
+            }
+        }
+    }
+}

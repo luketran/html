@@ -1,0 +1,114 @@
+@import "sass/static/mixin";
+@import "sass/static/_variables.scss";
+@import "sass/static/font";
+@import "sass/static/button";
+@import "sass/static/general";
+@import "sass/partial/header";
+@import "sass/partial/body";
+@import "sass/partial/footer";
+@import "sass/partial/navbar";
+@import "sass/partial/modal";
+@import "sass/page/404";
+@import "sass/page/aboutus";
+@import "sass/page/buyhistory";
+@import "sass/page/pagecart";
+@import "sass/partial/cart";
+@import "sass/page/forgotpass";
+@import "sass/page/itemdetail";
+@import "sass/page/likeitems";
+@import "sass/page/news";
+@import "sass/page/newsdetail";
+@import "sass/page/ordersuccess";
+@import "sass/page/ourinfo";
+@import "sass/page/payconfirm";
+@import "sass/page/payment";
+@import "sass/page/product";
+@import "sass/page/useracc";
+@import "sass/page/home";
+
+
+
+.item{
+    background-color: #fafafa;
+    transition: 0.5s ease;
+    &:hover,&:focus,&:active {
+        .itemimg{
+            border-bottom: 1px solid $page-color;
+        }
+    }
+    .itemimg{
+        background-color: white;
+        border-bottom: 1px solid #EFEFEF;
+        position: relative;
+        &:hover>ul {
+            opacity: 1;
+            transform: translateY(0%);
+            visibility: visible;
+        }
+        ul{
+            position: absolute;
+            bottom: 0;
+            margin-bottom: 0;
+            transition: 0.4s;
+            opacity: 0;
+            transform: translateY(100%);
+            visibility: hidden;
+            width: 100%;
+            li{
+                display: inline-block;
+                margin: 0 3px;
+                background-color: white;
+                padding: 5px 8px;
+                &.active{
+                    a{
+                        color: $page-color;
+                    }
+                }
+                a{
+                    color: black;
+                    text-decoration: none;
+                    font-weight: bold;
+                    &:hover,&:focus,&:active {
+                        color: $page-color;
+                    }
+                }
+            }
+
+        }
+    }
+    .iteminfo{
+        text-align: left;
+        padding: 20px;
+        
+        a{
+            @include geta(color,black);
+            h4{
+                overflow: hidden;
+                margin: 15px 0 15px;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                font-size: 15px;
+                line-height: 1.4;
+            }
+            
+        }
+        .star{
+            color: $page-color;
+            font-size: 17px;
+        }
+        .price{
+            color: red;
+            font-size: large;
+            margin-right: 5px;
+        }
+        .oldprice{
+            color: gray;
+            font-size: medium;
+            text-decoration: line-through;
+        }
+    }
+}
+
+

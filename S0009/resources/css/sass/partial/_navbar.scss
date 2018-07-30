@@ -1,0 +1,373 @@
+.menu{
+    text-align: center;
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        @media(min-width:992px){
+            display: block !important;
+        }
+    }
+    .menubar{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        >li{
+            display: inline-block;
+            >a{
+                display: block;
+                padding: 5px;
+                text-decoration: none;
+                color:white;
+                font-size: 15px;
+                text-align: left;
+                >i{
+                    transition:  transform 0.5s ease;
+                }
+            }
+            &:hover{
+                >a{
+                    color: $page-color;
+                }
+            }
+            &.has-submenu{
+                &:hover{
+                    >a{
+                        text-decoration: none;
+                        >i{
+                            transform: rotate(-180deg);
+                        }
+                    }
+                    >ul.submenu{
+                        opacity: 1;
+                        visibility: visible;
+                        transform: none;
+                    }
+                }
+                >ul.submenu{
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    min-width: 100%;
+                    background-color: white;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all 0.5s ease;
+                    transform: translateY(15px);
+                    z-index: 10;
+                    text-align: left;
+                    >li{
+                        display: inline-block;
+                        vertical-align: top;
+                        margin-left: 30px;
+                        &:last-child{
+                            float: right;
+                            @media(max-width:991px){
+                                display: none;
+                            }
+                        }
+                        @media(min-width:992px){
+                            padding-right: 20px;
+                        }
+                        >a{
+                            text-decoration: none;
+                            padding: 10px 0px;
+                            display: block;
+                            color:#000;
+                            font-weight: bold;
+                            white-space: nowrap;
+                            text-align: left;
+                            @media(min-width:992px){
+                                margin: 20px 0;
+                                border-bottom: 1px solid $border-h;
+                            }
+                            >i{
+                                display: none;
+                                @media(max-width:991px){
+                                    display: unset;
+                                }
+                            }
+                        }
+                        &:hover{
+                            
+                            >a{
+                                color:$page-color;
+                            }
+                        }
+                        &.has-second-submenu{
+                            &:hover{
+                                >a{
+                                    >i{
+                                        transform: rotate(180deg);
+                                    }
+                                }
+                                >ul.second-submenu{
+                                    opacity: 1;
+                                    visibility: visible;
+                                    transform: none;
+                                }
+                            }
+                            >ul.second-submenu{
+                                top: 0;
+                                min-width: 100%;
+                                transition: all 0.5s ease;
+                                >li{
+                                    display: block;
+                                    @media(min-width:992px){
+                                        padding-right: 20px;
+                                    }
+                                    &:hover{
+                                    background: #F7F8FA;
+                                        >a{
+                                            color:$page-color;
+                                        }
+                                    }
+                                    >a{
+                                        text-decoration: none;
+                                        padding: 5px 0px;
+                                        display: block;
+                                        color:#000;
+                                        white-space: nowrap;
+                                        text-align: left;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width:991px){
+    body{
+        .main{
+            &:before{
+                content: '';
+                position: fixed;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: 10000;
+                opacity: 0;
+                transition: all 0.5s ease;
+                visibility: hidden;
+                background-color: rgba(0,0,0,.3);
+            }
+        }
+        &.menu-open{
+            .main{
+                &:before{
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+
+        }
+        li{
+            .open{
+                a{
+                    i{
+                        transform: translateY(-50%) rotate(180deg);
+                    }
+                }
+            }
+        }
+    }
+    .navbar-toggle{
+        display:inline-block !important;
+        z-index: 10001;
+        position: fixed;
+        left: 15px;
+        top: 30px;
+        .icon-bar{
+            background: $page-color;
+            transition: all 0.5s ease-in;
+        }
+        &.active{
+            .icon-bar{
+                &:first-child{
+                    transform: rotate(45deg);
+                    position: absolute;
+                    top: 15px;
+                }
+                &:nth-child(2){
+                    transform: translateX(-15px) rotate(90deg);
+                    position: absolute;
+                    bottom: 0px;
+                }
+                &:last-child{
+                    transform: rotate(-45deg);
+                    position: absolute;
+                    top: 11px;
+                }
+            }
+        }
+        
+    }
+    li{
+        &:hover{
+            background: unset !important;
+        }
+    }
+    .menu{
+        position: fixed;
+        top: 87px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 10001;
+        transition: all 0.5s linear;
+        background: $page-xanh;
+        overflow-x: hidden;
+        overflow-y: auto;
+        max-height: 0;
+        opacity: 0;
+        visibility: hidden;
+        &.open{
+            opacity: 1;
+            visibility: visible;
+            max-height: 1000px;
+
+        }
+        .menubar{
+            
+            >li{
+                display: block;
+                border-bottom: 1px solid $border;
+                border-radius: 0;
+                padding: 5px 15px;
+                >a{
+                    >i{
+                        transform: none !important;
+                    }
+                }
+                
+                &.has-submenu{
+                    >a{
+                        padding-right: 40px;
+                        position: relative;
+                        >i{
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                            bottom: 0;
+                            width: 40px;
+                            text-align: center;
+                            &:before{
+                                width: 20px;
+                                height: 20px;
+                                position: absolute;
+                                top: 50%;
+                                right: 10px;
+                                transform: translateY(-50%);
+                            }
+                        }
+                    }
+                    
+                    >ul.submenu{
+                        position: relative;
+                        top:auto;
+                        left: auto;
+                        min-width: 100%;
+                        opacity: 1;
+                        visibility: visible;
+                        max-width: unset;
+                        background: $page-xanh;
+                        transition: unset;
+                        transform: unset;
+                        padding-left: 15px;
+                        display: none;
+                        >li{
+                            display: block;
+                            background: $page-xanh;
+                            >a{
+                                padding: 10px 15px;
+                                display: block;
+                                color:white;
+                                white-space: nowrap;
+                                >i{
+                                    transition : transform 0.5s ease;
+                                }
+                            }
+                            &:hover{
+                                >a{
+                                    color:$page-color;
+                                }
+                            }
+                            &.has-second-submenu{
+                                &:hover{
+                                    >a{
+                                        >i{
+                                            transform: none !important;
+                                        }
+                                    }
+                                    >ul.second-submenu{
+                                        opacity: 1;
+                                        visibility: visible;
+                                        transform: none;
+                                        box-shadow: 3px 3px 20px 2px black;
+                                           
+                                    }
+                                }
+                                &.open{
+                                    a{
+                                        i{
+                                            transform: rotate(180deg) !important;
+                                        }
+                                    }
+                                }
+                                >a{
+                                    padding-right: 40px;
+                                    position: relative;
+                                    >i{
+                                        position: absolute;
+                                        right: 0;
+                                        top: 0;
+                                        bottom: 0;
+                                        width: 40px;
+                                        text-align: center;
+                                        &:before{
+                                            width: 20px;
+                                            height: 20px;
+                                            position: absolute;
+                                            top: 50%;
+                                            right: 10px;
+                                            transform: translateY(-50%);
+                                        }
+                                    }
+                                }
+                                >ul.second-submenu{
+                                    position: relative;
+                                    top: auto;
+                                    left: auto;
+                                    padding-left: 15px;
+                                    min-width: 100%;
+                                    opacity:1;
+                                    visibility: visible;
+                                    background: $page-xanh;
+                                    transition: unset;
+                                    transform:unset;
+                                    display: none;
+                                    >li{
+                                        display: block;
+                                        background: $page-xanh;
+                                        >a{
+                                            padding: 10px 15px;
+                                            display: block;
+                                            color:white;
+                                            white-space: nowrap;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}

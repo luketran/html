@@ -203,3 +203,18 @@ a.pagebtn{
     text-decoration: none;
     color: white;
 }
+.form-input{
+    position: relative;
+    input:not(:placeholder-shown)~.form-error{
+        transform: translateY(0px);
+       opacity: 1;
+       visibility: visible;
+       transition: 0.3s ease;
+    }
+    .form-error{
+       transform: translateY(-20px);
+       opacity: 0;
+       visibility: hidden;
+        color: red;
+    }
+}

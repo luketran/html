@@ -1,0 +1,284 @@
+.input-group{
+    input{
+        border: 1px solid transparent;
+        box-shadow: none;
+        border-radius: 0;
+        &:focus{
+            border-color: transparent;
+            box-shadow: none;
+        }
+    }
+    button{
+        border: 1px solid transparent;
+        box-shadow: none;
+        border-radius: 0;
+        &:hover,&:focus,&:active{
+            box-shadow: none;
+            border-color: transparent !important;
+            border: 1px solid transparent;
+            background-color: $page-color !important;
+            outline: none;
+        }
+    }
+}
+header{
+    .tophead{
+        background-color: #444444;
+        color: white;
+        .welcometext{
+            span{
+                display: block;
+                padding: 1.5rem 0;
+            }
+        }
+        .shortlink{
+            text-align: right;
+        }
+        .loglink,.short{
+            a{
+                display: inline-block;
+                padding: 1.5rem;  
+                text-decoration: none;
+                color: white;
+                i{
+                    margin-right: .5rem;
+                }
+                &:hover{
+                    background-color: $bg-hover;
+                    color: black;
+                    transition: 0.3s ease;
+                }
+            }
+        }
+        .short{
+            @media (min-width: 992px){
+                sup{
+                    display: none;
+                }
+            }
+            a{
+                span{
+                    margin-left: 5px;
+                }
+            }
+        }
+        .logedin{
+            text-align: right;
+            position: relative;
+            display: inline-block;
+            @media (max-width: 991px){
+                padding: .4rem 0;
+            }
+            &:hover ul{
+                transform: translateY(0px);
+                opacity: 1;
+                visibility: visible;
+                transition: 0.5s ease;
+                z-index: 200;
+            }
+            img{
+                max-width: 20px;
+                max-height: 20px;
+            }
+            ul{
+                list-style: none;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                padding-top: 5px;
+                z-index: 99;
+                transform: translateY(20px);
+                opacity: 0;
+                visibility: hidden;
+                border: 1px solid $page-color;
+                background-color: white;
+                li{
+                    color: $text;
+                    padding: 5px 10px;
+                    a{
+                        @include a-usual;
+                        color: $text;
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
+    }
+    .bothead{
+        .botheadcont{
+            position: relative;
+            display: table;
+            width: 100%;
+        }
+        .logo{
+            display: table-cell;
+            vertical-align: middle;
+        }
+        .headsearch{
+            button{
+                border: none;
+                background-color: transparent;
+            }
+            @media (min-width: 992px) {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 0;
+                border: 2px solid transparent;
+                .inputgroup{
+                    input{
+                        border: none;
+                        max-width: 0;
+                        overflow: hidden;
+                    }
+                    button{
+                        &.active{
+                            i{
+                                color: $page-color;
+                            }
+                        }
+                    }
+                }
+                &.ssearch{
+                    border: 2px solid $page-color;
+                    transition: 0.3s ease;
+                    input{
+                        max-width: 200px;
+                        width: 200px;
+                        padding: 1rem;
+                        transition: 0.3s ease;
+                    }
+                    button{
+                        i{
+                            color: $page-color;
+                        }
+                    }
+                }
+            }
+            @media (max-width: 991px){
+                .inputgroup{
+                    input{
+                        width: 100%;
+                        border: 1px solid $page-color;
+                        transition: 0.3s ease;
+                        padding: .5rem;
+                        opacity: 0;
+                        visibility: hidden;
+                    }
+                    button{
+                        position: fixed;
+                        right: 110px;
+                        top: 45px;
+                        font-size: 2rem;
+                    }
+                }
+                &.ssearch{
+                    input{
+                        margin-top: 5rem;
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 1199px){
+        .welcometext{
+            display: none;
+        }
+    }
+    @media (max-width: 991px) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 99;
+        background-color: white;
+        border-bottom: 2px solid $page-color;
+        padding-bottom: 1rem;
+        .tophead{
+            background-color: $yellow;
+            .loglink{
+                a{
+                    padding: .5rem;
+                }
+            }
+            .short{
+                position: fixed;
+                top: 35px;
+                right: 15px;
+                z-index: 9;
+                a{
+                    color: $text;
+                    padding-right: 0;
+                    i{
+                        font-size: 2rem;
+                        position: relative;
+                        sup{
+                            position: absolute;
+                            display: flex;
+                            width: 15px;
+                            height: 15px;
+                            background: $page-color;
+                            border-radius: 50%;
+                            color: white;
+                            align-items: center;
+                            right: -9px;
+                            justify-content: center;
+                            font-weight: bold;
+                            padding: 8px;
+                        }
+                    }
+                    span{
+                        display: none;
+                    }
+                }
+            }
+        }
+        .bothead{
+            padding: 10px 0;
+        }
+        .logo{
+            position: fixed;
+            left: 55px;
+            z-index: 100;
+            img{
+
+                max-width: 150px;
+            }
+        }
+       
+        
+    }
+    @media (max-width: 480px){
+        .logo{
+            img{
+                max-width: 100px;
+                margin-top: 8px;
+            }
+        }
+    }
+}
+body{
+  &.fixed{
+      header{
+          @media (min-width: 992px) {
+              border-bottom: 2px solid $page-xanh;
+              position: fixed;
+              top: 0;
+              z-index: 10000;
+              width: 100%;
+              background-color: white;
+              .tophead{
+                  display: none;
+              }
+              .bothead{
+                  transition: 0.3s ease-in-out;  
+              }
+          } 
+      }
+        .wrapper{
+            margin-top: 117px;
+        }    
+    }  
+}

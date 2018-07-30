@@ -49,29 +49,31 @@
 										<div class="incart">
 											<h4>Có <span>2</span> sản phẩm trong giỏ hàng</h4>
 											<div class="_incartitem">
-												<div class="_1item">
-													<img src="resources/images/incartimg.png" alt="">
+												<div class="_1citem">
+													<img src="resources/images/itemimg.png" alt="">
 													<div class="_1info">
 														<p class="icin">Juy cạp thường thun trắng</p>
 														<p class="icp">2.100.000đ</p>
-														<div class="_itemno">
-															<i class="fa fa-minus"></i>
-															<input type="text" name="" value="1">
-															<i class="fa fa-plus"></i>
+														<div class="input-group _itemno">
+															<a class="nictrl input-group-addon">-</a>
+															<input type="number" class="form-control" aria-label="" value="1">
+															<a class="nictrl input-group-addon">+</a>
 														</div>
+														
 													</div>
 													<i class="fa fa-trash"></i>
 												</div>
-												<div class="_1item">
-													<img src="resources/images/incartimg.png" alt="">
+												<div class="_1citem">
+													<img src="resources/images/itemimg.png" alt="">
 													<div class="_1info">
 														<p class="icin">Juy cạp thường thun trắng</p>
 														<p class="icp">2.100.000đ</p>
-														<div class="_itemno">
-															<i class="fa fa-minus"></i>
-															<input type="text" name="" value="1">
-															<i class="fa fa-plus"></i>
+														<div class="input-group _itemno">
+															<a class="nictrl input-group-addon">-</a>
+															<input type="number" class="form-control" aria-label="" value="1">
+															<a class="nictrl input-group-addon">+</a>
 														</div>
+														
 													</div>
 													<i class="fa fa-trash"></i>
 												</div>
@@ -216,7 +218,6 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-12">
-
 						<div class="banner owl-carousel">
 							<a href=""><img src="resources/images/banner.png" alt=""></a>
 							<a href=""><img src="resources/images/banner.png" alt=""></a>
@@ -243,6 +244,32 @@
 							</div>
 							<div class=" sale2 col-sm-12">
 								<a href=""><img src="resources/images/banner5.png" alt=""></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="seasondeal">
+				<div class="container">
+					<div class="row">
+						<div class="ssdcont col-sm-12">
+							<div class="col-sm-6 col-lg-push-6">
+								<div class="dealcont">
+									<h3>PHỤ KIỆN THỜI TRANG GIÀY TÚI VÍ, MŨ LEN</h3>
+									<h3><b>GIẢM GIÁ</b> <span>30%</span></h3>
+									<p>Chương trình diễn ra từ ngày 28/12 đến 1/1/2018, áp dụng tại hệ thống TokyoLife trên toàn quốc, với hàng trăm nghìn sản phẩm mới về liên tục cập nhật cho CT sale chào mừng năm mới này.</p>
+									<div class="col-sm-8 col-sm-push-2">
+										<div class="dealcd">
+											<div class="row">
+												<div class="col-sm-3"><h4>05</h4><p>Ngày</p></div>
+												<div class="col-sm-3"><h4>05</h4><p>Giờ</p></div>
+												<div class="col-sm-3"><h4>05</h4><p>Phút</p></div>
+												<div class="col-sm-3"><h4>05</h4><p>Giây</p></div>
+											</div>
+										</div>
+									</div>
+									<a href="">MUA NGAY</a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -408,33 +435,45 @@
 			<div class="news">
 				<h3>TIN TỨC</h3>
 				<div class="container">
-					<div class="col-sm-4">
-						<div class="_1tin">
-							<a href=""><img src="resources/images/newsimg.png" alt=""></a>
-							<p class="author">01.03.2018 / Admin</p>
-							<a href=""><h4>Trời nồm thế này cứ mặc áo phông là thoải mái nhất, lại còn dễ kết hợp đồ</h4></a> 
-							<p>Tuy không phải item mới mẻ gì nhưng áo phông vẫn luôn là món đồ mà ai cũng sắm tới vài chiếc trong tủ</p>
-							<a href="">Xem thêm</a>
-						</div>
-					</div>	
-					<div class="col-sm-4">
-						<div class="_1tin">
-							<a href=""><img src="resources/images/newsimg.png" alt=""></a>
-							<p class="author">01.03.2018 / Admin</p>
-							<a href=""><h4>Trời nồm thế này cứ mặc áo phông là thoải mái nhất, lại còn dễ kết hợp đồ</h4></a> 
-							<p>Tuy không phải item mới mẻ gì nhưng áo phông vẫn luôn là món đồ mà ai cũng sắm tới vài chiếc trong tủ</p>
-							<a href="">Xem thêm</a>
-						</div>
-					</div>	
-					<div class="col-sm-4">
-						<div class="_1tin">
-							<a href=""><img src="resources/images/newsimg.png" alt=""></a>
-							<p class="author">01.03.2018 / Admin</p>
-							<a href=""><h4>Trời nồm thế này cứ mặc áo phông là thoải mái nhất, lại còn dễ kết hợp đồ</h4></a> 
-							<p>Tuy không phải item mới mẻ gì nhưng áo phông vẫn luôn là món đồ mà ai cũng sắm tới vài chiếc trong tủ</p>
-							<a href="">Xem thêm</a>
-						</div>
-					</div>	
+					<div class="row">
+						<div class="col-sm-3">
+							<div class="_1tin">
+								<a href=""><img src="resources/images/newsimg.png" alt=""></a>
+								<p class="author">01.03.2018 / Admin</p>
+								<a href=""><h4>Trời nồm thế này cứ mặc áo phông là thoải mái nhất, lại còn dễ kết hợp đồ</h4></a> 
+								<p>Tuy không phải item mới mẻ gì nhưng áo phông vẫn luôn là món đồ mà ai cũng sắm tới vài chiếc trong tủ</p>
+								<a href="">Xem thêm</a>
+							</div>
+						</div>	
+						<div class="col-sm-3">
+							<div class="_1tin">
+								<a href=""><img src="resources/images/newsimg.png" alt=""></a>
+								<p class="author">01.03.2018 / Admin</p>
+								<a href=""><h4>Trời nồm thế này cứ mặc áo phông là thoải mái nhất, lại còn dễ kết hợp đồ</h4></a> 
+								<p>Tuy không phải item mới mẻ gì nhưng áo phông vẫn luôn là món đồ mà ai cũng sắm tới vài chiếc trong tủ</p>
+								<a href="">Xem thêm</a>
+							</div>
+						</div>	
+						<div class="col-sm-3">
+							<div class="_1tin">
+								<a href=""><img src="resources/images/newsimg.png" alt=""></a>
+								<p class="author">01.03.2018 / Admin</p>
+								<a href=""><h4>Trời nồm thế này cứ mặc áo phông là thoải mái nhất, lại còn dễ kết hợp đồ</h4></a> 
+								<p>Tuy không phải item mới mẻ gì nhưng áo phông vẫn luôn là món đồ mà ai cũng sắm tới vài chiếc trong tủ</p>
+								<a href="">Xem thêm</a>
+							</div>
+						</div>	
+						<div class="col-sm-3">
+							<div class="_1tin">
+								<a href=""><img src="resources/images/newsimg.png" alt=""></a>
+								<p class="author">01.03.2018 / Admin</p>
+								<a href=""><h4>Trời nồm thế này cứ mặc áo phông là thoải mái nhất, lại còn dễ kết hợp đồ</h4></a> 
+								<p>Tuy không phải item mới mẻ gì nhưng áo phông vẫn luôn là món đồ mà ai cũng sắm tới vài chiếc trong tủ</p>
+								<a href="">Xem thêm</a>
+							</div>
+						</div>	
+					</div>
+					
 				</div>
 	
 			</div>
@@ -447,13 +486,6 @@
 						<div class="row">
 							<div class="col-md-4">
 								<div class="ctinfo">
-									<img src="resources/images/logow.png" alt="">
-									<ul class="ouraddress fa-ul">
-										<li><span class="fa-li"><i class="fa fa-phone fa-fw"></i></span><span>Hotline:</span><span class="pno">(+84) 937 334 594</span>
-										</li>
-										<li><span class="fa-li"><i class="fa fa-map-marker fa-fw"></i></span><span>Tầng 12A - Tòa nhà Pico Plaza, 20 Cộng Hòa, Phường 12, Quận Tân Bình, TP Hồ Chí Minh</span>
-										</li>
-									</ul>
 									<ul class="social">
 										<li><a href="#" class="fa fa-facebook fa-fw" aria-hidden="true"></a></li>
 										<li><a href="#" class="fa fa-instagram fa-fw" aria-hidden="true"></a></li>
@@ -463,70 +495,18 @@
 									</ul>
 								</div>
 							</div>
-							<div class="col-md-4">
-								<div class="sitemap">
-									<div class="row">
-										<div class="col-sm-6">
-											<h5>MENU</h5>
-											<ul>
-												<li><a href="index.html">Trang chủ</a></li>
-												<li><a href="san-pham.html">Sản phẩm</a></li>
-												<li><a href="bai-viet.html">Bài viết</a></li>
-												<li><a href="gioi-thieu.html">Giới thiệu</a></li>
-												<li><a href="lien-he.html">Liên hệ</a></li>
-											</ul>
-										</div>
-										<div class="col-sm-6">
-											<h5>THÔNG TIN CHUNG</h5>
-											<ul>
-												<li><a href="">Chính sách bảo mật</a></li>
-												<li><a href="">Chính sách bảo mật</a></li>
-												<li><a href="">Chính sách bảo mật</a></li>
-												<li><a href="">Chính sách bảo mật</a></li>
-												<li><a href="">Chính sách bảo mật</a></li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="spdv">
-									<div class="row">
-										<div class="col-sm-6">
-											<h5>SẢN PHẨM</h5>
-											<ul>
-												<li><a href="">Thời trang nam</a></li>
-												<li><a href="">Thời trang nữ</a></li>
-												<li><a href="">Túi xách</a></li>
-												<li><a href="">Giày dép</a></li>
-												<li><a href="">Phụ kiện</a></li>
-											</ul>
-										</div>
-										<div class="col-sm-6">
-											<h5>DỊCH VỤ KHÁCH HÀNG</h5>
-											<ul>
-												<li><a href="">Tìm kiếm</a></li>
-												<li><a href="">Đăng nhập</a></li>
-												<li><a href="">Đăng nhập</a></li>
-												<li><a href="">Đăng nhập</a></li>
-												<li><a href="">Đăng nhập</a></li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
 						</div>
 					</div>
 				</div>
 				<div class="trademark">
 					<div class="container">
-						<span class="cpr">Copyright © 2018 Designed by 	<a href="#" target="_blank">iamSale</a> . All rights reserved.</span>
 						<div class="paymentmt">
 							<span><img src="resources/images/logo_mastercard.png" alt=""></span>
 							<span><img src="resources/images/logo_paypal.png" alt=""></span>
 							<span><img src="resources/images/logo_amex-medium.png" alt=""></span>
 							<span><img src="resources/images/logo_visa.png" alt=""></span>
 						</div>
+						<div class="cpr">Copyright © 2018 Designed by 	<a href="#" target="_blank">iamSale</a> . All rights reserved.</div>
 					</div>
 				</div>
 			</div>

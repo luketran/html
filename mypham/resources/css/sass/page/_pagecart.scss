@@ -1,0 +1,132 @@
+// trang gio hang
+.page-cart{
+    padding: 40px 0;
+    table{
+        width: 100%;
+        tr{
+            border-bottom: 1px solid #e1e1e1;
+            th{
+                padding-bottom: 10px;
+            }
+        }
+        td{
+            img{
+                max-width: 170px;
+            }
+        }
+    }
+    .fa-trash-o{
+        font-size: 25px;
+        color: $text-title;
+        cursor: pointer;
+        @media (min-width: 768px) {
+            line-height: 0px;
+        }
+    }
+    
+    .cartaction{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        @media (max-width: 480px) {
+            display: block;
+        }
+        a{
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 10px;
+            background-color: $bg-color;
+            color: black;
+            &:hover{
+                background-color: $page-color;
+                color: white;
+            }
+            @media (max-width: 480px) {
+                display: block;
+                margin-bottom: 10px;
+                text-align: center;
+            }
+            .fa-chevron-left{
+                margin-right: 5px;
+            }
+        }
+    }
+    @media(max-width:991px){
+        table{
+            display: block;
+            width: 100% !important;
+            overflow: hidden;
+            thead{
+                display: none;
+            }
+            tbody,tr,td{
+                display: block;
+                width: 100% !important;
+            }
+            tr{
+                position: relative;
+                &.appear{
+                    .show-title{
+                        display: block;
+                    }
+                }
+            }
+            td{
+                &.rmfc{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: unset !important;
+                    .iconshow{
+                       display: block !important;
+                       position: absolute;
+                       top: 5px;
+                       right: 10px;
+                       cursor: pointer;
+                    }
+                    .fa-times{
+                        position: absolute;
+                        top: 100px;
+                        right: 10px;
+                    }
+
+                }
+                text-align: left !important;
+                padding: 15px !important;
+                &:after{
+                    clear: both;
+                    display: block;
+                    content: " ";
+                }
+                &.show-title{
+                    font-weight: bold;
+                    &:before{
+                        font-weight: normal;
+                    }
+                    &.st1{
+                        &:before{
+                            content : attr(data-title1);
+                        }
+                    }
+                    &.st2{
+                        &:before{
+                            content : attr(data-title2);
+                        }
+                    }
+                    &.st3{
+                        display: flex;
+                        align-items: center;
+                        &:before{
+                            content : attr(data-title3);
+                        }
+                    }
+                    &.st4{
+                        &:before{
+                            content : attr(data-title4);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

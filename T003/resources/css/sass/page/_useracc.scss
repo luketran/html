@@ -28,28 +28,32 @@
                 border-radius: 50%;
                 visibility: hidden;
             }
+            &::after{
+                content: "\f030";
+                font-family: fontawesome;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 50%;
+                -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+                font-size: 30px;
+                color: white;
+                opacity: 0;
+                visibility: hidden;
+            }
             &:hover{
                 &::before{
                     visibility: visible;
                 }
-                .changeava{
+                &::after{
                     opacity: 1;
                     visibility: visible;
                     transition: 0.5s ease-out;
                 }
             } 
-            .changeava{
-                position: absolute;
-                left: 0;
-                right: 0;
-                @include absolute-Y;
-                color: white;
-                opacity: 0;
-                visibility: hidden;
-                .fa-camera{
-                    display: block;
-                    font-size: 30px;
-                }
+            img{
+                border-radius: 50%;
             }
         }
         b{
@@ -145,7 +149,7 @@
                 border: none;
                 border-radius: 5px;
                 margin-top: .5rem;
-                margin-bottom: 1rem;
+                margin-bottom: 2rem;
                 padding: 1rem;
             }
             button{

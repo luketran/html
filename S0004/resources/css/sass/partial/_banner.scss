@@ -1,0 +1,32 @@
+.banner{
+    position: relative;
+    .owl-dots{
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        @media (max-width: 767px) {
+            bottom: 5px;
+            .owl-dot{
+                width: 10px !important;
+                height: 10px !important;
+            }
+        }
+        .owl-dot{
+            width: 15px;
+            height: 15px;
+            margin: 10px;
+            border-radius: 50%;
+            border: 1px solid transparent;
+            background: white !important;
+            outline: none;
+            &.active{
+                background: $page-color !important;
+            }
+            &:hover,&:active,&:focus{
+                background: white;
+                cursor: pointer;
+            }
+        }
+    }
+}

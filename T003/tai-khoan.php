@@ -7,6 +7,10 @@
 		<title></title>
 		<!-- Bootstrap -->
 		<link rel="stylesheet" href="resources/vendor/bootstrap/bootstrap.min.css">
+         <!-- slick and fancybox css -->
+         <link rel="stylesheet" href="resources/vendor/slick/slick.css">
+		<link rel="stylesheet" href="resources/vendor/fancybox/jquery.fancybox.min.css">
+        <!-- slick and fancybox css -->
 		<link rel="stylesheet" href="resources/vendor/owlcarousel/owl.carousel.min.css">
 		<link rel="stylesheet" href="resources/vendor/font-awesome-4.7.0/css/font-awesome.min.css">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -33,12 +37,10 @@
 					<div class="row">
 						<div class="col-md-3">
 							<div class="accountctrl">
-								<div class="useravatar">
-									<div class="changeava">
-										<div class="fa fa-camera"></div>
-										Đổi ảnh đại diện
-									</div>
-								</div>
+                                <label class="useravatar" style="background-image:none;" id="profile-media-image-img" data-user-id="5b4d764ae3afed49c003dad1">
+                                    <img data-type="user-media-image" src="resources/images/content/brand.png" alt="">
+                                    <input data-type="file-image" type="file" accept="image/*" hidden="" class="hide">
+                                </label>
 								<b>Nguyễn Văn A</b>
 								<ul class="ctroption nav nav-tabs" role="tablist">
 									<li>
@@ -125,7 +127,7 @@
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td> <a href="">#123</a></td>
+                                                    <td> <a href="order-success.php">#123</a></td>
                                                     <td>06/06/2018</td>
                                                     <td>03</td>
                                                     <td>20 Cộng Hoà</td>
@@ -133,7 +135,7 @@
                                                     <td><span class="dgx">Đã giao</span></td>
                                                 </tr>
                                                 <tr>
-                                                    <td> <a href="">#123</a></td>
+                                                    <td> <a href="order-success.php">#123</a></td>
                                                     <td>06/06/2018</td>
                                                     <td>03</td>
                                                     <td>20 Cộng Hoà</td>
@@ -141,7 +143,7 @@
                                                     <td><span class="dgh">Đang giao</span></td>
                                                 </tr>
                                                 <tr>
-                                                    <td> <a href="">#123</a></td>
+                                                    <td> <a href="order-success.php">#123</a></td>
                                                     <td>06/06/2018</td>
                                                     <td>03</td>
                                                     <td>20 Cộng Hoà</td>
@@ -195,8 +197,11 @@
 
       
 	<script  src="resources/vendor/jquery/jquery-3.3.1.js"></script>
+     <!-- slick and fancybox lib -->
+     <script src="resources/vendor/slick/slick.min.js"></script>
+    <script src="resources/vendor/fancybox/jquery.fancybox.min.js"></script>
+    <!-- slick and fancybox lib -->
 	<script src="resources/vendor/bootstrap/bootstrap.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 	<script src="resources/vendor/owlcarousel/owl.carousel.min.js"></script>
 	<script  src="resources/vendor/font-awesome-4.7.0/fontawesome.min.js"></script>	
 	<script  src="resources/js/main.js"></script>	

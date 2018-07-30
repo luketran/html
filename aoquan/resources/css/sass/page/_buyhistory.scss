@@ -1,0 +1,127 @@
+.lsmua{
+    text-align: center;
+    background-color: $bg-color;
+    padding: 10px;
+    table{
+        width: 100%;
+        thead{
+            tr{
+                border-top: 1px solid $border;
+                border-bottom: 1px solid $border;
+                th{
+                    font-weight: bold;
+                    text-align: center;
+                }
+            }
+        }
+        tbody{
+            tr{
+                border-top: 1px solid $border;
+                border-bottom: 1px solid $border;
+                td{
+                    padding: 15px 0;
+                    span{
+                        border-radius: 5px;
+                        padding: 5px;
+                    }
+                    .dgx{
+                        background-color: #00a65a;
+                    }
+                    .dgh{
+                        background-color: #00c0ef;
+                    }
+                    .dxl{
+                        background-color: #f39c12;
+                    }
+                }
+            }
+        }
+    }
+    @media(max-width:768px){
+        table{
+            display: block;
+            width: 100% !important;
+            overflow: hidden;
+            thead{
+                display: none;
+            }
+            tbody,tr,td{
+                display: block;
+                width: 100% !important;
+            }
+            tr{
+                position: relative;
+                &.appear{
+                    .show-title{
+                        display: block;
+                    }
+                }
+            }
+            td{
+                text-align: left !important;
+                padding: 15px !important;
+                &.rmfc{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: unset !important;
+                    .iconshow{
+                       display: block !important;
+                       position: absolute;
+                       top: 5px;
+                       right: 10px;
+                       cursor: pointer;
+
+                    }
+                    .fa-times{
+                        position: absolute;
+                        top: 100px;
+                        right: 10px;
+                    }
+                }
+                &:after{
+                    clear: both;
+                    display: block;
+                    content: " ";
+                }
+                &.show-title{
+                    font-weight: bold;
+                    &:before{
+                        font-weight: normal;
+                    }
+                    &.st1{
+                        &:before{
+                            content : attr(data-title1);
+                            display: inline-block;
+                            vertical-align: middle;
+                        }
+                    }
+                    &.st2{
+                        &:before{
+                            content : attr(data-title2);
+                            display: inline-block;
+                            vertical-align: middle;
+                        }
+                    }
+                    &.st3{
+                        ._itemno{
+                            display: inline-block;
+                        }
+                        &:before{
+                            content : attr(data-title3);
+                            display: inline-block;
+                            vertical-align: middle;
+                        }
+                    }
+                    &.st4{
+                        &:before{
+                            content : attr(data-title4);
+                            display: inline-block;
+                            vertical-align: middle;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

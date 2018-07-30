@@ -7,6 +7,10 @@
 		<title></title>
 		<!-- Bootstrap -->
 		<link rel="stylesheet" href="resources/vendor/bootstrap/bootstrap.min.css">
+		 <!-- slick and fancybox css -->
+		 <link rel="stylesheet" href="resources/vendor/slick/slick.css">
+		<link rel="stylesheet" href="resources/vendor/fancybox/jquery.fancybox.min.css">
+        <!-- slick and fancybox css -->
 		<link rel="stylesheet" href="resources/vendor/owlcarousel/owl.carousel.min.css">
 		<link rel="stylesheet" href="resources/vendor/font-awesome-4.7.0/css/font-awesome.min.css">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -40,11 +44,26 @@
 									<h1>Đăng ký</h1>
 									<p>Nếu bạn chưa có tài khoản với chúng tôi, hãy đăng ký!</p>
 									<form action="">
-										<input type="text" placeholder="Tên người dùng">
-										<input type="text" placeholder="Số điện thoại">
-										<input type="text" placeholder="Email">
-										<input type="text" placeholder="Mật khẩu">
-										<input type="text" placeholder="Xác nhận lại mật khẩu">
+										<div class="form-input">
+											<input type="text" placeholder="Tên người dùng">
+											<p class="form-error">Email chưa đúng định dạng</p>
+										</div>
+										<div class="form-input">
+											<input type="text" placeholder="Số điện thoại">
+											<p class="form-error">Email chưa đúng định dạng</p>
+										</div>
+										<div class="form-input">
+											<input type="text" placeholder="Email">
+											<p class="form-error">Email chưa đúng định dạng</p>
+										</div>
+										<div class="form-input">
+											<input type="text" placeholder="Mật khẩu">
+											<p class="form-error">Email chưa đúng định dạng</p>
+										</div>
+										<div class="form-input">
+											<input type="text" placeholder="Xác nhận lại mật khẩu">
+											<p class="form-error">Email chưa đúng định dạng</p>
+										</div>
 										<button class="pagebtn">ĐĂNG KÝ</button>
 									</form>
 									<span>Bạn đã có tài khoản?<a class="tolog" href="dang-nhap.php">Đăng nhập tại đây</a></span>
@@ -69,8 +88,11 @@
 
       
 	<script  src="resources/vendor/jquery/jquery-3.3.1.js"></script>
+	 <!-- slick and fancybox lib -->
+	 <script src="resources/vendor/slick/slick.min.js"></script>
+    <script src="resources/vendor/fancybox/jquery.fancybox.min.js"></script>
+    <!-- slick and fancybox lib -->
 	<script src="resources/vendor/bootstrap/bootstrap.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 	<script src="resources/vendor/owlcarousel/owl.carousel.min.js"></script>
 	<script  src="resources/vendor/font-awesome-4.7.0/fontawesome.min.js"></script>	
 	<script  src="resources/js/main.js"></script>	

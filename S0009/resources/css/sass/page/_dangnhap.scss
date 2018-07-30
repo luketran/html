@@ -1,0 +1,71 @@
+.logpage{
+    background-image: url(../images/logbg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 70px 0;
+}
+.logform{
+    max-width: 400px;
+    display: block;
+    padding: 0 15px;
+    margin: auto;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    position: relative;
+    i{
+        font-size: 35px;
+        padding: 15px;
+        border-radius: 50%;
+        background-color: $page-xanh;
+        color: white;
+        position: absolute;
+        transform: translateY(-50%) translateX(50%);
+        right: 50%;
+    }
+    .logcontent{
+        padding: 30px;
+    }
+    h4{
+        font-weight: bold;
+        font-size: 25px;
+    }
+    a{
+        text-decoration: underline;
+    }
+    form{
+        border-bottom: 1px solid white;
+        margin: 20px auto;
+        padding-bottom: 20px;
+        input[type="text"]{
+            display: block;
+            margin: 20px auto;
+            width: 100%;
+            padding: 10px;
+            background-color: white;
+            border-radius: 3px;
+            border: 1px solid transparent;
+        }
+        button{
+            background-color: $page-xanh;
+            padding: 10px 20px;
+            width: 100%;
+            display: block;
+            margin: auto;
+            color: white;
+        }
+    }
+    .logex{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        @media (max-width:479px) {
+            display: block;
+            span{
+                display: block;
+            }
+            .cuscheck{
+                display: inline-block;
+            }
+        }
+    }
+}

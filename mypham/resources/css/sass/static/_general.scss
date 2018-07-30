@@ -1,0 +1,181 @@
+html, body{
+    font-family: 'Open Sans', sans-serif;
+    color: $text;
+    font-size: 15px;
+    width: 100%;
+}
+ul{
+    padding-left: 0;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+input,button,select{
+    outline: none;
+}
+textarea{
+    resize: none;
+    outline: none;
+}
+h2{
+    font-weight: bold;   
+    font-size: 20px;
+}
+input[type=checkbox] {
+    width: 15px;
+    height: 15px; 
+    border: 1px solid #b4b9be;
+    background: #fff;
+    color: #555;
+    clear: none;
+    cursor: pointer;
+    border-radius: 0px;
+    display: inline-block;
+    line-height: 0;
+    margin: -4px 6px 0 0 !important;
+    outline: 0;
+    padding: 0 !important;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-appearance: none;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+    -webkit-transition: .05s border-color ease-in-out;
+    transition: .05s border-color ease-in-out;
+    outline: none !important;
+    position: relative;
+    &:disabled {
+        background: #eee;
+        opacity: 0.5;
+    }
+    &:after {
+        transform: rotate(45deg);
+        position: absolute;
+        left: 4px;
+        top: 1px;
+        width: 5px;
+        height: 10px;
+        border-width: 2px;
+        border-style: solid;
+        border-top: 0;
+        border-left: 0;
+        border-color: #fff;
+        content: '';
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.15s ease-in-out;
+    }
+    &:checked {
+        background: $page-color;
+        border-color: $page-color;
+        &:before {
+            animation: rippleOn 700ms forwards ease-out;
+            content: "";
+            position: absolute;
+            left: 5px;
+            top: 5px;
+            background-color: $page-color;
+            height: 4px;
+            width: 4px;
+            border-radius: 100%;
+            z-index: 1;
+            opacity: 0;
+            margin: 0;
+        }
+        &:after {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+input[type=radio] {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    background: #fff;
+    color: #555;
+    clear: none;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 0;
+    margin: 4px 6px 0 0 !important;
+    outline: 0;
+    padding: 0 !important;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-appearance: none;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+    -webkit-transition: .05s border-color ease-in-out;
+    transition: .05s border-color ease-in-out;
+    outline: none !important;
+    position: relative;
+    &:disabled {
+        background: #eee;
+        opacity: 0.5;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        left: 2px;
+        top: 2px;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background-color: $page-color;
+        
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.15s ease;
+        transform: scale(0.5);
+    }
+    &:before{
+        animation: RadioRippleOn 700ms forwards ease-out;
+        position: absolute;
+        left: 2px;
+        top: 2px;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background-color: $page-color;
+        z-index: 1;
+        opacity: 0;
+        margin: 0;
+        
+    }
+    &:checked {
+        border-color: $page-color;
+        &:before {
+            content: "";
+        }
+        &:after {
+            opacity: 1;
+            visibility: visible;
+            transform: none;
+        }
+    }
+}
+@keyframes rippleOn {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(8, 8);
+    }
+}
+@keyframes RadioRippleOn{
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(5, 5);
+    }
+}

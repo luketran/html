@@ -1,0 +1,28 @@
+// trang thanh cong
+.ordersuccess{
+    padding: 40px 0;
+    .odcs{
+        text-align: center;
+        max-width: 500px;
+        padding: 0 15px;
+        margin: auto;
+        h3{
+            color: $page-color;
+            @media (max-width: 480px) {
+                font-size: 23px;
+            }
+        }
+        p{
+            line-height: 30px;
+        }
+        span{
+            color: $page-color;
+        }
+        a{
+            @include staticbutton;
+            padding: 10px 20px;
+            display: inline-block;
+            text-decoration: none;
+        }
+    }
+}

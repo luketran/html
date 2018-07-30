@@ -1,0 +1,76 @@
+.dangnhap{
+    padding: 50px 0;
+    .container{
+        .col-md-6{
+            text-align: center;
+            .formd{
+                max-width: 300px;
+                margin: auto;
+                h3{
+                    font-weight: bold;
+                    margin-bottom: 20px;
+                    margin-top: 0;
+                }
+                input{
+                    @include pageinput;
+                    margin: 10px 0;
+                }
+                .logopt{
+                    text-align: left;
+                    .cuscheck{
+                        display: inline-block;
+                    }
+                    input{
+                        width: auto;
+                    }
+                    a{
+                        @include a-usual;
+                        margin-left: 30px;
+                    }
+                }
+                button{
+                    @include buttonpage;
+                    padding: 10px 20px;
+                    background-color: $page-color;
+                    width: 100%;
+                    margin-top: 15px;
+                    &:hover{
+                        color: white;
+                    }
+                }
+                &.dk{
+                    .cuscheck{
+                        text-align: left;
+                    }
+                }
+            }
+        }
+        .sclog{
+            margin-top: 60px;
+            a{
+                text-decoration: none;
+                position: relative;
+                text-align: left;
+                max-width: 300px;
+                font-size: 15px;
+                border-radius: 20px;
+                padding: 10px 0px 10px 80px;
+                color: white;
+                display: block;
+                margin: auto;
+                &.fblog{
+                    background-color: #3b5997;
+                }
+                &.ttlog{
+                    background-color: #55acee;
+                }
+                i{
+                    margin-right: 15px;
+                    position: absolute;
+                    left: 50px;
+                    top: 13px;
+                }
+            }
+        }
+    }
+}

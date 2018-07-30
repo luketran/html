@@ -1,0 +1,234 @@
+.useracc{
+    padding: 40px 0;
+    @media (max-width: 991px) {
+        padding: 2rem 0;
+    }
+    .accountctrl{
+        border: 1px solid $border-light;
+        @media (max-width: 992px) {
+            margin-bottom: 20px;
+        }
+        .useravatar{
+            text-align: center;
+            width: 150px;
+            height: 150px;
+            display: block;
+            margin: 20px auto;
+            border-radius: 50%;
+            position: relative;
+            background-image: url(../images/uava.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            &::before{
+                content: "";
+                background-color: rgba(0,0,0,0.6);
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                border-radius: 50%;
+                visibility: hidden;
+            }
+            &::after{
+                content: "\f030";
+                font-family: fontawesome;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 50%;
+                -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+                font-size: 30px;
+                color: white;
+                opacity: 0;
+                visibility: hidden;
+            }
+            &:hover{
+                &::before{
+                    visibility: visible;
+                }
+                &::after{
+                    opacity: 1;
+                    visibility: visible;
+                    transition: 0.5s ease-out;
+                }
+            } 
+            img{
+                border-radius: 50%;
+            }
+        }
+        b{
+            display: block;
+            margin: auto;
+            text-align: center;
+            padding-bottom: 20px;
+            font-size: 17px;
+            border-bottom: 4px solid $page-color;
+        }
+        .nav-tabs{
+            border-bottom:none;
+            li{
+                float: none;
+                &.active{
+                    a{
+                        border: none;
+                    }
+                }
+            }
+        }
+        ul{
+            list-style: none;
+            font-size: 1.6rem;
+            margin-bottom: 0;
+            li{
+                &:last-child{
+                    border-top: 1px solid #ececec;
+                }
+                &:hover,&:focus,&:active {
+                    background-color: $bg-color;
+                    color: $text;
+                }
+                a{
+                   @include a-usual;
+                   color: $text;
+
+                }
+            }
+        }
+    }
+    .updateinfo{
+        padding: 40px 0px;
+        background: $bg-color;
+        h4{
+            text-align: center;
+            font-weight: bold;
+        }
+        h5{
+            text-align: center;
+        }
+        form{
+            width: 60%;
+            margin: auto;
+            @media (max-width: 991px) {
+                width: 90%;
+            }
+            @media (max-width: 480px) {
+                width: 100%;
+            }
+            
+            .form-group{
+                label{
+                    sup{
+                        color: red;
+                    }
+                }
+                input,select,{
+                    border-radius: 3px;
+                    padding: 5px 10px;
+                    border: none;
+                    box-shadow: none;
+                }
+            }
+            button{
+                padding: 10px 20px;
+                margin-left: 15px;
+                background-color: $page-color;
+                &:hover{
+                    background-color: $page-xanh;
+                }
+            }
+        }
+    }
+    .changepass{
+        background-color: $bg-color;
+        padding: 3rem 0;
+        text-align: center;
+        display: inline-block;
+        form{
+            label{
+                text-align: left;
+                width: 100%;
+            }
+            input{
+                width: 100%;
+                border: none;
+                border-radius: 5px;
+                margin-top: .5rem;
+                margin-bottom: 2rem;
+                padding: 1rem;
+            }
+            button{
+                display: block;
+                background-color: $page-color;
+                &:hover{
+                    background-color: $page-xanh;
+                }
+            }
+        }
+    }
+    .buyhistory{
+        background-color: $bg-color;
+        padding: 20px 0;
+        @media (max-width: 991px) {
+            overflow-x: scroll;
+        }
+        h4{
+            text-align: center;
+            font-weight: bold;
+            margin: 0;
+            padding-bottom: 20px;
+            border-bottom: 1px solid $border-light;
+        }
+        table{
+            width: 100%;
+            @media (max-width: 991px) {
+                width: 700px;
+            }
+            tr{
+                border-bottom: 1px solid $border-light;
+            }
+            th,td{
+                padding: 10px;
+                text-align: center;
+                &:last-child{
+                    text-align: left;
+                    span{
+                        padding: 2px 5px;
+                        border-radius: 5px;
+                    }
+                }
+                .dgx{
+                    background-color: #00A75A;
+                    color: white;
+                }
+                .dgh{
+                    background-color: #01C0ED;
+                    color: white;
+                }
+                .dxl{
+                    background-color: #F39D12;
+                    color: white;
+                }
+            }
+            td{
+                a{
+                    color: $text;
+                    text-decoration: underline;
+                    &:hover{
+                        color: #01C0ED;
+                    }
+                }
+            }
+        }
+        @media(max-width:991px){
+            .buyhistory{
+                overflow-x: scroll;
+            }
+            table{
+                width: 800px;
+            }
+        }
+    }
+}

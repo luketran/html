@@ -1,0 +1,41 @@
+.aboutus{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    article{
+        background-color: rgba(0,0,0,0.3);
+        color: white;
+        position: absolute; 
+        padding: 5rem;
+        @include absolute-Y;
+        h1{
+            &::before{
+                content: "";
+                width: 90px;
+                height: 3px;
+                margin-right: 1rem;
+                background-color: white;
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+        p{
+            max-width: 50%;
+            font-size: 1.9rem;
+            margin-bottom: 2rem;
+            opacity: 0.8;
+           
+        }
+    }
+    img{
+        position: absolute;
+        &.img1{
+            top: -5rem;
+            right: 0;
+        }
+        &.img2{
+            bottom: -5rem;
+            right: 5rem;
+        }
+    }
+}

@@ -90,6 +90,13 @@
             }
         }
         .colorpick,.sizepick{
+            display: table;
+            span{
+                &:first-child{
+
+                    display: table-cell;
+                }
+            }
             label{
                 font-weight: normal;
                 margin: 0 1rem;
@@ -163,6 +170,9 @@
                     &:hover{
                         color: white;
                         background-color: $page-xanh;
+                    }
+                    @media (max-width: 600px) {
+                        margin-right: 5px;
                     }
                 }
             }

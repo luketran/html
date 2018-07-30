@@ -1,0 +1,56 @@
+// lich su mua hang
+.buyhistory{
+    background-color: #f4f4f4;
+    padding: 20px 0;
+    @media (max-width: 991px) {
+        overflow-x: scroll;
+    }
+    h4{
+        text-align: center;
+        font-weight: bold;
+        margin: 0;
+        padding-bottom: 20px;
+        border-bottom: 1px solid $border;
+    }
+    table{
+        width: 100%;
+        @media (max-width: 991px) {
+            width: 700px;
+        }
+        tr{
+            border-bottom: 1px solid $border;
+        }
+        th,td{
+            padding: 10px;
+            text-align: center;
+            &:last-child{
+                text-align: left;
+                span{
+                    padding: 2px 5px;
+                    border-radius: 5px;
+                }
+            }
+            .dgx{
+                background-color: #00A75A;
+                color: white;
+            }
+            .dgh{
+                background-color: #01C0ED;
+                color: white;
+            }
+            .dxl{
+                background-color: #F39D12;
+                color: white;
+            }
+        }
+
+    }
+    @media(max-width:991px){
+        .buyhistory{
+            overflow-x: scroll;
+        }
+        table{
+            width: 800px;
+        }
+    }
+}

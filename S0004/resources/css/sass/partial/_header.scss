@@ -1,0 +1,116 @@
+header{
+    position: fixed;
+    top: 0;
+    left: 5rem;
+    right: 5rem;
+    color: white;
+    z-index: 99;
+   .loglink{
+       margin: 15px 0;
+       text-align: right;
+       a{
+           @include a-usual;
+           color: white;
+       }
+   }
+   .short{
+       ul{
+           list-style: none;
+           text-align: right;
+           li{
+               display: inline-block;
+               position: relative;
+               a{
+                   @include a-usual;
+                   display: inline-block;
+                   color: white;
+                   padding: 10px;
+                   font-size: 18px;
+                   sup{
+                       position: absolute;
+                       top: -3px;
+                       right: 0px;
+                       background-color: $page-color;
+                       border-radius: 50%;
+                       padding: 8px 5px;
+                       color: white;
+                   }
+               }
+                .searchinput{
+                    position: absolute;
+                    top: 100%;
+                    right: 0;
+                    input{
+                        border: 1px solid $border;
+                        border-radius: 3px;
+                        color: $text;
+                        padding: 5px 10px;
+                        transition: 0.3s ease;
+                        @media (min-width:992px){
+                            transform: translateY(15px);
+                            opacity: 0;
+                            visibility: hidden;
+                        }
+                    }
+                    &.showinput{
+                        @media (min-width:992px){
+                            input{
+                                transform: translateY(0px);
+                                opacity: 1;
+                                visibility: visible;
+                            }
+                        }
+                    }
+                }
+           }
+       }
+   }
+   
+   @media (max-width:991px) {
+       .loglink{
+           position: absolute;
+           left: 0;
+           top: 10px;
+           margin: 0;
+       }
+       .short{
+            position: absolute;
+            right: 0;
+            top: 7px;
+            ul{
+                li{
+                    a{
+                        padding: 0 10px;
+                    }
+                }
+            }
+       }
+       .logo{
+            position: absolute;
+            top: 30px;
+            @include absolute-X;
+        }
+        .search{
+            position: fixed;
+            top: 85px;
+            left: 15px;
+            right: 15px;
+        }
+        .showsearch{
+            position: absolute !important;
+            right: 0;
+            top: 0;
+            padding: 7px 10px !important;
+            line-height: 10px;
+            background: $page-color;
+            z-index: 99;
+            border-radius: 3px;
+        }
+        .searchinput{
+            width: 100%;
+            input{
+                width: 100%;
+            }
+        }
+   }
+}

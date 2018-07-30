@@ -1,0 +1,390 @@
+.topbar{
+    background-color: $page-color;
+    padding: 10px 0;
+    color: white;
+    @media (max-width: 480px) {
+        text-align: center;
+        span{
+            font-size: 12px;
+        }
+    }
+    .login{
+        float: right;
+        a{
+            color: white;
+            text-decoration: none;
+        }
+        span{
+            padding: 0 10px;
+            @media (max-width: 480px) {
+                padding: 0 5px;
+            }
+        }
+    }
+    .logedin{
+        float: right;
+        position: relative;
+        &:hover ul{
+            transform: translateY(0px);
+            opacity: 1;
+            visibility: visible;
+        }
+        img{
+            max-width: 20px;
+            max-height: 20px;
+        }
+        ul{
+            list-style: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            padding-top: 5px;
+            z-index: 99;
+            transform: translateY(20px);
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.5s ease;
+            border: 1px solid $page-color;
+            li{
+                color: $text;
+                background-color: white;
+                padding: 5px 10px;
+                a{
+                    @include a-usual;
+                    color: $text;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+}
+.header{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    
+    .header-wrapper{
+        display: flex;
+        align-items: center;
+        @media (max-width: 991px) {
+            display: block;
+            text-align: center;
+        }
+    }
+    
+    .logo{
+        display: inline-block;
+    }
+    .acc{
+        display: inline-block;       
+        float: right;
+        ul{
+            font-size: larger;
+            margin-bottom: 0;
+            li{
+                position: relative;
+                display: inline-block;
+                margin: 0 10px;
+                .fa-search:before{
+                    font-size: 20px;
+                }
+                .fa-heart:before{
+                    font-size: 20px;
+                }
+                .fa-shopping-bag:before{
+                    font-size: 20px;
+                }
+                &:hover>.onhover{
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateY(0);
+                }
+                a{
+                    color: black;
+                    text-decoration: none;
+                    &:hover,&:focus,&:active {
+                        color: $page-color;
+                    }
+                }
+                sup{
+                    position: absolute;
+                    right: -15px;
+                    top: -15px;
+                    background:$page-color;
+                    color: white;
+                    border-radius: 50%;
+                    width: 20px;
+                    height: 20px;
+                    text-align: center;
+                    padding-top: 10px;
+                    @media (max-width: 480px) {
+                        right: unset;
+                    }
+                }
+                .onhover{
+                    position: absolute;
+                    z-index: 5;
+                    padding: 15px;
+                    width: 280px;
+                    right: 0;
+                    background: white;
+                    border-top: 1px solid $page-color;
+                    font-size: 15px;
+                    box-shadow: -5px 5px 5px #aaaaaa;
+                    overflow: hidden;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all 0.3s ease-in;
+                    transform: translateY(15px);
+                }
+                .inshop{
+                    padding: 20px;
+                    ._inshopitem{
+                        max-height: 380px;
+                        overflow-y: scroll;
+                        border-bottom: 1px solid #EBEBEB;
+                        ._1item{
+                            display: flex;
+                            margin-bottom: 15px;
+                            img{
+                                height: fit-content;
+                            }
+                            ._1info{
+                                font-weight: bold;
+                                font-size: 14px;
+                                padding:0 5px;
+                                text-align: left;
+                                h4{
+                                    font-weight: bold;
+                                    font-size: 14px;
+                                    margin: 0;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    display: -webkit-box;
+                                    -webkit-box-orient: vertical;
+                                    -webkit-line-clamp: 2;
+                                }
+                                p{
+                                    margin: 0 0 5px;
+                                }
+                            }
+                            i{
+                                margin: auto;
+                                font-size: 20px;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                    ._inshopaction{
+                        text-align: center;
+                        font-weight: bold;
+                        .totalprice{
+                            display: flex;
+                            justify-content: space-between;
+                            margin: 5px 0;
+                        }
+                        a{
+                            text-decoration: none;
+                            display: inline-block;
+                            background-color: #EBEBEB;
+                            width: 90%;
+                            border: none;
+                            border-radius: 10px;
+                            margin-top: 5px;
+                            padding: 10px 0;
+                            transition: 0.5s ease;
+                            &:hover{
+                                background-color: $page-color;
+                                color: white;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+.pagelocal{
+    padding: 10px 0;
+    background-color: $bg-color;
+    @media (max-width:991px){
+    }
+    .breadcrumb{
+        margin: 0;
+        background-color: transparent;
+        padding: 0 15px;
+        li{
+            &.active{
+                color: $page-color;
+                &::before{
+                    color: $page-color;
+                   content: "\f101" !important;
+                   font-family: FontAwesome;
+                }
+            }
+        }
+    }
+    a{
+        color: $text-author;
+        text-decoration: none;
+    }
+}
+._itemno{
+    border: 1px solid $page-color;
+    display: flex;
+    width: 80px;
+    justify-content: space-between;
+    align-items: center;    
+    border-radius: 20px;
+    a{
+        font-size: 15px;
+        text-decoration: none;
+        font-weight: bold;  
+        border: none;
+        padding: 0 10px;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    input{
+        padding: 0;
+        border: none;
+        color: $text;
+        text-align: center;
+        width: 20px;
+    }
+}
+.search{
+    @media (min-width:992px) {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        z-index: 5;
+        &.shows{
+            label{
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0px);
+            }
+        }
+        label{
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(15px);
+            transition: 0.5s ease;
+        }
+    }
+    @media (max-width:991px) {
+        background-color: rgba(0,0,0,0.3);
+        position: fixed;
+        top: 90px;
+        left: 0;
+        right: 0;
+        label{
+            input{
+                width: 90%;
+                border: none !important;
+            }
+        }
+    }
+    label{
+        width: 100%;
+        position: relative;
+        margin: 10px auto;
+        input{
+            border: 1px solid $page-color;
+            padding: 5px 10px;
+            border-radius: 10px;
+        }
+        .fa-search{
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background-color: $page-color;
+            color: white;
+            padding: 8px;
+            border-radius: 10px;
+        }
+    }
+}
+body{
+    &.fixed{
+        header{
+            .header{
+                @media (min-width: 992px) {
+                    position: fixed;
+                    top: 0;
+                    padding: 10px 0;
+                    z-index: 10000;
+                    width: 100%;
+                    background-color: white;
+                    border-bottom: 2px solid $page-color;
+                    .logo{
+                        img{
+                            width: 100px;
+                        }
+                    }
+                } 
+            }
+        }
+        .wrapper{
+            margin-top: 70.81px;
+        }
+    }
+
+}
+@media (max-width: 991px) {
+    header{
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        right: 0;
+        .topbar{
+            padding: 3px 0;
+            .welcome{
+                display: none;
+            }
+        }
+        .header{
+            padding: 5px 0;
+            background-color: #f3f3f3;
+            border-bottom: 2px solid $page-color;
+            img{
+                width: 100px;
+            }
+            .acc{
+                position: absolute;
+                bottom: 17px;
+                right: 15px;
+                ul{
+                    li{
+                        a{
+                            color: #444444;
+                            &::before{
+                                font-size: 17px !important;
+                            }
+                            sup{
+                                font-size: 10px;
+                                top: -9px;
+                            }
+                            &.fa-search{
+                                position: fixed;
+                                top: 100px;
+                                right: 15px;
+                                z-index: 15;
+                                background-color: $page-color;
+                                padding: 9px;
+                                border-radius: 10px;
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .wrapper{
+        margin-top: 89.81px;
+    }
+}

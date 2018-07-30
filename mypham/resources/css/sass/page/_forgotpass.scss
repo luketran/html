@@ -1,0 +1,66 @@
+// trang quen mat khau
+.forgotpass{
+    padding: 40px 0;
+    .stepcont{
+        max-width: 600px;
+        margin: auto;
+        padding: 30px 15px;
+        background-color: #f4f4f4;
+    }
+    .cconfirmtype{
+        padding: 15px 30px;
+        h5{
+            text-align: center;
+        }
+        form{
+            width: 100%;
+            input[type="text"]{
+                width: 100%;
+            }
+            input[type="radio"]{
+                margin-top: -4px !important;
+            }
+            .form-check{
+                input[type="text"]{
+                    width: unset;
+                    margin-right: 10px;
+                }
+            }
+            button{
+                width: 100%;
+                @include staticbutton;
+                padding: 10px 50px;
+                margin-top: 15px;
+            }
+            
+        }
+        .uinput{
+            input[type="text"]{
+                @include getboder;
+                padding: 10px 15px;
+                border-radius: 5px;
+                width: 100%;
+            }
+            span{
+                color: $text-title;
+                text-align: left;
+                margin: 5px;
+            }
+        }
+    }
+    .scanoun{
+        background-color: #f4f4f4;
+        padding: 15px;
+        text-align: center;
+        h5{
+            font-weight: bold;
+        }
+        button{
+            width: 100%;
+            @include staticbutton;
+            padding: 10px 50px;
+            margin-top: 15px;
+        }
+    }
+    
+}

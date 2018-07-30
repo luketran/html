@@ -1,0 +1,244 @@
+.modal{
+    .modal-dialog{
+        max-width: 500px;
+        background-color: white;
+        top: 20%;
+        @media (max-width: 992px) {
+            max-width: 90%;
+            top: 10%;
+            margin: auto;
+        }
+        .close{
+            position: absolute;
+            right: -25px;
+            top: -33px;
+            font-size: 30px;
+            color: white;
+            text-shadow: none;
+            opacity: 1;
+            @media (max-width: 991px) {
+                right: 10px;
+                top: 5px;
+                color: black;
+                z-index: 3;
+            }
+        }
+        .modal-content{
+            border-radius: 0;
+            padding: 30px;
+            box-shadow:none;
+            -webkit-box-shadow: none;
+            border: none;
+            overflow-y: auto;
+            @media (max-width: 480px) {
+                padding: 15px;
+            }
+            .modal-top{
+                text-align: center;
+                margin-bottom: 10px;
+            }
+            .modal-mid{
+                label{
+                    color: $text-author;
+                    font-weight: 100;
+                }
+                input{
+                    @include getboder;
+                    border-radius: 10px;
+                }
+                .col-md-6{
+                    &:first-child{
+                        padding-left: 0;
+                        @media (max-width: 991px) {
+                            padding-right: 0px;
+                        }
+                    }
+                    &:last-child{
+                        padding-right: 0;
+                        @media (max-width: 991px) {
+                            padding-left: 0px;
+                        }
+                    }
+                }
+                .col-md-12{
+                    padding: 0;
+                }
+                button{
+                    background-color: $page-color;
+                    color: white;
+                    border: none;
+                    border-radius: 10px;
+                    padding: 10px 40px !important;
+                    margin-top: 15px;
+                    width: -webkit-fill-available;
+                }
+                span{
+                    a{
+                        @include geta(color,$page-color);
+                    }
+                }
+            }
+        }
+        .or{
+            border-bottom: 1px solid #cacaca;
+            text-align: center;
+            position: relative;
+            @media (max-width: 480px) {
+                margin-top: 20px;
+            }
+            span{
+                position: absolute;
+                background-color: white;
+                bottom: -6px;
+                left: 50%;
+                transform: translateX(-50%);
+                padding: 0 30px;
+                @media (max-width: 480px) {
+                    padding: 0 15px;
+                }
+            }
+        }
+        .modal-bot{
+            margin: 10px 0;
+            text-align: center;
+            padding: 10px 30px;
+            display: flex;
+            justify-content: space-between;
+            @media (max-width: 480px) {
+                padding: 10px 15px;
+            }
+            .sociallog{
+                width: 48%;
+                border-radius: 10px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                color: white;
+                cursor: pointer;
+            }
+            #fblog{
+                background-color: #3b5998;
+            }
+            #glog{
+                background-color: #e42323;
+            }
+        }
+        .tologin,.toreg{
+            text-align: center;
+            padding-bottom: 30px;
+            a{
+                @include geta(color,$page-color);
+            }
+        }
+    }
+}
+// modal thong bao them sp
+.modaladd{
+    .modal-dialog{
+        max-width: 600px;
+        background-color: white;
+        position: relative;
+        text-align: center;
+        padding: 10px 0;
+        margin: auto;
+        top: 20%;
+        @media (max-width: 991px) {
+            top: 10%;
+            width: 90%;
+            margin: auto;
+        }
+        .close{
+            position: absolute;
+            right: 0;
+            top: 0;
+            color: red;
+            background-color: #e1e1e1;
+            z-index: 3;
+            opacity: 1;
+            font-size: 20px;
+            padding: 10px;
+        }
+        .modal-content{
+            margin: 30px;
+            padding: 0;
+            box-shadow: none;
+            -webkit-box-shadow:none;
+            border: none;
+            @media (max-width: 480px) {
+                margin: 10px;
+                display: inline-block;
+            }
+            .itemreview{
+                border-right: 1px solid #e1e1e1;
+                @media (max-width: 991px) {
+                    border-right: none;
+                    border-bottom: 1px solid #e1e1e1;
+                    padding-bottom: 10px;
+                }
+                .ithumb{
+                    max-width: 170px;
+                    max-height: 200px;
+                    border: 1px solid #e1e1e1;
+                    margin: 10px 0;
+                }
+                .noi{
+                    font-size: 15px;
+                    margin-bottom: 15px;
+                    font-weight: bold;
+                }
+                .poi{
+                    span{
+                        color: $page-color;
+                        font-weight: bold;
+                    }
+                }
+            }
+            .cartreview{
+                i{
+                    background-image: url("../images/popupshopicon.png");
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+                h5{
+                    font-size: 20px;
+                    color: $page-color;
+                    margin: 10px 0;
+                }
+                h4{
+                    margin: 10px 0;
+                }
+                .tpic{
+                    font-weight: bold;
+                    font-size: 18px;
+                    margin: 20px 0;
+                    span{
+                        color: $page-color;
+                    }
+                }
+                a{
+                    display: inline-block;
+                    margin-bottom: 10px;
+                    text-decoration: none;
+                    font-weight: bold;
+                    @include buttonpage(padding,10px,15px);
+                    @include buttonhover;
+                }
+            }
+        }
+    }
+}
+.modalqview{
+    .modal-dialog{
+        width: unset !important;
+        max-width: 1200px;
+    }
+    .productopt{
+        margin: 15px 0;
+        label{
+            margin-right: 10px;
+            input[type="radio"]{
+                margin: 0px 4px 3px 0 !important;
+            }
+        }
+    }
+    
+}

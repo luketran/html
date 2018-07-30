@@ -9,10 +9,12 @@ $(function(){
     helper.itemslide('.commentslide',3,1,1,1,1);
     helper.itemslide('.relatenewslist',3,3,2,1,1);
     helper.itemslide('.sameitemlist',4,4,3,2,1);
-    helper.categoryshow();
 	helper.totop();
 	helper.showsearch();
 	helper.itemslick();
+	helper.showlogopt();
+	helper.fixtop();
+	helper.showcart();
 });
 
 
@@ -151,17 +153,6 @@ function Helper(){
 		$('html,body').animate({scrollTop: 0}, 400);
 		});
 	}
-    methods.categoryshow = function(){
-        $('.category').click(function() {
-			$('.listdm').toggleClass("show");
-		});
-		window.onclick = function(e) {
-		if (!e.target.matches('.category, .category *, .listdm, .listdm *')) {
-				$('.listdm').removeClass('show');
-		}
-		}
-	}
-	
     methods.showsearch = function(el){
         $('#open-search').click(function() {
 			$('#headsearch').toggleClass("ssearch");
@@ -177,88 +168,23 @@ function Helper(){
     }
     methods.showlogopt = function(){
         var curr = $("#cont1");
-		$("input[type='radio']").on('change', function() {
+		$(".logopts input[type='radio']").on('change', function() {
 			curr = $("input[type='radio']:checked").val();
 			$(curr).siblings().removeClass("showlogopt");
 			$(curr).addClass("showlogopt")
 		});
     }
-    methods.colornsizepick = function(){
-        $( ".sizepick a" ).click(function() {
-			$(this).siblings().removeClass("choosed");
-			$(this).addClass("choosed");
-		});
-		$( ".colorpick a" ).click(function() {
-			$(this).siblings().removeClass("choosed");
-			$(this).addClass("choosed");
-		});
-    }
-    methods.showitem = function(){
-        $( ".giohang table tr .rmfc .iconshow" ).click(function() {
-			$(this).parents('tr').siblings().removeClass('appear');			
-			$(this).parents('tr').toggleClass('appear');		
-		});
-        
-	}
-	
-	methods.fixmenu = function(){
+   
+	methods.fixtop = function(){
 		$(window).bind('scroll', function () {
-			if ($(window).scrollTop() > 70) {
-				$('header').addClass('fixed');
+			if ($(window).scrollTop() > 50) {
+				$('body').addClass('fixed');
 			} else {
-				$('header').removeClass('fixed');
+				$('body').removeClass('fixed');
 			}
 		});
 	}
 	
-	methods.cartshow = function(){
-		var open = false;
-		$('#opcart').on('click' , function(){
-			if( open){
-				$('.shortcart').removeClass('showcart');
-			}else{
-				$('.shortcart').addClass('showcart');
-			}
-			open = !open;
-		});
-		$('body, html').on('click', function(event){
-			var target = $(event.target);
-			if( !target.is('#opcart,#opcart *,.scart,.scart *,.shortcart,.shortcart *')){
-				$('.shortcart').removeClass('showcart');
-				open = false;
-			}
-		});
-
-	}
-	methods.inputctrl = function(){
-		$(".nictrl").on("click", function() {
-		var $button = $(this);
-		var oldValue = $button.parent().find("input").val();
-		if ($button.text() == "+") {
-			var newVal = parseFloat(oldValue) + 1;
-		} else {
-		// Don't allow decrementing below zero
-		if (oldValue > 0) {
-			var newVal = parseFloat(oldValue) - 1;
-		} else {
-			newVal = 0;
-		}
-		}
-		$button.parent().find("input").val(newVal);
-		});
-	}
-	methods.priceslider = function(){
-		$( "#slider-range" ).slider({
-			range: true,
-			min: 10000,
-			max: 50000000,
-			values: [ 10000, 20000000 ],
-			slide: function( event, ui ) {
-			  	$( "#amount" ).val(ui.values[ 0 ] + "đ - " + ui.values[ 1 ]+ "đ" );
-			}
-			});
-				$( "#amount" ).val($( "#slider-range" ).slider( "values", 0 ) +"đ - " + $( "#slider-range" ).slider( "values", 1 )+ "đ" );
-	}
 	methods.itemslick = function(){
 		$('.thumblist').slick({
 			dots: false,
@@ -283,6 +209,24 @@ function Helper(){
 		$('#modalqview').on('shown.bs.modal', function(){
 			$('#modalqview').find('.slick-slider').slick('setPosition',0);
 		})
+	}
+	methods.showcart = function (){
+		$('#open-cart').on('click', function(e){
+			e.preventDefault();
+			$('#cart').addClass('active');
+			$('body').addClass('open-cart');
+		})
+		$('.cart .btn-close').on('click', function(){
+			$('#cart').removeClass('active');
+			$('body').removeClass('open-cart');
+		})
+		$('body, html').on('click', function(event){
+			var target = $(event.target);
+			if( !target.is('#cart , #cart * ,#open-cart,#open-cart *')){
+				$('#cart').removeClass('active');
+				$('body').removeClass('open-cart');
+			}
+		});
 	}
 
 	

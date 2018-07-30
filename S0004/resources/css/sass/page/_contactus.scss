@@ -1,0 +1,58 @@
+.contactus{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    .row{
+        height: 100%;
+        .col-lg-7{
+            height: 100%;
+        }
+    }
+    .map{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        .bigmap{
+            width: 100%;
+            height: 100%;
+        }
+        .contactinfo{
+            position: absolute;
+            @include absolute-Y;
+            left: 3rem;
+            background-color: white;
+            padding: 4rem;
+            max-width: 40%;
+            ._1info{
+                border-bottom: 1px solid $border;
+                font-size: 2rem;
+                h4{
+                    font-weight: bold;
+                    
+                }
+            }
+        }
+    }
+    .contactform{
+        padding: 3rem;
+        font-size: 1.2em;
+        h3{
+            text-align: right;
+            margin-right: 15px;
+        }
+        form{
+            input, textarea{
+                width: 100%;
+                border: none;
+                background-color: #F1F1F1;
+                border-radius: 5px;
+                padding: 10px;
+                margin-bottom: 2rem;
+            }
+            button{
+                padding: 10px 30px;
+                float: right;
+            }
+        }
+    }
+}

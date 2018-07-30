@@ -1,0 +1,301 @@
+.banner{
+    height: 700px;
+    overflow: hidden;
+    @media (max-width: 1300px) {
+        height: unset;
+    }
+}
+.aboutus{
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        @media (max-width: 480px) {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        @media (max-width: 768px) {
+            text-align: center;
+        }
+        .title{
+            position: relative;
+            margin-bottom: 2em;
+            @media (max-width: 768px) {
+                margin-bottom: 1em;
+            }
+            .line{
+                height: 3px;
+                width: 70px;
+                background-color: $page-color;
+                float: left;
+                margin-top: 16px;
+                margin-right: 21px;
+                @media (max-width: 768px) {
+                    margin: auto;
+                    width: 50%;
+                    float: unset;
+                }
+            }
+            
+        }
+        p{
+            margin: 3em 0;
+            color: #777777;
+            text-align: justify;
+            @media (max-width: 480px) {
+                margin: 2em 0;
+            }
+        }
+        a{
+            padding: 10px 15px;
+            background-color: $page-color;
+            border-radius: 20px;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        .right{
+            text-align: center;
+            @media (max-width: 480px) {
+                margin-top: 20px;
+            }
+        }
+}
+.dealinday{
+    background-image: url("../images/banner2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 30px 0;
+    h2{
+        margin: 0;
+    }
+    .lotus{
+        padding: 20px 0;
+    }
+    .dealtype{
+        nav{
+            background: transparent;
+        }
+        .nav-tabs{
+            border-bottom: none;
+            list-style: none;
+            text-align: center;
+            margin-bottom: 15px;
+            >li{
+                float: none;
+                display: inline-block;
+                &.active{
+                    a{
+                        color: white;
+                        background-color: $page-color;
+                    }
+                }
+                a{
+                    padding: 5px 15px;
+                    border: 1px solid $page-color;
+                    border-radius: 30px;
+                    color: $text;
+                    transition: 0.5s ease;
+                }
+            }
+        }
+        @media (max-width: 480px) {
+            a{
+                font-size: 12px;
+            }
+        }
+    }
+    .tab1slide,.tab2slide,.tab3slide{
+        position: relative;
+        .owl-dots{
+            display: none;
+        }
+        .owl-nav{
+            button{
+                position: absolute;
+                top: 40%;
+                font-size: 50px;
+                color: $page-color;
+            }
+            .owl-prev{
+                left: -50px;
+                @media (max-width: 768px) {
+                    left: 0;
+                }
+            }
+            .owl-next{
+                right: -50px;
+                @media (max-width: 768px) {
+                    right: 0;
+                }
+            }
+        }
+    }
+
+}
+.sale{
+    overflow: overlay;
+    padding: 40px 0;
+    .sale2{
+        margin-bottom: 15px;
+    }
+    a{
+        width: 100%;
+        position: relative;
+        display: inline-block;
+        &::before{
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            bottom: 5px;
+            left: 5px;
+            border: 2px solid #fff;
+            content: '';
+            transition: all 0.5s ease;
+            transform: scale(0);
+            visibility: hidden;
+            background-color: rgba(255,255,255,0.2);
+        }
+        &:hover {
+            &::before{
+                transform: scale(1);
+                visibility: visible;
+            }
+        }
+        img{
+            width: 100%;
+        }
+    }
+    @media (max-width: 991px) {
+        .sale3{
+            margin-bottom: 15px;
+        }
+    }
+
+}
+.news{
+    background-image: url("../images/banner3.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 50px;
+    padding-bottom: 80px;
+    overflow: overlay;
+    color: white;
+    @media (max-width: 768px) {
+        padding: 20px 0;
+    }
+    @media (max-width: 480px) {
+        text-align: center;
+    }
+    .left{
+        @media (max-width: 991px) {
+            text-align: center;
+        }
+        h2{
+            margin-bottom: 0;
+            @media (max-width: 991px) {
+                text-align: center;
+            }
+        }
+        .lotus{
+            margin-left: 10px;
+            margin-bottom: 30px;
+            margin-top: 30px;
+            @media (max-width: 991px) {
+                margin-left: 0;
+            }
+        }
+        .tin{
+            margin-bottom: 20px;
+            display: inline-block;
+            @media (max-width: 991px) {
+                text-align: left;
+            }
+            img{
+                width: 45%;
+                float: left;
+                padding-right: 20px;
+                @media (max-width: 480px) {
+                    padding-right: 0;
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+            }
+            a{
+                font-size: 16px;
+                text-decoration: none;
+                color: white;
+            }
+            
+            i{
+                padding-right: 5px;
+            }
+            span{
+                padding-right: 10px;
+            }
+            
+            p{
+                opacity: 0.8;
+            }
+        }
+    }
+    .right{
+        text-align: center;
+        .contact{
+            border: 2px solid white;
+            margin-top: 20px;
+            padding: 50px 70px 30px 70px;
+            @media (max-width: 1024px) {
+                padding: 50px 15px 30px 15px;
+            }
+            
+            h4{
+                margin-bottom: 30px;
+            }
+            input{
+                border: 1px solid gray;
+                border-radius: 15px;
+                margin-bottom: 20px;
+                height: 50px;
+                width: 80%;
+                padding-left: 15px;
+                color: black;
+                @media (max-width: 480px) {
+                    width: 100%;
+                }
+            }
+            button{
+                background-color: #ee9f9f;
+                border: none;
+                border-radius: 15px;
+                padding: 10px 15px;
+                width: 35%;
+                font-weight: bold;
+                @media (max-width: 480px) {
+                    width: 50%;
+                }
+            }
+            h3{
+                margin-bottom: 20px;
+                opacity: 0.9;
+                font-size: 20px;
+            }
+            p{
+                margin-bottom: 20px;
+                opacity: 0.8;
+            }
+        }
+    }
+
+}
+.partner{
+    padding-top: 30px;
+    text-align: center;
+    h2{
+        margin-bottom: 20px;
+        @media (max-width: 480px) {
+            margin-top: 0;
+        }
+        
+    }   
+}

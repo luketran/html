@@ -1,0 +1,30 @@
+.forgotpass{
+    padding: 100px 0;
+    .formwrap{
+        max-width: 400px;
+        padding: 70px 15px;
+        margin: auto;
+        background-color: $border-light;
+        .fpcontent{
+            max-width: 70%;
+            @media (max-width:480px) {
+                max-width: 90%;
+            }
+            margin: auto;
+            input{
+                padding: 10px;
+                border-radius: 3px;
+                width: 100%;
+                border: none;
+                margin-top: 20px;
+            }
+            .btn{
+                background-color: $page-xanh;
+                color: white;
+                padding: 10px;
+                width: 100%;
+                margin-top: 20px;
+            }
+        }
+    }
+}

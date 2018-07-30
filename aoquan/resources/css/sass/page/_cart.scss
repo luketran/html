@@ -1,0 +1,159 @@
+.giohang{
+    padding: 50px 0;
+    .incartitems{
+        table{
+            width: 100%;
+            thead{
+                tr{
+                    border: 1px solid $border;
+                    th{
+                        padding: 15px 0;
+                        text-align: center;
+                        &:first-child{
+                            width: 30%;
+                            text-align: left;
+                            padding-left: 15px;
+                        }
+                    }
+                }
+            }
+            tbody{
+                tr{
+                    border: 1px solid $border;
+                    td{
+                        .iconshow{
+                            display: none;
+                        }
+                        padding: 15px 0;
+                        text-align: center;
+                        &:first-child{
+                            width: 30%;
+                            text-align: left;
+                            padding-left: 15px;
+                            img{
+                                float: left;
+                                margin-right: 10px;
+                            }
+                            span{
+                                display: block;
+                                padding-top: 35px;
+                                @media (max-width: 992px){
+                                    padding-top: 22px;
+                                }
+                            }
+                        }
+                        ._itemno{
+                            @include editnumber;
+                            margin: auto;
+                            input{
+                                margin: 0 15px;
+                            }
+                        }
+                        &.rmfc{
+                            width: 10%;
+                            i{
+                                font-size: 25px;
+                                cursor: pointer;
+                                &:hover{
+                                    color: $page-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    h3{
+        text-align: right;
+        margin: 30px 0;
+    }
+    @media(max-width:768px){
+        table{
+            display: block;
+            width: 100% !important;
+            overflow: hidden;
+            thead{
+                display: none;
+            }
+            tbody,tr,td{
+                display: block;
+                width: 100% !important;
+            }
+            tr{
+                position: relative;
+                &.appear{
+                    .show-title{
+                        display: block;
+                    }
+                }
+            }
+            td{
+                &.rmfc{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: unset !important;
+                    .iconshow{
+                       display: block !important;
+                       position: absolute;
+                       top: 5px;
+                       right: 10px;
+                       cursor: pointer;
+                    }
+                    .fa-times{
+                        position: absolute;
+                        top: 100px;
+                        right: 10px;
+                    }
+
+                }
+                text-align: left !important;
+                padding: 15px !important;
+                &:after{
+                    clear: both;
+                    display: block;
+                    content: " ";
+                }
+                &.show-title{
+                    font-weight: bold;
+                    display: none;
+                    &:before{
+                        font-weight: normal;
+                    }
+                    &.st1{
+                        &:before{
+                            content : attr(data-title1);
+                            display: inline-block;
+                            vertical-align: middle;
+                        }
+                    }
+                    &.st2{
+                        &:before{
+                            content : attr(data-title2);
+                            display: inline-block;
+                            vertical-align: middle;
+                        }
+                    }
+                    &.st3{
+                        ._itemno{
+                            display: inline-block;
+                        }
+                        &:before{
+                            content : attr(data-title3);
+                            display: inline-block;
+                            vertical-align: middle;
+                        }
+                    }
+                    &.st4{
+                        &:before{
+                            content : attr(data-title4);
+                            display: inline-block;
+                            vertical-align: middle;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

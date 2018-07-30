@@ -1,0 +1,250 @@
+
+._1detail{
+    .photo-thumbnails{
+        margin: 2rem 0;
+        .thumblist{
+            position: relative;
+            i{
+                font-size: 25px;
+                padding: 6px 12px;
+                font-size: 17px;
+                background-color: $page-color;
+                border-radius: 5px;
+                color: white;
+                position: absolute;
+                @include absolute-Y;
+                z-index: 20;
+                cursor: pointer;
+                &.fa-angle-right{
+                    right: 0;
+                }
+                &.fa-angle-left{
+                    left: 0;
+                }
+            }
+        }
+        .thumbnail{
+            margin: 0 1rem;
+            cursor: pointer;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            &:focus{
+                outline: none;
+            }
+            &.slick-current{
+                border: 1px solid $page-color;
+            }
+            img{
+                width: 100%;
+            }
+        }
+    }
+    .big-photo{
+        a{
+            border: 1px solid $border-light;
+            &:focus{
+                outline: none;
+            }
+        }
+        img{
+            width: 100%;
+        }
+    }
+    .itemdes{
+        h4{
+            font-weight: bold;
+            margin: 0;
+        }
+        .star{
+            color: #f2cf8d;
+            margin: 15px 0;
+        }
+        .itemprice{
+            .price{
+                font-weight: bold;
+                font-size: 20px;
+                margin-right: 5px;
+                color: $page-color;
+            }
+            .oldprice{
+                color: $text-content;
+                text-decoration: line-through;
+                font-size: 16px;
+                margin-right: 5px;
+            }
+        }
+        p{
+            margin: 15px 0;
+        }
+        ul{
+            list-style: none;
+            li{
+                margin: 2rem 0;
+                
+            }
+        }
+        .tag{
+            a{
+                color: $text;
+            }
+        }
+        .material{
+            display: table;
+            label{
+                font-weight: normal;
+                margin: 0 1rem;
+            }
+        }
+        ._mtaction{
+            margin: 20px 0;
+            a{
+                color: $text;
+                background-color: $bg-color;
+                margin-right: 1rem;
+                &:hover{
+                    color: white;
+                    background-color: $page-color;
+                }
+            }
+        }
+        
+    }
+}
+._itemno{
+    display: inline-block;
+    vertical-align: middle;
+    .input-group{
+        width: 100px;
+        background-color: $bg-color;
+        span{
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+        input{
+            text-align: center;
+            color: $text;
+            font-weight: bold;
+            padding: 0;
+            background-color: transparent;
+            border-left: 1px solid $border;
+            border-right: 1px solid $border;
+            border-top: none;
+            border-bottom: none;
+        }
+    }
+}
+.iteminfo{
+    padding: 5rem 0;
+    ._2detail{
+        margin: 20px 0;
+        background-color: $bg-color;
+        padding: 2rem;
+        .nav-tabs{
+            border-bottom: 1px solid transparent;
+            margin-bottom: 2rem;
+            li{
+                position: relative;
+                &.active{
+                    a{
+                        background-color: $page-xanh;
+                        color: white;
+                    }
+                }
+                a{
+                    font-weight: bold;
+                    color: $text;
+                    width: 120px;
+                    text-align: center;
+                    background-color: white;
+                    margin-right: 2rem;
+                    border-radius: 5px !important;
+                    &:hover{
+                        color: white;
+                        background-color: $page-xanh;
+                    }
+                    @media (max-width: 600px) {
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+        .tab-content{
+            .comment{
+                textarea{
+                    background-color: white;
+                }
+                ._1comt{
+                    ._1comtinfo{
+                        .cmttime{
+                            display: block;
+                            color: $text-author;
+                        }
+                    }
+                }
+                .newcomment{
+                    .starrate{
+                        i{
+                            color: $text-author;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ._3detail{
+        .sameitem{
+            h1{
+                text-align: left;
+                font-size: 2.5rem;
+                margin-bottom: 3rem;
+                @media (max-width: 768px) {
+                    font-size: 2rem;
+                }
+            }
+            .sameitemlist{
+                .flower{
+                    .itemdetail{
+                        margin: 0 1.5rem;
+                        .ittitle{
+                            font-size: 1.3rem;
+                        }
+                        .itemaction{
+                            a{
+                                &.addtowl{
+                                    background-color: $bg-color;
+                                    color: $text;
+                                    &:hover{
+                                        background-color: $page-color;
+                                        color: white;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .owl-dots{
+                    display: none;
+                }
+                .owl-nav{
+                    position: absolute;
+                    top: -60px;
+                    right: 0;
+                    button{
+                        i{
+                            padding: 5px 10px;
+                            font-size: 17px;
+                            background-color: $page-color;
+                            border-radius: 5px;
+                            color: white;
+                        }
+                        &.owl-prev{
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

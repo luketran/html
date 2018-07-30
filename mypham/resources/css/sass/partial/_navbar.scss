@@ -1,0 +1,411 @@
+.menu{
+    width: auto;
+    display: block;
+    margin: auto;
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        @media(min-width:992px){
+            display: block !important;
+        }
+        li{
+            position: relative;
+            a{
+                color: black;
+            }
+        }
+        .menu-right{
+            float: right;
+            
+        }
+    }
+    .menubar{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        >li{
+            display: inline-block;
+            position: relative;
+            border: 1px solid transparent;
+            border-radius: 20px;
+            >a{
+                display: block;
+                padding: 6px 15px;
+                text-decoration: none;
+                text-transform: uppercase;
+                >i{
+                    transition:  transform 0.5s ease;
+                }
+            }
+            @media(min-width:992px){
+                &:hover{
+                    border: 1px solid $page-color;
+                    a{
+                        color: $page-color;
+                    }
+                }
+            }
+            
+            &.has-submenu{
+                @media(min-width:992px){
+                    &:hover{
+                        >a{
+                            >i{
+                                transform: rotate(-180deg);
+                            }
+                        }
+                        >ul.submenu{
+                            opacity: 1;
+                            visibility: visible;
+                            transform: none;
+                        }
+                    }
+                }
+               
+                >ul.submenu{
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    min-width: 160px;
+                    opacity: 0;
+                    visibility: hidden;
+                    max-width: 250px;
+                    transition: all 0.5s ease;
+                    transform: translateY(15px);
+                    z-index: 10000;
+                    padding: 5px 0;
+                    text-align: left;
+                    border-radius: 4px;
+                    >li{
+                        display: block;
+                        background-color: white;    
+                        @media(min-width:992px){
+                            border-bottom: 1px solid $page-color;
+                            border-right: 1px solid $page-color;
+                            border-left: 1px solid $page-color;
+                        }
+                        >a{
+                            text-decoration: none;
+                            padding: 10px 30px 10px 10px;
+                            display: block;
+                            color:#000;
+                            white-space: nowrap;
+                            >i{
+                                transition : transform 0.5s ease;
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                height: 40px;
+                                width: 15px;
+                                line-height: 40px;
+                            }
+                        }
+                        @media(min-width:992px){
+                            &:hover{
+                                >a{
+                                    transition: 0.7s;
+                                    transform: translateX(5px);
+                                    color: $page-color;
+                                }
+                            }
+                        }
+                       
+                        &.has-second-submenu{
+                            @media(min-width:992px){
+                                &:hover{
+                                    >ul.second-submenu{
+                                        opacity: 1;
+                                        visibility: visible;
+                                        transform: none;
+                                    }
+                                }
+                            }
+                            
+                            >ul.second-submenu{
+                                position: absolute;
+                                top: 0;
+                                left: 100%;
+                                min-width: 100%;
+                                opacity: 0;
+                                visibility: hidden;
+                                @include box-shadow;
+                                background: #fff;
+                                transition: all 0.5s ease;
+                                transform: translate(15px , 15px);
+                                padding: 0;
+                                margin-left: 2px;
+                                @media(min-width:992px){
+                                    border: 1px solid $page-color;
+                                }
+                                >li{
+                                    @media(min-width:992px){
+                                        border-bottom: 1px solid $page-color;
+                                        &:last-child{
+                                            border-bottom: none;
+                                        }
+                                    }
+                                    display: block;
+                                    >a{
+                                        text-decoration: none;
+                                        padding: 10px 15px;
+                                        display: block;
+                                        color:#000;
+                                        white-space: nowrap;
+                                        
+                                        @media(min-width:992px){
+                                            &:hover {
+                                                transition: 0.7s;
+                                                transform: none;
+                                                transform: translateX(8px);
+                                                color: $page-color;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:991px){
+    body{
+        .main{
+            &:before{
+                content: '';
+                position: fixed;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: 2;
+                opacity: 0;
+                transition: all 0.5s ease;
+                visibility: hidden;
+                background-color: rgba(0,0,0,.3);
+            }
+        }
+        &.menu-open{
+            .main{
+                &:before{
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+    .navbar-toggle{
+        display:inline-block !important;
+        z-index: 10001;
+        position: fixed;
+        left: 15px;
+        .icon-bar{
+            background: #000;
+            transition: 0.5s ease;
+        }
+        &.active{
+            .icon-bar{
+                &:first-child{
+                    transform: rotate(45deg);
+                    position: absolute;
+                    top: 15px;
+                }
+                &:nth-child(2){
+                   opacity: 0;
+                }
+                &:last-child{
+                    transform: rotate(-45deg);
+                    position: absolute;
+                    top: 11px;
+                }
+            }
+        }
+    }
+    .menu{
+        position: fixed;
+        top: 90.81px;
+        right: 100%;
+        bottom: 0;
+        width: 100%;
+        z-index: 10001;
+        transition : right 0.5s ease;
+        background: white;
+        color: $text;
+        overflow-x: hidden;
+        overflow-y: auto;
+        &.open{
+            right: 0;
+        }
+        .menubar{
+            >li{
+                display: block;
+                border: none !important;
+                >a{
+                    padding: 15px;  
+                    border-bottom: 1px solid #eee;
+                    text-align: left;
+                    >i{
+                        transform: none !important;
+                        border-left: 1px solid #eee;
+                    }
+                }
+                &:hover{
+                    >a{
+                        color: $page-color;
+                    }
+                }
+                &.has-submenu{
+                    >a{
+                        padding-right: 40px;
+                        position: relative;
+                        >i{
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                            bottom: 0;
+                            width: 40px;
+                            text-align: center;
+                            &:before{
+                                width: 20px;
+                                height: 20px;
+                                position: absolute;
+                                top: 50%;
+                                right: 10px;
+                                transform: translateY(-50%);
+                                transition: 0.3s ease;
+                            }
+                        }
+                    }
+                    &.open{
+                        .fa-angle-down::before{
+                            transform: translateY(-50%) rotate(180deg) !important;
+                        }
+                    }
+                    >ul.submenu{
+                        position: relative;
+                        top:auto;
+                        left: auto;
+                        min-width: 100%;
+                        opacity: 1;
+                        visibility: visible;
+                        max-width: unset;
+                        transition: unset;
+                        transform: unset;
+                        padding-left: 15px;
+                        display: none;
+                        background: #fafafa;
+                        >li{
+                            display: block;
+                            background: #fafafa;
+                            border: 1px solid transparent;
+                            >a{
+                                padding: 10px 15px;
+                                display: block;
+                                color:#000;
+                                white-space: nowrap;
+                                >i{
+                                    transition : transform 0.5s ease;
+                                }
+                            }
+                            &:hover{
+                                >a{
+                                    background: unset;
+                                    color: $page-color;
+                                }
+                            }
+                            &.has-second-submenu{
+                                a{
+                                    .fa-angle-right{
+                                        &::before {
+                                            content: "\f107";
+                                        }
+                                    }
+                                }
+                                &.open{
+                                    a{
+                                        i{
+                                            transform: rotate(-180deg) !important;
+                                        }
+                                    }
+                                }
+                                &:hover{
+                                    >a{
+                                        >i{
+                                            transform: none;
+                                        }
+                                    }
+                                    >ul.second-submenu{
+                                        opacity: 1;
+                                        visibility: visible;
+                                        transform: none;
+                                    }
+                                }
+                                >a{
+                                    padding-right: 40px;
+                                    position: relative;
+                                    >i{
+                                        position: absolute;
+                                        right: 0;
+                                        width: 40px;
+                                        text-align: center;
+                                        display: inline-block;
+                                        vertical-align: middle;
+                                        &:before{
+                                            width: 20px;
+                                            height: 20px;
+                                            position: absolute;
+                                            right: 10px;
+                                        }
+                                    }
+                                }
+                                >ul.second-submenu{
+                                    position: relative;
+                                    top: auto;
+                                    left: auto;
+                                    padding: 0;
+                                    margin: 0;
+                                    min-width: 100%;
+                                    opacity:1;
+                                    visibility: visible;
+                                    border: none;
+                                    background: #fff;
+                                    transition: unset;
+                                    transform:unset;
+                                    display: none;
+                                    border-bottom: 1px solid #eee;
+                                    >li{
+                                        display: block;
+                                        background-color: white;
+                                        border: none;
+                                        >a{
+                                            padding: 10px 15px;
+                                            display: block;
+                                            color:#000;
+                                            white-space: nowrap;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // aaaaaaaaaa
+  
+    // aaaaaaaaaa
+
+
+
+
+
+
+
+}

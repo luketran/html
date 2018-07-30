@@ -1,0 +1,44 @@
+.quenmk{
+    padding: 50px 0;
+    .quenmknd{
+        max-width: 350px;
+        display: block;
+        margin: auto;
+        text-align: center;
+        padding: 0 15px;
+        h4{
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        form{
+            text-align: left;
+            input{
+                margin-right: 5px;
+            }
+            label{
+                font-weight: normal;
+            }
+        }
+        button{
+            @include buttonpage;
+            padding: 10px 20px;
+            background-color: $page-color;
+            width: 100%;
+            margin-top: 15px;
+            &:hover{
+                color: white;
+            }
+        }
+        .foxt,.fodmk{
+            input{
+                @include pageinput;
+            }
+        }
+        .fodmk{
+            p{
+                color: $text-content;
+                margin-top: 10px;
+            }
+        }
+    }
+}
